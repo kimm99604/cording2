@@ -137,69 +137,15 @@
             </ul>
         </nav>
         <article class="article">
-            <h2>HTML5 기본 문서</h2>
+            <h2>시멘틱 마크업</h2>
             <p>
-                태그(tag): &lt;html&gt;,  &lt;head&gt;등과 같이  &lt;&gt;(각 괄호)로 되어 있는 것 <br>
-                요소(element): (&lt;&gt;)과 (&lt;/&gt;)와 같이 태그의 시작과 종료 <br>
-                마크업(markup): 이러한 요소들로 코딩한 것<br>
-                속성(attribute): &lt;html lang="ko"/&gt; 나 &lt;meta charset="UTF-8"/&gt;처럼 태그 내부에 부가적인 
-                설정값을 선언하는 것<br> 
-
-            </p>
-            <p>
-                HTML 기본 문서의 요소는 head 요소와 body요소로 구성되어 있으며, head요소 안에는 meta, title, 
-                link, style, script등의 요소들이 올 수 있다.
-            </p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>요소명</th>
-                        <th>설명</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="center">&lt;meta&gt;</td>
-                        <td>HTML 문서의 설명, 키워드, 문서의 작성자 등 지정</td>
-                    </tr>
-                    <tr>
-                        <td class="center">&lt;title&gt;</td>
-                        <td>HTML 문서 제목 지정</td>
-                    </tr>
-                    <tr>
-                        <td class="center">&lt;link&gt;</td>
-                        <td>외부 CSS 파일을 HTML문서에 연결할 때 사용</td>
-                    </tr>
-                    <tr>
-                        <td class="center">&lt;style&gt;</td>
-                        <td>HTML 문서 내에서 스타일(CSS) 정의</td>
-                    </tr>
-                    <tr>
-                        <td class="center">&lt;script&gt;</td>
-                        <td>자바스크립트를 HTML문서 내부에서 정의하거나 외부에서 자바스크립트 파일을 불러 올 때 사용</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p>lang 속성은 HTML 문서에서 꼭 정의해야 하는 속성이다.<br>
-                 - 언어 설저에 따라 시각 장애인들이 사용하는 스크린 리더(음악낭독 프로그램)
-                에서 언어를 다르게 읽어 주기 때문<br> 
+                시멘틱(semantic) : '의미론적인'이라는 뜻으로 마크업을 할 때 의미에 부합하는 태그를 사용하라는 뜻
             </p>
             <p class="box">
-                &lt;i lang="de"&gt; Ich liebe dich&lt;/i&gt; //특정 부분에서 언어를 바꾸고 싶다면 해당하는 부분에서만 lang속성을 다른언어로 지정 가능
-            </p>
-            <p> &lt;meta&gt; 태그의 charset 속성의 값 UTF-8을 '문자 인코딩(charset)'방식이라고 하는데
-                UTF-8의 경우 거의 대부분의 문자를 처리할 수 있기 때문에 HTML5의 문자 인코딩 방식으로 주로 사용 됨
-            </p>
-            <p class="box">
-                &lt;meta charset="UTF-8"&gt;<br>
-                 &lt;meta name="viewprt"<br>
-                 content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximun-scale=1.0,user-<br>
-                 scalable=no"&gt;
-            </p>
-            <p>
-                뷰포트(viewport): 모바일 해상도(가로보기, 세로보기)에 맞게 HTML 문서를 조절해 주는 속성
-            </p>
-        </article>
+                &lt;body&gt; 반응형웹  &lt;/body&gt; <br>
+                <br>&lt;body&gt;<br> &lt;h1&gt; 반응형웹 &lt;/h1&gt;  //권장<br> &lt;/body&gt; <br>
+               </p>
+           
     </section>
 </body>
 </html>
