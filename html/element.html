@@ -137,21 +137,40 @@
             </ul>
         </nav>
         <article class="article">
-            <h2>시멘틱 마크업</h2>
+            <h2>블록 레벨 요소와 인라인요소</h2>
             <p>
-                시멘틱(semantic) : '의미론적인'이라는 뜻으로 마크업을 할 때 의미에 부합하는 태그를 사용하라는 뜻
+                블록 레벨 요소(Block-level Elements) : 블록 레벨 요소는 마크업 할 때 줄이 바뀌는 특성을 가짐 
+                <br>ex) &lt;li&gt;,  &lt;h1&gt;,  &lt;p&gt; 등 
             </p>
-            <p class="box">
-                &lt;body&gt; 반응형웹  &lt;/body&gt; <br>
-                <br>&lt;body&gt;<br> &lt;h1&gt; 반응형웹 &lt;/h1&gt;  //권장<br> &lt;/body&gt; <br>
-               </p>
-               <p>
-                &lt;h1&gt;은 문서의 첫 제목을 의미하는 태그입니다. 이 부분을 '반은형웹' 헤딩 일이라고 읽어준다면
-                "아! 이 부분이 제목이구나"를 알 수 있게 됩니다.<br>
-                <br>NOTE
-                <br>실제 마크업을 할 때는 작업자마다 콘텐츠의 의미를 해석하는 차이가 조금 있을 수도 있지만 가급적
-                시메틱하게 마크업을 하려고 노력하는 것이 중요!! 
+            <p>
+                인라인 요소(Inline Elements) : 인라인 요소는 마크업 할 때 한 줄로 출력 됨 
+                <br>ex) &lt;strong&gt;,  &lt;span&gt; 등 
             </p>
+            <h2>블록 레벨 요소와 인라인 요소의 특징</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>요소 유형</th>
+                        <th>특징</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center" rowspan="3">블록 레벨<br>요소</td>
+                        <td>1. 블록 레벨 요소는 줄 바꿈이 일어난다.</td>
+                    </tr>
+                    <tr>
+                        <td>2. 텍스트와 인라인 요소를 자식 요소로 포함할 수 있다</td>
+                    </tr>
+                    <tr>
+                        <td>3. 블록 레벨 요소는 줄 바꿈이 일어납니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="center">인라인 요소</td>
+                        <td>HTML 문서 제목 지정</td>
+                    </tr>
+                </tbody>
+            </table>
            
     </section>
 </body>
