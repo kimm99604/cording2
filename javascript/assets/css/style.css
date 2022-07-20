@@ -101,7 +101,7 @@ body {
 
 /* 티스토리용 문서 */
 .document {
-    /* word-break: keep-all; */
+    padding-bottom: 100px !important;
 }
 .document i {
     font-style: normal;
