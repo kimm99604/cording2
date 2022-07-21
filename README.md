@@ -12,6 +12,6 @@ https://kimm99604.github.io/cording2/javascript/javascript01.html
 https://kimm99604.github.io/cording2/javascript/javascript02.html
 
 ### HTML 메인 페이지 
-https://kimm99604.github.io/cording2/html/index.html
+https://kimm99604.github.io/cording2/html/index.html  
 https://kimm99604.github.io/cording2/html/alphabet.html
 
