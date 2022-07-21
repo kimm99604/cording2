@@ -1,4 +1,4 @@
-&lt;!DOCTYPE html&gt;
+<!-- &lt;!DOCTYPE html&gt;
 &lt;html lang="ko"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -14,9 +14,43 @@
     &lt;!-- 3. 태그에 직접 기술하는 방법 --&gt;
     &lt;a href="#" onclick="alert('Javasript')"&gt;&lt;/a&gt;
 &lt;/body&gt;
-&lt;/html&gt;
+&lt;/html&gt; -->
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    let x = 100; //전역변수
+    let y = 200;
+    
+    function func(){
+    let x = 100;   //지역변수
+    let z = "javascript"     
+    x = 200;  //지역변수 x 100 -> 200으로 변경 
+    y = 300; //전역변수 y 200 -> 300으로 변경  
+
+
+    document.write("함수 안");    
+    document.write(x);
+    document.write(y);
+    document.write(z);
+    }
+    func();
+
+    document.write("함수 밖");    
+    document.write(x);
+    document.write(y);
+    document.write(z);  
+</body>
+</html>
+  
 
 
 
