@@ -67,16 +67,16 @@
         <div class="main_sample">
             <div id="sample01" class="sample">
                 <h3>01. 변수 : 데이터 불러오기</h3>
-                <p></p>
+                <p>변수에 값을 불러옵니다.</p>
                 <div class="script">
 <pre><code class="language-js">{
-            let x = 100,
-            y = 200,
-            z = "javascript"
+    let x = 100,
+    y = 200,
+    z = "javascript"
 
-            document.write(x);
-            document.write(y);
-            document.write(z);
+    document.write(x);
+    document.write(y);
+    document.write(z);
 }
 </code></pre>
                 </div>
@@ -92,16 +92,16 @@
 
             <div id="sample02" class="sample">
                 <h3>02. 상수 : 데이터 불러오기</h3>
-                <p></p>
+                <p>상수에 값을 불러옵니다. 상수는 const라고 표기하며 변경할 수 없습니다.</p>
                 <div class="script">
 <pre><code class="language-js">{
-            const x = 100,
-            y = 200,
-            z = "javascript";
+    const x = 100,
+    y = 200,
+    z = "javascript";
 
-            document.write(x);
-            document.write(y);
-            document.write(z);
+    document.write(x);
+    document.write(y);
+    document.write(z);
 }
 </code></pre>
                 </div>
@@ -117,14 +117,14 @@
 
             <div id="sample03" class="sample">
                 <h3>03. 배열 : 데이터 불러오기</h3>
-                <p></p>
+                <p>배열에 데이터 값을 불러옵니다.</p>
                 <div class="script">
 <pre><code class="language-js">{
-            const arr = [100, 200, "javascript"];
+    const arr = [100, 200, "javascript"];
 
-            document.write(arr[0]);
-            document.write(arr[1]);
-            document.write(arr[2]);
+    document.write(arr[0]);
+    document.write(arr[1]);
+    document.write(arr[2]);
 
 }
 </code></pre>
@@ -141,15 +141,15 @@
 
             <div id="sample04" class="sample">
                 <h3>04. 배열 : 데이터 불러오기 : 2차 배열</h3>
-                <p></p>
+                <p>배열속에 있는 2차 배열 데이터 값을 불러옵니다.</p>
                 <div class="script">
 <pre><code class="language-js">{
-            const arr = [100, 200, ["javascript", "jquery"]];
+    const arr = [100, 200, ["javascript", "jquery"]];
 
-            document.write(arr[0]);
-            document.write(arr[1]);
-            document.write(arr[2][0]); //javascript 출력
-            document.write(arr[2][1]); //jquery 출력 
+    document.write(arr[0]);
+    document.write(arr[1]);
+    document.write(arr[2][0]); //javascript 출력
+    document.write(arr[2][1]); //jquery 출력 
 }
 </code></pre>
                 </div>
@@ -165,12 +165,12 @@
 
             <div id="sample05" class="sample">
                 <h3>05. 배열 : 데이터 불러오기 : 갯수 구하기</h3>
-                <p></p>
+                <p>배열 데이터 값의 갯수를 구합니다.</p>
                 <div class="script">
 <pre><code class="language-js">{
-            const arr = [100, 200, "javascript"];
-                    
-            document.write(arr.length); //배열안 데이터수 출력
+    const arr = [100, 200, "javascript"];
+            
+    document.write(arr.length); //배열안 데이터수 출력
 }
 </code></pre>
                 </div>
@@ -186,20 +186,20 @@
 
             <div id="sample06" class="sample">
                 <h3>06. 배열 : 데이터 불러오기 : for()문</h3>
-                <p></p>
+                <p>배열 데이터 값을 반복문을 사용하여 가져옵니다.</p>
                 <div class="script">
 <pre><code class="language-js">{
-            const arr = [100, 200, 300, 400, 500];
+    const arr = [100, 200, 300, 400, 500];
 
-            document.write(arr[0]);
-            document.write(arr[1]);
-            document.write(arr[2]);
-            document.write(arr[3]);
-            document.write(arr[4]);
-           
-            for(let i=0; i < arr.length; i++){
-                    document.write(arr[i]);
-            }
+    document.write(arr[0]);
+    document.write(arr[1]);
+    document.write(arr[2]);
+    document.write(arr[3]);
+    document.write(arr[4]);
+    
+    for(let i=0; i < arr.length; i++){
+            document.write(arr[i]);
+    }
 }
 </code></pre>
                 </div>
@@ -226,20 +226,20 @@
 
             <div id="sample07" class="sample">
                 <h3>07. 배열 : 데이터 불러오기 : forEach()</h3>
-                <p></p>
+                <p>배열 데이터 값을 반복문을 사용하여 가져옵니다.</p>
                 <div class="script">
 <pre><code class="language-js">{
-            const num = [100, 200, 300, 400, 500];
+    const num = [100, 200, 300, 400, 500];
 
-            num.forEach(function(el){
-                document.write(el); 
-            });
+    num.forEach(function(el){
+        document.write(el); 
+    });
 
-            num.forEach(function(element, index, array){
-                document.write(element); //요소 
-                document.write(index); //인덱스
-                document.write(array); //배열 
-            });
+    num.forEach(function(element, index, array){
+        document.write(element); //요소 
+        document.write(index); //인덱스
+        document.write(array); //배열 
+    });
 }
 </code></pre>
                 </div>
@@ -260,14 +260,14 @@
 
             <div id="sample08" class="sample">
                 <h3>08. 배열 : 데이터 불러오기 : for of()</h3>
-                <p></p>
+                <p>배열 데이터 값을 반복문을 사용하여 가져옵니다.</p>
                 <div class="script">
 <pre><code class="language-js">{
-            const arr = [100, 200, 300, 400, 500];
+    const arr = [100, 200, 300, 400, 500];
 
-            for(let i of arr ){
-                document.write(i); //배열 출력 
-            }
+    for(let i of arr ){
+        document.write(i); //배열 출력 
+    }
 }
 </code></pre>
                 </div>
@@ -284,15 +284,15 @@
 
             <div id="sample09" class="sample">
                 <h3>09. 배열 : 데이터 불러오기 : for in()</h3>
-                <p></p>
+                <p>배열 데이터 값을 반복문을 사용하여 가져옵니다.</p>
                 <div class="script">
 <pre><code class="language-js">{
-            const arr = [100, 200, 300, 400, 500];
+    const arr = [100, 200, 300, 400, 500];
 
-            for( let i in arr ){
-                document.write(i); //index가 출력 
-                document.write(arr[i]); //array가 출력 
-            }
+    for( let i in arr ){
+        document.write(i); //index가 출력 
+        document.write(arr[i]); //array가 출력 
+    }
 }
 </code></pre>
                 </div>
@@ -310,21 +310,21 @@
 
             <div id="sample10" class="sample">
                 <h3>10. 배열 : 데이터 불러오기 : map()</h3>
-                <p></p>
+                <p>배열 데이터 값을 반복문을 사용하여 가져옵니다.</p>
                 <div class="script">
 <pre><code class="language-js">{
-            const arr = [100, 200, 300, 400, 500];
+    const arr = [100, 200, 300, 400, 500];
 
-            arr.map(function(el){
-                document.write(el);
-                console.log(el); // 100, 200, 300, 400, 500 출력
-            });
+    arr.map(function(el){
+        document.write(el);
+        console.log(el); // 100, 200, 300, 400, 500 출력
+    });
 
-            arr.map(function(element, index, array){
-                document.write(element); //요소 출력
-                document.write(index); //인덱스 값 출력
-                document.write(array); //배열 출력 
-            });
+    arr.map(function(element, index, array){
+        document.write(element); //요소 출력
+        document.write(index); //인덱스 값 출력
+        document.write(array); //배열 출력 
+    });
 }
 </code></pre>
                 </div>
