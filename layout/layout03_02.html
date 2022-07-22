@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃 3</title>
+    <title>레이아웃 3 - float 반응형</title>
 
     <style>
         * {
@@ -60,6 +60,69 @@
             height: 100px;
             background-color: #0288D1;
             clear: both;
+        }
+        @media(max-width:1200px){
+            #wrap {
+                width: 100%;
+            }
+            #aside {
+                width: 30%;
+                height: 780px;
+            }
+            #section1 {
+                width: 70%;
+                height: 260px;
+            }
+            #section2 {
+                width: 35%;
+                height: 520px;
+            }
+            #section3 {
+                width: 35%;
+                height: 520px;
+            }
+        }
+        @media(max-width:768px){
+            #wrap {
+                width: 100%;
+            }
+            #aside {
+                width: 30%;
+                height: 780px;
+            }
+            #section1 {
+                width: 70%;
+                height: 260px;
+            }
+            #section2 {
+                width: 35%;
+                height: 260px;
+            }
+            #section3 {
+                width: 35%;
+                height: 260px;
+            }
+        }
+        @media(max-width:480px){
+            #wrap {
+                width: 100%;
+            }
+            #aside {
+                width: 100%;
+                height: 200px;
+            }
+            #section1 {
+                width: 100%;
+                height: 430px;
+            }
+            #section2 {
+                width: 100%;
+                height: 150px;
+            }
+            /* #section3 {
+                width: 35%;
+                height: 260px;
+            } */
         }
     </style>
 </head>

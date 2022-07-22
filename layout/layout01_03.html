@@ -4,52 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃 2 - float</title>
+    <title>레이아웃 flex</title>
 
     <style>
         * {
             margin: 0;
         }
         body {
-            background-color: #E8F5E9;
+            background-color: #FFF3E0;
         }
         #wrap {
             width: 1200px;
             margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
         }
         #header {
-            width: 100%;
+            width: 1200px;
             height: 100px;
-            background-color: #C8E6C9;
+            background-color: #FFE0B2;
         }
         #nav {
-           width: 100%;
-           height: 100px;
-            background-color: #A5D6A7;
+            width: 1200px;
+            height: 100px;
+            background: #FFCC80;
         }
         #aside {
-            width: 300px;
+            width: 400px;
             height: 780px;
-            background-color: #81C784;
-            float: left;
+            background: #FFB74D;
+          
         }
         #section {
-            width: 600px;
+            width: 800px;
             height: 780px;
-            background-color: #66BB6A;
-            float: left;
-        }
-        #article {
-            width: 300px;
-            height: 780px;
-            background-color: #4CAF50;
-            float: left;
+            background: #FFA726;
+          
         }
         #footer {
-           width: 100%;
-           height: 100px;
-            background-color: #43A047;
-            clear: both;
+            width: 1200px;
+            height: 100px;
+            background: #FF9800;
+            
         }
     </style>
 </head>
@@ -59,7 +55,6 @@
         <div id="nav"></div>
         <div id="aside"></div>
         <div id="section"></div>
-        <div id="article"></div>
         <div id="footer"></div>
     </div>
 </body>
