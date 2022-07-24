@@ -9,6 +9,7 @@
     <style>
         * {
             margin: 0;
+            padding: 0;
         }
         body {
             background-color: #FFF3E0;
@@ -18,42 +19,33 @@
             margin: 0 auto;
             display: grid;
             grid-template-areas: 
-            "header header"
-            "nav nav"
-            "aside section"
-            "footer footer";
-            /* grid-template-columns: auto;
-            grid-template-rows: auto; */
+                "header header"
+                "nav nav"
+                "aside section"
+                "footer footer"
+            ;
+            grid-template-columns: 400px 800px;
+            grid-template-rows: 100px 100px 780px 100px;
         }
-        #header {
-            width: 1200px;
-            height: 100px;
+        #header {   
             background-color: #FFE0B2;
             grid-area: header;
         }
         #nav {
-            width: 1200px;
-            height: 100px;
             background: #FFCC80;
             grid-area: nav;
 
         }
         #aside {
-            width: 400px;
-            height: 780px;
             background: #FFB74D;
             grid-area: aside;
         
         }
         #section {
-            width: 800px;
-            height: 780px;
             background: #FFA726;
             grid-area: section;
         }
         #footer {
-            width: 1200px;
-            height: 100px;
             background: #FF9800;
             grid-area: footer;
         }
@@ -61,11 +53,11 @@
 </head>
 <body>
     <div id="wrap">
-        <div id="header"></div>
-        <div id="nav"></div>
-        <div id="aside"></div>
-        <div id="section"></div>
-        <div id="footer"></div>
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <aside id="aside"></aside>
+        <section id="section"></section>
+        <footer id="footer"></footer>
     </div>
 </body>
 </html>

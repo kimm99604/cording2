@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃 grid</title>
+    <title>레이아웃 grid 반응형</title>
 
     <style>
         * {
             margin: 0;
+            padding: 0;
         }
         body {
             background-color: #FFF3E0;
@@ -18,95 +19,66 @@
             margin: 0 auto;
             display: grid;
             grid-template-areas: 
-            "header header"
-            "nav nav"
-            "aside section"
-            "footer footer";
-            /* grid-template-columns: auto;
-            grid-template-rows: auto; */
+                "header header"
+                "nav nav"
+                "aside section"
+                "footer footer";
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 100px 100px 780px 100px;
         }
-        #header {
-            width: 1200px;
-            height: 100px;
+        #header {   
             background-color: #FFE0B2;
             grid-area: header;
         }
         #nav {
-            width: 1200px;
-            height: 100px;
             background: #FFCC80;
             grid-area: nav;
 
         }
         #aside {
-            width: 400px;
-            height: 780px;
             background: #FFB74D;
             grid-area: aside;
         
         }
         #section {
-            width: 800px;
-            height: 780px;
             background: #FFA726;
             grid-area: section;
         }
         #footer {
-            width: 1200px;
-            height: 100px;
             background: #FF9800;
             grid-area: footer;
         }
-        @media(max-width:1200px){
+        @media(max-width:1300px){
             #wrap {
-                width: 100%;
+                width: 96%;
             }
-            /* #aside { 
-               width: 30%;
-               height: 780px;
-           }
-           #section {
-               width: 70%;
-               height: 780px;
-           } */
         }
         @media(max-width:768px){
             #wrap {
                 width: 100%;
             }
-            #aside {
-                width: 100%;
-                height: 780px;
-            }
-            #section {
-                /* width: 100%; */
-                height: 780px;
-            }
         }
         @media(max-width:480px){
             #wrap {
-                width: 100%;
-            }
-            #aside {
-                width: 100%;
-                height: 300px;
-               
-            }
-            #section {
-                width: 100%;
-                height: 480px;
-                
+                grid-template-areas: 
+                    "header"
+                    "nav"
+                    "aside" 
+                    "section"
+                    "footer";
+                grid-template-columns: 100%;
+                grid-template-rows: 100px 100px 300px 480px 100px;
             }
         }
     </style>
 </head>
 <body>
     <div id="wrap">
-        <div id="header"></div>
-        <div id="nav"></div>
-        <div id="aside"></div>
-        <div id="section"></div>
-        <div id="footer"></div>
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <aside id="aside"></aside>
+        <section id="section"></section>
+        <footer id="footer"></footer>
     </div>
 </body>
 </html>

@@ -9,6 +9,7 @@
     <style>
         * {
             margin: 0;
+            padding: 0;
         }
         body {
             background-color: #E1F5FE;
@@ -19,110 +20,97 @@
             margin: 0 auto;
         }
         #header {
-            width: 1200px;
             height: 100px;
             background-color: #B3E5FC;
         }
         #nav {
-            width: 1200px;
             height: 100px;
             background-color: #81D4FA;
         }
+        #main {
+        }
         #aside {
-            width: 300px;
+            width: 30%;
             height: 780px;
             background-color: #4FC3F7;
             float: left;
         }
-        #section1 {
-            width: 900px;
+        #article1 {
+            width: 70%;
             height: 260px;
             background-color: #29B6F6;
             float: left;
-
         }
-        #section2 {
-            width: 900px;
+        #article2 {
+            width: 70%;
             height: 260px;
             background-color: #03A9F4;
             float: left;
-
         }
-        #section3 {
-            width: 900px;
+        #article3 {
+            width: 700%;
             height: 260px;
             background-color:  #039BE5;
             float: left;
-
         }
         #footer {
-            width: 1200px;
             height: 100px;
             background-color: #0288D1;
+        }
+
+        /* clearfix */
+        clearfix::before,
+        clearfix::after {
+            content: '';
+            display: block;
+            line-height: 0;
+        }
+        claerfix::after {
             clear: both;
         }
-        @media(max-width:1200px){
+        /* 미디어 쿼리 */
+        @media (max-width:1300px){
             #wrap {
-                width: 100%;
+                width: 96%;
             }
-            #aside {
-                width: 30%;
-                height: 780px;
-            }
-            #section1 {
-                width: 70%;
-                height: 260px;
-            }
-            #section2 {
+            #article2 {
                 width: 35%;
                 height: 520px;
             }
-            #section3 {
+            #article3 {
                 width: 35%;
                 height: 520px;
             }
         }
-        @media(max-width:768px){
+        @media (max-width:768px){
             #wrap {
                 width: 100%;
             }
-            #aside {
-                width: 30%;
-                height: 780px;
-            }
-            #section1 {
+            #article1 {
                 width: 70%;
-                height: 260px;
+                height: 390px;
             }
-            #section2 {
-                width: 35%;
-                height: 260px;
+            #article2 {
+                width: 70%;
+                height: 390px;
             }
-            #section3 {
-                width: 35%;
-                height: 260px;
+            #article3 {
+              display: none;
             }
         }
-        @media(max-width:480px){
-            #wrap {
-                width: 100%;
-            }
+        @media (max-width:480px){
             #aside {
                 width: 100%;
-                height: 200px;
+                height: 100px;
             }
-            #section1 {
+            #article1 {
                 width: 100%;
                 height: 430px;
             }
-            #section2 {
+            #article2 {
                 width: 100%;
                 height: 150px;
             }
-            /* #section3 {
-                width: 35%;
-                height: 260px;
-            } */
         }
     </style>
 </head>
@@ -130,10 +118,12 @@
     <div id="wrap">
         <div id="header"></div>
         <div id="nav"></div>
-        <div id="aside"></div>
-        <div id="section1"></div>
-        <div id="section2"></div>
-        <div id="section3"></div>
+        <div id="main" class="clearfix">
+            <div id="aside"></div>
+            <div id="article1"></div>
+            <div id="article2"></div>
+            <div id="article3"></div>
+        </div>
         <div id="footer"></div>
     </div>
 </body>
