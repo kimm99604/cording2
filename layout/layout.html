@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">layout</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit2">레이아웃 float</h2>
+            <p class="t_desc2">
+                원하는 곳에 float: left, right, none 등 을 준다. 
+            </p>
+            <p class="t_desc">
+                float을 줄 땐 버그 방지를 위한 방법이 3가지 있다.<br>
+                1. claer: both;<br>
+2. overflow: hidden; <br>
+3. .clearfix::before,<br>
+.clearfix::after {content: '' " ; display: block; line-height: 0;}<br>
+.clearfix::after {clear: both;} <br>
+            </p>
+
+            <h3 class="t_tit2">레이아웃 float - 반응형</h3>
+            <p class="t_desc2">
+                미디어쿼리를 통해 float 반응형을 만들 수 있다. 
+            </p>
+            <div class="t_box">
+                @media(max-width:1300px){
+                    #wrap {
+                        width: 96%;
+                    }
+                }
+                @media(max-width:768px){
+                    #wrap {
+                        width: 100%;
+                    }
+                }
+                @media(max-width:480px){
+                    #aside {
+                        width: 100%;
+                        height: 300px;
+                    }
+                    #section {
+                        width: 100%;
+                        height: 480px;
+                    }
+                }
+            </div>
+           
+
+            <h3 class="t_tit2">레이아웃 flex</h3>
+            <p class="t_desc2">
+                부모에 flex를 주면 자식들에게 적용된다. 
+            </p>
+
+            <h3 class="t_tit2">레이아웃 flex - 반응형</h3>
+            <p class="t_desc2">
+                미디어쿼리를 통해 flex 반응형을 만들 수 있다.  
+            </p>
+            <div class="t_box">
+                @media(max-width:1300px){
+                    #wrap {
+                        width: 96%;
+                    }
+                }
+                @media(max-width:768px){
+                    #wrap {
+                        width: 100%;
+                    }
+                    #main {
+                        flex-wrap: wrap;
+                    }
+                    #aside {
+                        width: 30%;
+                        height: 630px;
+                    }
+                    #section {
+                        width: 70%;
+                        height: 630px;
+                    }
+                    #article {
+                        width: 100%;
+                        height: 150px;
+                    }
+                }
+                @media(max-width:480px){ 
+                    #aside {
+                        width: 100%;
+                        height: 200px;
+                    }
+                    #section {
+                        width: 100%;
+                        height: 430px;
+                    }
+                }
+            </div>
+           
+            <h3 class="t_tit2">레이아웃 grid</h3>
+            <p class="t_desc2">
+                display에 grid를 주고 areas를 묶어준다.
+            </p>
+
+            <h3 class="t_tit2">레이아웃 grid - 반응형</h3>
+            <p class="t_desc2">
+                미디어쿼리를 통해 grid 반응형을 만들 수 있다. 
+            </p>
+            <div class="t_box">
+                @media (max-width:1300px){
+                    #wrap {
+                        width: 96%;
+                    }
+                    #main {
+                        grid-template-areas: 
+                          "aside article1 article1"
+                          "aside article2 article3"
+                          "aside article2 article3";
+                        grid-template-columns: 30% 35% 35%;
+                        grid-template-rows: 260px 520px;
+                      }
+                }
+                @media (max-width:768px){
+                    #wrap {
+                        width: 100%;
+                    }
+                    #main {
+                        grid-template-areas: 
+                          "aside article1"
+                          "aside article2";
+                        grid-template-columns: 30% 70%;
+                        grid-template-rows: 390px 390px;
+                      }
+                    #article3 {
+                      display: none;
+                    }
+                }
+                @media (max-width:480px){
+                    #aside {
+                        width: 100%;
+                        height: 200px;
+                    }
+                    #main {
+                        grid-template-areas: 
+                          "aside" 
+                          "article1"
+                          "article2";
+                        grid-template-columns: 100%;
+                        grid-template-rows: 200px 430px 150px;
+                      }
+                }
+            </div>
+
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:kimm9964@naver.com">kimm9964@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+</body>
+</html>
