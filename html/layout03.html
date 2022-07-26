@@ -72,49 +72,49 @@
                 </p>
                 <div class="t_code">
 <pre><code class="language-css">
-    @media (max-width:1300px){
-        #wrap {
-            width: 96%;
-        }
-        #article2 {
-            width: 35%;
-            height: 520px;
-        }
-        #article3 {
-            width: 35%;
-            height: 520px;
-        }
+@media (max-width:1300px){
+    #wrap {
+        width: 96%;
     }
-    @media (max-width:768px){
-        #wrap {
-            width: 100%;
-        }
-        #article1 {
-            width: 70%;
-            height: 390px;
-        }
-        #article2 {
-            width: 70%;
-            height: 390px;
-        }
-        #article3 {
-          display: none;
-        }
+    #article2 {
+        width: 35%;
+        height: 520px;
     }
-    @media (max-width:480px){
-        #aside {
-            width: 100%;
-            height: 100px;
-        }
-        #article1 {
-            width: 100%;
-            height: 430px;
-        }
-        #article2 {
-            width: 100%;
-            height: 150px;
-        }
+    #article3 {
+        width: 35%;
+        height: 520px;
     }
+}
+@media (max-width:768px){
+    #wrap {
+        width: 100%;
+    }
+    #article1 {
+        width: 70%;
+        height: 390px;
+    }
+    #article2 {
+        width: 70%;
+        height: 390px;
+    }
+    #article3 {
+        display: none;
+    }
+}
+@media (max-width:480px){
+    #aside {
+        width: 100%;
+        height: 100px;
+    }
+    #article1 {
+        width: 100%;
+        height: 430px;
+    }
+    #article2 {
+        width: 100%;
+        height: 150px;
+    }
+}
 </pre></code>
                 </div>
                 <h2 class="t_tit2">flex</h2>
@@ -132,50 +132,50 @@
                 </p>
                 <div class="t_code">
 <pre><code class="language-css">
-    @media (max-width:1300px){
-        #wrap {
-            width: 96%;
-        }
-        #article2 {
-          display: flex;
-        }
-        #article2-1 {
-            width: 50%;
-            height: 520px;
-        }
-        #article2-2 {
-            width: 50%;
-            height: 520px;
-        }
+@media (max-width:1300px){
+    #wrap {
+        width: 96%;
     }
-    @media (max-width:768px){
-        #wrap {
-            width: 100%;
-        }
-        #article1 {
-            width: 100%;
-            height: 390px;
-        }
-        #article2-1 {
-            width: 100%;
-            height: 390px;
-        }
-        #article2-2 {
-          display: none;
-        }
+    #article2 {
+        display: flex;
     }
-    @media (max-width:480px){
-        #aside {
-            width: 100%;
-            height: 200px;
-        }
-        #article1 {
-            height: 430px;
-        }
-        #article2-1 {
-            height: 150px;
-        }
+    #article2-1 {
+        width: 50%;
+        height: 520px;
     }
+    #article2-2 {
+        width: 50%;
+        height: 520px;
+    }
+}
+@media (max-width:768px){
+    #wrap {
+        width: 100%;
+    }
+    #article1 {
+        width: 100%;
+        height: 390px;
+    }
+    #article2-1 {
+        width: 100%;
+        height: 390px;
+    }
+    #article2-2 {
+        display: none;
+    }
+}
+@media (max-width:480px){
+    #aside {
+        width: 100%;
+        height: 200px;
+    }
+    #article1 {
+        height: 430px;
+    }
+    #article2-1 {
+        height: 150px;
+    }
+}
 </pre></code>
                 </div>
                 <h3 class="t_tit2">grid</h3>
@@ -193,48 +193,48 @@
                 </p>
                 <div class="t_code">
 <pre><code class="language-css">
-    @media (max-width:1300px){
-        #wrap {
-            width: 96%;
-        }
-        #main {
-            grid-template-areas: 
-              "aside article1 article1"
-              "aside article2 article3"
-              "aside article2 article3";
-            grid-template-columns: 30% 35% 35%;
-            grid-template-rows: 260px 520px;
-          }
+@media (max-width:1300px){
+    #wrap {
+        width: 96%;
     }
-    @media (max-width:768px){
-        #wrap {
-            width: 100%;
+    #main {
+        grid-template-areas: 
+            "aside article1 article1"
+            "aside article2 article3"
+            "aside article2 article3";
+        grid-template-columns: 30% 35% 35%;
+        grid-template-rows: 260px 520px;
         }
-        #main {
-            grid-template-areas: 
-              "aside article1"
-              "aside article2";
-            grid-template-columns: 30% 70%;
-            grid-template-rows: 390px 390px;
-          }
-        #article3 {
-          display: none;
-        }
+}
+@media (max-width:768px){
+    #wrap {
+        width: 100%;
     }
-    @media (max-width:480px){
-        #aside {
-            width: 100%;
-            height: 200px;
+    #main {
+        grid-template-areas: 
+            "aside article1"
+            "aside article2";
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 390px 390px;
         }
-        #main {
-            grid-template-areas: 
-              "aside" 
-              "article1"
-              "article2";
-            grid-template-columns: 100%;
-            grid-template-rows: 200px 430px 150px;
-          }
+    #article3 {
+        display: none;
     }
+}
+@media (max-width:480px){
+    #aside {
+        width: 100%;
+        height: 200px;
+    }
+    #main {
+        grid-template-areas: 
+            "aside" 
+            "article1"
+            "article2";
+        grid-template-columns: 100%;
+        grid-template-rows: 200px 430px 150px;
+        }
+}
 </pre></code>
                 </div>
             </div>
