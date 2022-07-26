@@ -59,26 +59,26 @@
             </p>
             <div class="t_code">
 <pre><code class="language-css">
-    @media(max-width:1300px){
-        #wrap {
-            width: 96%;
-        }
+@media(max-width:1300px){
+    #wrap {
+        width: 96%;
     }
-    @media(max-width:768px){
-        #wrap {
-            width: 100%;
-        }
+}
+@media(max-width:768px){
+    #wrap {
+        width: 100%;
     }
-    @media(max-width:480px){
-        #aside {
-            width: 100%;
-            height: 300px;
-        }
-        #section {
-            width: 100%;
-            height: 480px;
-        }
+}
+@media(max-width:480px){
+    #aside {
+        width: 100%;
+        height: 300px;
     }
+    #section {
+        width: 100%;
+        height: 480px;
+    }
+}
 </pre></code>
                 
             </div>
@@ -95,41 +95,41 @@
             </p>
             <div class="t_code">
 <pre><code class="language-css">
-    @media(max-width:1300px){
-        #wrap {
-            width: 96%;
-        }
+@media(max-width:1300px){
+    #wrap {
+        width: 96%;
     }
-    @media(max-width:768px){
-        #wrap {
-            width: 100%;
-        }
-        #main {
-            flex-wrap: wrap;
-        }
-        #aside {
-            width: 30%;
-            height: 630px;
-        }
-        #section {
-            width: 70%;
-            height: 630px;
-        }
-        #article {
-            width: 100%;
-            height: 150px;
-        }
+}
+@media(max-width:768px){
+    #wrap {
+        width: 100%;
     }
-    @media(max-width:480px){ 
-        #aside {
-            width: 100%;
-            height: 200px;
-        }
-        #section {
-            width: 100%;
-            height: 430px;
-        }
+    #main {
+        flex-wrap: wrap;
     }
+    #aside {
+        width: 30%;
+        height: 630px;
+    }
+    #section {
+        width: 70%;
+        height: 630px;
+    }
+    #article {
+        width: 100%;
+        height: 150px;
+    }
+}
+@media(max-width:480px){ 
+    #aside {
+        width: 100%;
+        height: 200px;
+    }
+    #section {
+        width: 100%;
+        height: 430px;
+    }
+}
 </pre></code>
                
             </div>
@@ -145,48 +145,48 @@
             </p>
             <div class="t_code">
 <pre><code class="language-css">
-    @media (max-width:1300px){
-        #wrap {
-            width: 96%;
-        }
-        #main {
-            grid-template-areas: 
-                "aside article1 article1"
-                "aside article2 article3"
-                "aside article2 article3";
-            grid-template-columns: 30% 35% 35%;
-            grid-template-rows: 260px 520px;
-            }
+@media (max-width:1300px){
+    #wrap {
+        width: 96%;
     }
-    @media (max-width:768px){
-        #wrap {
-            width: 100%;
+    #main {
+        grid-template-areas: 
+            "aside article1 article1"
+            "aside article2 article3"
+            "aside article2 article3";
+        grid-template-columns: 30% 35% 35%;
+        grid-template-rows: 260px 520px;
         }
-        #main {
-            grid-template-areas: 
-                "aside article1"
-                "aside article2";
-            grid-template-columns: 30% 70%;
-            grid-template-rows: 390px 390px;
-            }
-        #article3 {
-            display: none;
-        }
+}
+@media (max-width:768px){
+    #wrap {
+        width: 100%;
     }
-    @media (max-width:480px){
-        #aside {
-            width: 100%;
-            height: 200px;
+    #main {
+        grid-template-areas: 
+            "aside article1"
+            "aside article2";
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 390px 390px;
         }
-        #main {
-            grid-template-areas: 
-                "aside" 
-                "article1"
-                "article2";
-            grid-template-columns: 100%;
-            grid-template-rows: 200px 430px 150px;
-            }
+    #article3 {
+        display: none;
     }
+}
+@media (max-width:480px){
+    #aside {
+        width: 100%;
+        height: 200px;
+    }
+    #main {
+        grid-template-areas: 
+            "aside" 
+            "article1"
+            "article2";
+        grid-template-columns: 100%;
+        grid-template-rows: 200px 430px 150px;
+        }
+}
 </pre></code>
             </div>
         </div>
