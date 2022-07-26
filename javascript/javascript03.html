@@ -446,12 +446,12 @@
 
         //07. 화살표 함수(매개변수 함수) 
         {
-            //1. function func(str){
+            // 1. function func(str){
             //     document.write(str);
             // }
             // func("함수가 실행되었습니다.7<br>");
 
-            //2. func = (str) => {
+            // 2. func = (str) => {
             //     document.write(str);
             // }
             // func("함수가 실행되었습니다.7<br>");
@@ -459,7 +459,7 @@
             // 3. func = (str) => document.write(str);
             // func("함수가 실행되었습니다.7<br>");
 
-            //4. 앞에 const 생략가능 
+            // 4. 앞에 const 생략가능 
             // func = str => document.write(str)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
         
             // func("함수가 실행되었습니다.7<br>");
@@ -467,17 +467,17 @@
 
         //08. 화살표 함수(리턴값 함수) 
         {
-            // function func(){
-            //     const str = "함수가 실행되었습니다.8<br>";
-            //     return str;
-            // }
-            // document.write(func());
+            function func(){
+                const str = "함수가 실행되었습니다.8<br>";
+                return str;
+            }
+            document.write(func());
 
-            // func = () => { //함수안에 두줄 이상은 한줄로 줄일 수 없음 
-            //     const str = "함수가 실행되었습니다.8<br>";
-            //     return str;
-            // }
-            // document.write(func());
+            func = () => { //함수안에 두줄 이상은 한줄로 줄일 수 없음 
+                const str = "함수가 실행되었습니다.8<br>";
+                return str;
+            }
+            document.write(func());
         }
     </script>
 </body>
