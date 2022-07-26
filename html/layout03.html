@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 레퍼런스북</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dracula.css">
+    <!-- 구글 아이콘 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+</head>
+<body>
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <span>이름 : 김미애</span>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <header class="main_header">
+            <h2>HTML <em>레퍼런스 북</em></h2>
+        </header>
+        <nav class="main_menu">
+            <ul>
+                <li><a href="alphabet.html">알파벳</a></li>
+                <li><a href="basic.html">기초 문법</a></li>
+                <li><a href="block.html">블록구조/인라인구조</a></li>
+                <li><a href="web.html">웹표준/웹접근성/웹호환성</a></li>
+                <li><a href="sementilc.html">시멘틱 태그</a></li>
+                <li><a href="seo.html">검색엔진시스템(SEO)</a></li>
+            </ul>
+            <ul>
+                <li><a href="layout01.html">레이아웃1</a></li>
+                <li><a href="layout02.html">레이아웃2</a></li>
+                <li class="active"><a href="layout03.html">레이아웃3</a></li>
+                <li><a href="layout04.html">레이아웃4</a></li>
+                <li><a href="layout05.html">레이아웃5</a></li>
+            </ul>
+        </nav>
+        <div class="main_refer">
+            <div class="document">
+                <h2 class="t_tit">레이아웃03</h2>
+                <p class="t_desc">
+                    float, flex, grid로 표현한 레이아웃 .
+                </p>
+                <div class="t_iframe">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYlLK0iiUKA630oWeHmkhlY%2F%25EB%25A0%2588%25EC%259D%25B4%25EC%2595%2584%25EC%259B%2583%3Fnode-id%3D29%253A39" allowfullscreen></iframe>
+                </div>
+                <h2 class="t_tit2">float</h2>
+                <p class="t_desc2">
+                    원하는 곳에 float: left, right, none 등 을 준다. 
+                </p>
+                <p class="t_desc">
+                    float을 줄 땐 버그 방지를 위한 방법이 3가지 있다.<br>
+                    1. claer: both;<br>
+                    2. overflow: hidden; <br>
+                    3. .clearfix::before,<br>
+                    .clearfix::after {content: '' " ; display: block; line-height: 0;}<br>
+                    .clearfix::after {clear: both;} <br>
+                </p>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="la3 float" src="https://codepen.io/kimm99604/embed/NWYvZdo?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/kimm99604/pen/NWYvZdo">
+                    la3 float</a> by kimm99604 (<a href="https://codepen.io/kimm99604">@kimm99604</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+                <h3 class="t_tit2">float - 반응형</h3>
+                <p class="t_desc2">
+                    미디어쿼리를 통해 float 반응형을 만들 수 있다. 
+                </p>
+                <div class="t_code">
+<pre><code class="language-css">
+    @media (max-width:1300px){
+        #wrap {
+            width: 96%;
+        }
+        #article2 {
+            width: 35%;
+            height: 520px;
+        }
+        #article3 {
+            width: 35%;
+            height: 520px;
+        }
+    }
+    @media (max-width:768px){
+        #wrap {
+            width: 100%;
+        }
+        #article1 {
+            width: 70%;
+            height: 390px;
+        }
+        #article2 {
+            width: 70%;
+            height: 390px;
+        }
+        #article3 {
+          display: none;
+        }
+    }
+    @media (max-width:480px){
+        #aside {
+            width: 100%;
+            height: 100px;
+        }
+        #article1 {
+            width: 100%;
+            height: 430px;
+        }
+        #article2 {
+            width: 100%;
+            height: 150px;
+        }
+    }
+</pre></code>
+                </div>
+                <h2 class="t_tit2">flex</h2>
+                <p class="t_desc">
+                    부모에 flex를 주면 자식들에게 적용된다.
+                </p>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="la3 flex" src="https://codepen.io/kimm99604/embed/YzaxoZE?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/kimm99604/pen/YzaxoZE">
+                    la3 flex</a> by kimm99604 (<a href="https://codepen.io/kimm99604">@kimm99604</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+                <h3 class="t_tit2">flex - 반응형</h3>
+                <p class="t_desc2">
+                    미디어쿼리를 통해 flex 반응형을 만들 수 있다. 
+                </p>
+                <div class="t_code">
+<pre><code class="language-css">
+    @media (max-width:1300px){
+        #wrap {
+            width: 96%;
+        }
+        #article2 {
+          display: flex;
+        }
+        #article2-1 {
+            width: 50%;
+            height: 520px;
+        }
+        #article2-2 {
+            width: 50%;
+            height: 520px;
+        }
+    }
+    @media (max-width:768px){
+        #wrap {
+            width: 100%;
+        }
+        #article1 {
+            width: 100%;
+            height: 390px;
+        }
+        #article2-1 {
+            width: 100%;
+            height: 390px;
+        }
+        #article2-2 {
+          display: none;
+        }
+    }
+    @media (max-width:480px){
+        #aside {
+            width: 100%;
+            height: 200px;
+        }
+        #article1 {
+            height: 430px;
+        }
+        #article2-1 {
+            height: 150px;
+        }
+    }
+</pre></code>
+                </div>
+                <h3 class="t_tit2">grid</h3>
+                <p class="t_desc2">
+                    display에 grid를 주고 areas를 묶어준다.
+                </p>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="la3 grid" src="https://codepen.io/kimm99604/embed/GRxvbmd?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/kimm99604/pen/GRxvbmd">
+                    la3 grid</a> by kimm99604 (<a href="https://codepen.io/kimm99604">@kimm99604</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+                <h3 class="t_tit2">grid - 반응형</h3>
+                <p class="t_desc2">
+                    미디어쿼리를 통해 flex 반응형을 만들 수 있다. 
+                </p>
+                <div class="t_code">
+<pre><code class="language-css">
+    @media (max-width:1300px){
+        #wrap {
+            width: 96%;
+        }
+        #main {
+            grid-template-areas: 
+              "aside article1 article1"
+              "aside article2 article3"
+              "aside article2 article3";
+            grid-template-columns: 30% 35% 35%;
+            grid-template-rows: 260px 520px;
+          }
+    }
+    @media (max-width:768px){
+        #wrap {
+            width: 100%;
+        }
+        #main {
+            grid-template-areas: 
+              "aside article1"
+              "aside article2";
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 390px 390px;
+          }
+        #article3 {
+          display: none;
+        }
+    }
+    @media (max-width:480px){
+        #aside {
+            width: 100%;
+            height: 200px;
+        }
+        #main {
+            grid-template-areas: 
+              "aside" 
+              "article1"
+              "article2";
+            grid-template-columns: 100%;
+            grid-template-rows: 200px 430px 150px;
+          }
+    }
+</pre></code>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:kimm9964@naver.com">kimm9964@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+</html>

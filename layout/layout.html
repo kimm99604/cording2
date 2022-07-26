@@ -47,37 +47,40 @@
             <p class="t_desc">
                 float을 줄 땐 버그 방지를 위한 방법이 3가지 있다.<br>
                 1. claer: both;<br>
-2. overflow: hidden; <br>
-3. .clearfix::before,<br>
-.clearfix::after {content: '' " ; display: block; line-height: 0;}<br>
-.clearfix::after {clear: both;} <br>
+                2. overflow: hidden; <br>
+                3. .clearfix::before,<br>
+                .clearfix::after {content: '' " ; display: block; line-height: 0;}<br>
+                .clearfix::after {clear: both;} <br>
             </p>
 
             <h3 class="t_tit2">레이아웃 float - 반응형</h3>
             <p class="t_desc2">
                 미디어쿼리를 통해 float 반응형을 만들 수 있다. 
             </p>
-            <div class="t_box">
-                @media(max-width:1300px){
-                    #wrap {
-                        width: 96%;
-                    }
-                }
-                @media(max-width:768px){
-                    #wrap {
-                        width: 100%;
-                    }
-                }
-                @media(max-width:480px){
-                    #aside {
-                        width: 100%;
-                        height: 300px;
-                    }
-                    #section {
-                        width: 100%;
-                        height: 480px;
-                    }
-                }
+            <div class="t_code">
+<pre><code class="language-css">
+    @media(max-width:1300px){
+        #wrap {
+            width: 96%;
+        }
+    }
+    @media(max-width:768px){
+        #wrap {
+            width: 100%;
+        }
+    }
+    @media(max-width:480px){
+        #aside {
+            width: 100%;
+            height: 300px;
+        }
+        #section {
+            width: 100%;
+            height: 480px;
+        }
+    }
+</pre></code>
+                
             </div>
            
 
@@ -90,42 +93,45 @@
             <p class="t_desc2">
                 미디어쿼리를 통해 flex 반응형을 만들 수 있다.  
             </p>
-            <div class="t_box">
-                @media(max-width:1300px){
-                    #wrap {
-                        width: 96%;
-                    }
-                }
-                @media(max-width:768px){
-                    #wrap {
-                        width: 100%;
-                    }
-                    #main {
-                        flex-wrap: wrap;
-                    }
-                    #aside {
-                        width: 30%;
-                        height: 630px;
-                    }
-                    #section {
-                        width: 70%;
-                        height: 630px;
-                    }
-                    #article {
-                        width: 100%;
-                        height: 150px;
-                    }
-                }
-                @media(max-width:480px){ 
-                    #aside {
-                        width: 100%;
-                        height: 200px;
-                    }
-                    #section {
-                        width: 100%;
-                        height: 430px;
-                    }
-                }
+            <div class="t_code">
+<pre><code class="language-css">
+    @media(max-width:1300px){
+        #wrap {
+            width: 96%;
+        }
+    }
+    @media(max-width:768px){
+        #wrap {
+            width: 100%;
+        }
+        #main {
+            flex-wrap: wrap;
+        }
+        #aside {
+            width: 30%;
+            height: 630px;
+        }
+        #section {
+            width: 70%;
+            height: 630px;
+        }
+        #article {
+            width: 100%;
+            height: 150px;
+        }
+    }
+    @media(max-width:480px){ 
+        #aside {
+            width: 100%;
+            height: 200px;
+        }
+        #section {
+            width: 100%;
+            height: 430px;
+        }
+    }
+</pre></code>
+               
             </div>
            
             <h3 class="t_tit2">레이아웃 grid</h3>
@@ -137,51 +143,53 @@
             <p class="t_desc2">
                 미디어쿼리를 통해 grid 반응형을 만들 수 있다. 
             </p>
-            <div class="t_box">
-                @media (max-width:1300px){
-                    #wrap {
-                        width: 96%;
-                    }
-                    #main {
-                        grid-template-areas: 
-                          "aside article1 article1"
-                          "aside article2 article3"
-                          "aside article2 article3";
-                        grid-template-columns: 30% 35% 35%;
-                        grid-template-rows: 260px 520px;
-                      }
-                }
-                @media (max-width:768px){
-                    #wrap {
-                        width: 100%;
-                    }
-                    #main {
-                        grid-template-areas: 
-                          "aside article1"
-                          "aside article2";
-                        grid-template-columns: 30% 70%;
-                        grid-template-rows: 390px 390px;
-                      }
-                    #article3 {
-                      display: none;
-                    }
-                }
-                @media (max-width:480px){
-                    #aside {
-                        width: 100%;
-                        height: 200px;
-                    }
-                    #main {
-                        grid-template-areas: 
-                          "aside" 
-                          "article1"
-                          "article2";
-                        grid-template-columns: 100%;
-                        grid-template-rows: 200px 430px 150px;
-                      }
-                }
+            <div class="t_code">
+<pre><code class="language-css">
+    @media (max-width:1300px){
+        #wrap {
+            width: 96%;
+        }
+        #main {
+            grid-template-areas: 
+                "aside article1 article1"
+                "aside article2 article3"
+                "aside article2 article3";
+            grid-template-columns: 30% 35% 35%;
+            grid-template-rows: 260px 520px;
+            }
+    }
+    @media (max-width:768px){
+        #wrap {
+            width: 100%;
+        }
+        #main {
+            grid-template-areas: 
+                "aside article1"
+                "aside article2";
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 390px 390px;
+            }
+        #article3 {
+            display: none;
+        }
+    }
+    @media (max-width:480px){
+        #aside {
+            width: 100%;
+            height: 200px;
+        }
+        #main {
+            grid-template-areas: 
+                "aside" 
+                "article1"
+                "article2";
+            grid-template-columns: 100%;
+            grid-template-rows: 200px 430px 150px;
+            }
+    }
+</pre></code>
             </div>
-
+        </div>
     </main>
     <!-- //main -->
     <footer id="footer">

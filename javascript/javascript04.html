@@ -34,6 +34,7 @@
                 <li><a href="study/for.html">반복문</a></li>
                 <li><a href="study/if.html">조건문</a></li>
                 <li><a href="study/type.html">데이터 타입</a></li>
+                <li><a href="study/function.html">함수</a></li>
             </ul>
         </nav>
     </header>
@@ -63,10 +64,10 @@
                 <div class="script">
 <pre><code class="language-js">{
     if (1) {
-         document.write("실행되었습니다(true).");
+        document.write("실행되었습니다(true).");
     }
     else {
-         document.write("실행되었습니다(false).");
+        document.write("실행되었습니다(false).");
     }
 }
 </code></pre>
@@ -77,11 +78,11 @@
                         <div class="sample01_result">
                             <script>
                                if (1) {
-         document.write("실행되었습니다(true).");
-    }
-    else {
-         document.write("실행되었습니다(false).");
-    }
+                                    document.write("실행되었습니다(true).");
+                                }
+                                else {
+                                    document.write("실행되었습니다(false).");
+                                }
                             </script>
                         </div>
                     </details>
@@ -108,8 +109,8 @@
                             <script>
                                   const num = 100;
 
-if (num) document.write("실행되었습니다(true).");
-else document.write("실행되었습니다(false).");
+                                    if (num) document.write("실행되었습니다(true).");
+                                    else document.write("실행되었습니다(false).");
                             </script>
                         </div>
                     </details>
@@ -266,7 +267,7 @@ else document.write("실행되었습니다(false).");
     let num = 1;
 
     while(num <= 5){
-         document.write("실행되었습니다.");
+        document.write("실행되었습니다.");
         num++;
     }
 
@@ -297,10 +298,10 @@ else document.write("실행되었습니다(false).");
 <pre><code class="language-js">{
     let num = 1;
 
-            do{
-                document.write("실행되었습니다.");
-                num++;
-            }while(num <= 5)
+    do {
+        document.write("실행되었습니다.");
+        num++;
+    }while(num <= 5)
 }
 </code></pre>
                 </div>
@@ -343,12 +344,12 @@ else document.write("실행되었습니다(false).");
                         <div class="sample09_result">
                             <script>
                                for(let i = 0; i < 100; i++){
-         document.write(i + "실행되었습니다.");
-    }
-    let num1 = [1,2,3,4,5,6];
-    for(let i = 0; i < num1.length; i++){
-         document.write(num1[i] + "실행되었습니다.");
-    }
+                                    document.write(i + "실행되었습니다.");
+                                }
+                                let num1 = [1,2,3,4,5,6];
+                                for(let i = 0; i < num1.length; i++){
+                                    document.write(num1[i] + "실행되었습니다.");
+                                }
     
                             </script>
                         </div>
@@ -376,16 +377,17 @@ else document.write("실행되었습니다(false).");
                         <div class="sample10_result">
                             <script>
                                  for(let i = 1; i <= 2; i++){
-        for(let j = 1; j <= 5; j++){
-            document.write(i+"*"+j+"="+i*j);
-        }
-    }
+                                    for(let j = 1; j <= 5; j++){
+                                        document.write(i+"*"+j+"="+i*j);
+                                    }
+                                }
                             </script>
                         </div>
                     </details>
                 </div>
             </div>
             <!-- //sample10 -->
+
     </main>
     <!-- //main -->
 
