@@ -44,41 +44,92 @@
             <h2 class="t_tit">데이터 타입(Data Type)</h2>
             <p class="t_desc">데이터 타입은 변수에 저장되는 데이터 유형으로 원시 데이터 타입과 객체 데이터 타입으로 나눌 수 있습니다.
             </p>
-
+            
             <hr>
 
             <h3 class="t_tit2">number(숫자)데이터</h3>
             <p class="t_desc">숫자 데이터는 정수, 소수점, 지수를 표현할 수 있습니다. 
             </p>
+            <div class="t_code">
+<pre><code>let num1 = 10;
+var num2 = 10.5; 
+let num3 = 1e+2; //1*10의 2승을 의미
+</code></pre>
+            </div>
 
             <h3 class="t_tit2">string(문자)데이터</h3>
             <p class="t_desc">문자 데이터는 ' ' 또는 " " 으로 표현할 수 있습니다. 
                 보통 문자데이터는 작은 따옴표로 많이 표현합니다.
             </p>
-
+            <div class="t_code">
+<pre><code>let str1 = 'javascript';
+let str2 = "html";
+let str3 = '문자는 "문자"';  //문자안에 문자가 들어갈 경우1
+let str3 = "문자는 '문자'";  //문자안에 문자가 들어갈 경우2
+</code></pre>
+            </div>
 
             <h3 class="t_tit2">논리(boolean)데이터</h3>
             <p class="t_desc">논리 데이터는 true(참)와 false(거짓)의 값을 표현합니다.<br>
                 boolean ()명령어는 변수의 값을 false나 true로 변환시켜주는 명령어입니다.
             </p>
+            <div class="t_code">
+<pre><code>let tem1 = (5 > 4);
+let tem2 = (5 < 4);
+console.log(temp1); // true
+console.log(temp2); // false
+
+let tem3 = 0; //0은 boolean에서 false를 의미함
+let tem4 = 1; //1은 boolean에서 true를 의미함
+console.log(temp3); //false
+console.log(temp4); //true
+</code></pre>
+            </div>
 
             <h3 class="t_tit2">undefined 데이터</h3>
             <p class="t_desc">undefined 데이터는 변수는 선언하였으나 데이터 값을 지정하지 않았을 경우나 객체의 속성 값을 지정하지 않았을 경우에
                 자동으로 저장되는 값입니다.
             </p>
+            <div class="t_code">
+<pre><code>let temp2;
+console.log(temp2); //undefined 
+
+let obj = {};
+obj.name = '홍길동';
+obj.age;
+console.log(obj.name); //홍길동
+console.log(obj.age); //undefined 
+</code></pre>
+            </div>
 
             <h3 class="t_tit2">null 데이터</h3>
             <p class="t_desc">null 데이터는 undefined와 유사하지만 변수를 빈(empty) 상태(초기화)로 만들거나,
                 데이터를 저장하였으나 값이 존재하지 않을 때 null값을 반환합니다.
             </p>
+            <div class="t_code">
+<pre><code>var obj = 10;
+obj = null;
+console.log(obj); //null, 변수를 빈(empty)상태로 만듭니다.
+var obj = document.getElementById('gnb');
+console.log(obj); //변수에 데이터 값을 저장은 하였으나 값이 존재하지 않을 경우 null을 저장합니다.
+
+let obj1; //undefined
+let obj2 = null; //null
+console.log(Boolean(obj1)); //false
+console.log((Boolean(obj2)); //false
+</code></pre>
+            </div>
 
             <h3 class="t_tit2">typeof 명령</h3>
             <p class="t_desc">변수에 저장 되어 있는 데이터의 타입을 알아보려면 typeof명령을 사용합니다.
             </p>
-           
-        </div>
-
-       
+            <div class="t_code">
+<pre><code>var num = 10;
+var str = '문자';
+console.log(typeof num); //number
+console.log(typeof str); //string
+</code></pre>
+            </div>
         </div>
     </main>
     <!-- //main -->
