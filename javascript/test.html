@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //1. 선언적 함수 
+    {
+    function func (){
+        document.write("실행되었습니다.1");
+    }
+    func();
+    }
+    //2. 익명 함수
+    {
+    const func = function () {
+        document.write("실행되었습니다.2");
+    }
+    func();
+    }
+    //3. 매개변수 함수 
+    {
+    function func2 (str){
+       document.write(str);
+    }
+    func2("실행되었습니다.3");
+    }
+    //4. 리턴값 함수 
+    {
+    function func (){
+        let str = "실행되었습니다4" ;
+        return str ;
+    }
+    document.write(func());
+    }
+    //5. 화살표 - 선언 
+    {
+    func = () => {
+        document.write("실행되었습니다.5");
+    }
+    func();
+    }
+    //6. 화살표 - 익명 
+    {
+    const func = () => {
+        document.write("실행되었습니다.6");
+    }
+    func();
+    }
+    //7. 화살표 - 매개
+    {
+    func = (str) => {
+        document.write("실행되었습니다.7");
+    }
+    func(str);
+    }
+    //8. 화살표 - 리턴값
+    {
+    func = () => {
+        let str = "실행되었습니다8" ;
+        return str ;
+    }
+    document.write(func());
+    }
+    </script>
+</body>
+</html>
