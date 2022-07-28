@@ -35,6 +35,7 @@
                 <li><a href="if.html">조건문</a></li>
                 <li><a href="type.html">데이터 타입</a></li>
                 <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
             </ul>
         </nav>
     </header>
@@ -59,12 +60,10 @@
              </p>
              <div class="t_code">
 <pre><code class="language-js">//01. 선언적 함수
-{
-    function func(){
-        document.write("함수가 실행되었습니다.1");
-    }
-    func(); // 함수를 꼭 호출해줘야 실행됨 
+function func() {
+    document.write("함수가 실행되었습니다.1");
 }
+func(); // 함수를 꼭 호출해줘야 실행됨 
 </code></pre>
             </div>
 
@@ -81,12 +80,10 @@
              </p>
              <div class="t_code">
 <pre><code class="language-js">//02. 익명 함수
-{
-    const func = function(){
-        document.write("함수가 실행되었습니다.2");
-    }
-    func(); 
+const func = function() {
+    document.write("함수가 실행되었습니다.2");
 }
+func(); 
 </code></pre>
             </div>
 
@@ -106,12 +103,10 @@
              <div class="t_code">
 <pre><code class="language-js"> //03. 매개변수(parameter) 함수
 //변수 : 지역변수, 전역변수, 매개변수
-{
-    function func(str){     //str은 매개변수임 
-        document.write(str);
-    }
-    func("함수가 실행되었습니다.3");
+function func(str){     //str은 매개변수임 
+    document.write(str);
 }
+func("함수가 실행되었습니다.3");
 </code></pre>
             </div>
 
@@ -129,13 +124,11 @@
              </p>
              <div class="t_code">
 <pre><code class="language-js">//04. 리턴값 함수
-{
-    function func(){
-        const str = "함수가 실행되었습니다.4";
-        return str; //리턴값에 str문자열 저장 /실행문이 있으면 return생략가능 
-    }
-    document.write(func()); //return값이 있기때문에 document에 함수 선언가능
+function func(){
+    const str = "함수가 실행되었습니다.4";
+    return str; //리턴값에 str문자열 저장 /실행문이 있으면 return생략가능 
 }
+document.write(func()); //return값이 있기때문에 document에 함수 선언가능
 </code></pre>
             </div>
 
@@ -152,27 +145,25 @@
              </p>
             <div class="t_code">
 <pre><code class="language-js">//화살표 함수 
-{
-    //1.
-    function func(str){
-        document.write(str);
-    }
-    func("함수가 실행되었습니다.");
-
-    //2. 
-    func = (str) => {
-        document.write(str);
-    }
-    func("함수가 실행되었습니다.");
-
-    //3. 
-    func = (str) => document.write(str);
-    func("함수가 실행되었습니다.");
-
-    //4. 앞에 const 생략가능 
-    func = str => document.write(str);
-    func("함수가 실행되었습니다.");
+//1.
+function func(str){
+    document.write(str);
 }
+func("함수가 실행되었습니다.");
+
+//2. 
+func = (str) => {
+    document.write(str);
+}
+func("함수가 실행되었습니다.");
+
+//3. 
+func = (str) => document.write(str);
+func("함수가 실행되었습니다.");
+
+//4. 앞에 const 생략가능 
+func = str => document.write(str);
+func("함수가 실행되었습니다.");
 </code></pre>
             </div>
         </div>
