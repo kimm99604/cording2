@@ -2,9 +2,6 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'NexonLv1Gothic';
-    font-size: 16px;
-    line-height: 1.6;
 }
 
 /* 링크 초기화 */
@@ -23,7 +20,12 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 
-/* 기울기 초기화 */
+/* 볼드체 초기화 */
+strong {
+    font-weight: normal;
+}
+
+/* 이탈리 초기화 */
 em, i {
     font-style: normal;
 }
@@ -38,9 +40,15 @@ table {
 /* 기본셋팅 */
 :root {
     font-size: 22px;
+    --fontTitle: "OKDdung";
+    --fontSub: "UtoImageTree";
+    --fontDocs: "SCoreDream";
     --white: #ffff;
     --black: #000;
-    --bgMain: #f4b861; /*변수 선언 가능*/
+    --orange: #e5774f;
+    --orange2: #eb943a;
+    --red: #c54435;
+    --bgMain: #f4b861; 
     --bgSub: #fef2e0;
     --brown: #762917;
 }
@@ -74,7 +82,88 @@ body {
     padding: 80px;
     text-align: center;
 }
+.main__title h1 strong {
+    color: var(--orange2);
+}
 .main__title h1 {
-    font-family: OKDdung;
+    font-family: var(--fontTitle);
     font-size: 8vw;
+    color: var(--orange);
+    white-space: nowrap; /* 줄바꿈 기능 x*/
+}
+.main__title em {
+    font-family: var(--fontSub);
+    font-size: 100px;
+    color: var(--brown);
+}
+.main__title p {
+    font-family: var(--fontSub);
+    font-size: 30px;
+    color: var(--brown);
+    margin-top: 50px;
+}
+
+/* main__desc */
+.main__desc {
+    margin: 200px 20px;
+    border: 4px solid var(--brown);
+    background-color: var(--bgSub);
+    padding: 80px;
+}
+.main__desc .title {
+    display: flex;
+    justify-content: space-between; /*양쪽 정렬*/
+    margin-bottom: 2rem;
+}
+.main__desc .title h2 {
+    width: 35%;
+    border: 4px solid var(--brown);
+    font-size: 2rem; /*1rem=22px로 맞춰놓음*/
+    padding: 0.7rem 1rem 0.5rem 80px;
+    font-family: var(--fontDocs);
+    font-weight: 900;
+    color: var(--brown);
+    position: relative;
+    box-sizing: border-box;
+}
+
+.main__desc .title h2::before {
+    content: '';
+    width: 50px;
+    height: 100%;
+    background-color: var(--red);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-right: 4px solid var(--brown);
+}
+.main__desc .title p {
+    width: 60%;
+    font-family: var(--fontSub);
+    font-size: 1.3rem;
+    line-height: 1.3;
+    color: var(--brown);
+}
+
+.main__desc .table {
+    border: 3px solid var(--brown);
+    font-family: var(--fontDocs);
+    font-size: 0.7rem;
+}
+.main__desc .table tr th {
+    background-color: rgba(0,0,0,0.08);
+    font-weight: normal;
+}
+.main__desc .table tr th,
+.main__desc .table tr td {
+    border: 1px solid var(--brown);
+    padding: 10px;
+    text-align: center;
+}
+.main__desc .table tr td:nth-child(3){
+    text-align: left;
+}
+.main__desc .table tr td span {
+    font-size: 16px;
+    padding-top: 4px;
 }
