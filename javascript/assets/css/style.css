@@ -67,6 +67,12 @@ body {
     display: inline-block;
     margin-bottom: 7px;
 }
+.header_nav .effect li a {
+    border-radius: 40px;
+}
+.header_nav .effect {
+    margin-top: 10px;
+}
 .header_nav ul li a:hover {
     background-color: #000;
     color: #fff;
