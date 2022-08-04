@@ -12,8 +12,8 @@ https://kimm99604.github.io/cording2/javascript/javascript01.html
 https://kimm99604.github.io/cording2/javascript/javascript02.html
 
 ### 퀴즈 이펙트 
-https://kimm99604.github.io/cording2/javascript/effect/quizeffect01.html   
-https://kimm99604.github.io/cording2/javascript/effect/quizeffect02.html   
+https://kimm99604.github.io/cording2/javascript/effect/quizEffect01.html   
+https://kimm99604.github.io/cording2/javascript/effect/quizEffect02.html   
 
 ### HTML 메인 페이지 
 https://kimm99604.github.io/cording2/html/index.html  
