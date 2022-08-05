@@ -213,95 +213,32 @@
         ]
 
         //문제출력
-        //1번
-        // quizType[0].textContent = quizInfo[0].answerType;
-        // quizNumber[0].textContent = quizInfo[0].answerNum;
-        // quizAsk[0].textContent = quizInfo[0].answerAsk;
-        // quizResult[0].textContent = quizInfo[0].answerResult;
+        for(i=0;i<quizInfo.length;i++){
+            quizType[i].innerText = quizInfo[i].answerType;
+            quizNumber[i].innerText = quizInfo[i].answerNum;
+            quizAsk[i].innerText = quizInfo[i].answerAsk;
+            quizResult[i].innerText = quizInfo[i].answerResult;
+        }
 
-        // //2번
-        // quizType[1].textContent = quizInfo[1].answerType;
-        // quizNumber[1].textContent = quizInfo[1].answerNum;
-        // quizAsk[1].textContent = quizInfo[1].answerAsk;
-        // quizResult[1].textContent = quizInfo[1].answerResult;
+        //정답숨김
+        for(i=0;i<quizInfo.length;i++){
+            quizResult[i].style.display = "none";
+        }
 
-        // //3번
-        // quizType[2].textContent = quizInfo[2].answerType;
-        // quizNumber[2].textContent = quizInfo[2].answerNum;
-        // quizAsk[2].textContent = quizInfo[2].answerAsk;
-        // quizResult[2].textContent = quizInfo[2].answerResult;
-
-        // //4번 
-        // quizType[3].textContent = quizInfo[3].answerType;
-        // quizNumber[3].textContent = quizInfo[3].answerNum;
-        // quizAsk[3].textContent = quizInfo[3].answerAsk;
-        // quizResult[3].textContent = quizInfo[3].answerResult;
-
-        // for(i=0; i<quizInfo.lenght; i++){ //for문을 통해 출력 
-        //     quizType[i].textContent = quizInfo[i].answerType;
-        //     quizNumber[i].textContent = quizInfo[i].answerNum;
-        //     quizAsk[i].textContent = quizInfo[i].answerAsk;
-        //     quizResult[i].textContent = quizInfo[i].answerResult;
-        // }
-
-        quizInfo.forEach((element,index) => {
-            quizType[index].textContent = quizInfo[index].answerType;
-            quizNumber[index].textContent = quizInfo[index].answerNum;
-            quizAsk[index].textContent = quizInfo[index].answerAsk;
-            quizResult[index].textContent = quizInfo[index].answerResult;
-        });
-
-        //정답 숨기기
-        // quizResult[0].style.display = "none";
-        // quizResult[1].style.display = "none";
-        // quizResult[2].style.display = "none";
-        // quizResult[3].style.display = "none";
-
-        // for(i=0; i<quizInfo.length; i++){
-        //     quizResult[i].style.display = "none";
-        // }
-       
-        quizInfo.forEach((element,index) => {
-            quizResult[index].style.display = "none";
-        });
-
-        //정답 확인
-
-        // quizConfirm.addEvnetListener("click", ()=>{
-        //     alert("dd")
-        // }); //quizConfirm이 하나일 때만 사용 가능 
-
-        // quizConfirm.forEach((btn) => {
-        //     btn.addEventListener("click",()=>{
-        //         alert("dd")
-        //     })
-        // });
-
-       
-
-        quizConfirm.forEach((btn, num) => { 
-            btn.addEventListener("click",()=>{
+        //버튼 확인 & 정답
+        quizConfirm.forEach((btn, num) => {
+            btn.addEventListener("click", () => {
                
-                //사용자 정답
-                const userWord = quizInput[num].value.toLowerCase().trim(); 
-
-                //사용자 정답 == 문제정답
+                const userWord = quizInput[num].value;
+                
                 if(userWord == quizInfo[num].answerResult){
-                    //정답
-                    // alert("정답")
-                    quizView[num].classList.add("like");
-                    quizConfirm[num].style.display = "none";
-                    quizInput[num].style.display = "none";
+                    quizView[num].classList.add("like")
                 } else {
-                    //오답
-                    // alert("오답")
-                    quizView[num].classList.add("dislike");
-                    quizConfirm[num].style.display = "none";
-                    quizResult[num].style.display = "block";
-                    quizInput[num].style.display = "none";
+                    quizView[num].classList.add("dislike")
                 }
             })
         });
+       
     </script>
 </body>
 0

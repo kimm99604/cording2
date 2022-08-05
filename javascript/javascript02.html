@@ -45,6 +45,7 @@
                 <li><a href="study/type.html">데이터 타입</a></li>
                 <li><a href="study/function.html">함수</a></li>
                 <li><a href="study/var.html">지역변수/전역변수</a></li>
+                <li><a href="study/element.html">요소 선택</a></li>
             </ul>
         </nav>
     </header>
@@ -493,7 +494,7 @@
 
             <div id="sample15" class="sample">
                 <h3>15. 객체 : 데이터 불러오기 : 변수</h3>
-                <p>변수를 통해 데이터를 불러옵니다.</p>
+                <p>객체를 변수를 통해 데이터를 불러옵니다.</p>
                 <div class="script">
 <pre><code class="language-js">{
     const obj = {
@@ -523,9 +524,9 @@
                                     c:"javascript"
                                 }
 
-                                const name1 = obj2.a+"<br>"; 
-                                const name2 = obj2.b+"<br>";
-                                const name3 = obj2.c+"<br>";
+                                const name1 = obj2.a; 
+                                const name2 = obj2.b;
+                                const name3 = obj2.c;
 
                                 document.write(name1+"<br>"); 
                                 document.write(name2+"<br>");
@@ -566,7 +567,7 @@
                             }
 
                             for(let i in obj3){
-                                document.write(obj3[i]);
+                                document.write(obj3[i]+"<br>");
                             }
                          </script>
                         </div>
@@ -577,7 +578,7 @@
 
             <div id="sample17" class="sample">
                 <h3>17. 객체 : 데이터 불러오기 : map()</h3>
-                <p>map()을 통해 데이터를 불러옵니다.</p>
+                <p>map()을 통해 객체 데이터를 불러옵니다.</p>
                 <div class="script">
 <pre><code class="language-js">{
     const obj = [
@@ -602,10 +603,9 @@
                                     {a:100, b:200, c:"javascript"}
                                 ];
 
-                                //obj.map(function(){});  기본형태 
-                                obj.map((el) => {
-                                    document.write(el.a);
-                                    document.write(el.b);
+                                obj4.map((el) => {
+                                    document.write(el.a+"<br>");
+                                    document.write(el.b+"<br>");
                                     document.write(el.c);
                                 });
                          </script>
@@ -654,6 +654,7 @@
                                 document.write("a" in obj5); 
                                 document.write("b" in obj5);
                                 document.write("c" in obj5);
+                                document.write("d" in obj5);
                          </script>
                         </div>
                     </details>

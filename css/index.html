@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +13,7 @@
     <link href="https://webfontworld.github.io/ok/OKDdung.css" rel="stylesheet">
     <link href="https://webfontworld.github.io/utoImagetree/UtoImageTree.css" rel="stylesheet">
     <link href="https://webfontworld.github.io/score/SCoreDream.css" rel="stylesheet">
-    
+
     <!-- 구글아이콘 -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -31,6 +32,7 @@
             --circle-sizing: 18rem;
             --circle-rotate: 0deg;
         }
+
         .tiger {
             margin: 50px auto;
             position: relative;
@@ -41,11 +43,13 @@
             transition: 0.5s ease-in-out;
             cursor: pointer;
         }
+
         .tiger *,
         .tiger *::before,
         .tiger *::after {
             position: absolute;
         }
+
         .tiger-eye {
             border-top-left-radius: 50% 60%;
             border-top-right-radius: 50% 60%;
@@ -61,12 +65,15 @@
             -webkit-animation: blinky 7s infinite;
             animation: blinky 7s infinite;
         }
+
         .tiger-eye-left {
             left: var(--position);
         }
+
         .tiger-eye-right {
             right: var(--position);
         }
+
         .tiger-eyebrow {
             --position: 2rem;
             --flip: 1;
@@ -78,15 +85,19 @@
             border-radius: 100%;
             background-color: var(--secondary-color);
         }
+
         .tiger-eyebrow-left {
             left: var(--position);
         }
+
         .tiger-eyebrow-right {
             right: var(--position);
         }
+
         .tiger-eyebrow-left {
             --flip: -1;
         }
+
         .tiger-nose {
             --sizing: 1rem;
             z-index: 4;
@@ -101,6 +112,7 @@
             border-bottom-right-radius: 0.125rem;
             background-color: var(--accent-color);
         }
+
         .tiger-snout {
             --offset: -0.125rem;
             --flipper: 1;
@@ -110,6 +122,7 @@
             height: 2.25rem;
             width: 2rem;
         }
+
         .tiger-snout::before,
         .tiger-snout::after {
             content: "";
@@ -120,13 +133,16 @@
             background-color: var(--secondary-color);
             transform: rotate(calc(50deg * var(--flipper)));
         }
+
         .tiger-snout::before {
             right: calc(100% + var(--offset));
         }
+
         .tiger-snout::after {
             --flipper: -1;
             left: var(--offset);
         }
+
         .tiger-blush {
             --position: 1.5rem;
             z-index: 2;
@@ -137,12 +153,15 @@
             background-color: var(--accent-color);
             opacity: 0.5;
         }
+
         .tiger-blush-left {
             left: var(--position);
         }
+
         .tiger-blush-right {
             right: var(--position);
         }
+
         .tiger-face-fluff {
             --position: 1.25rem;
             --flip: 1;
@@ -157,12 +176,15 @@
             border-bottom-right-radius: 50% 100%;
             background-color: var(--primary-color);
         }
+
         .tiger-face-fluff-left {
             left: var(--position);
         }
+
         .tiger-face-fluff-right {
             right: var(--position);
         }
+
         .tiger-face-fluff::before {
             content: "";
             bottom: 0.25rem;
@@ -174,13 +196,16 @@
             border-radius: inherit;
             background-color: inherit;
         }
+
         .tiger-face-fluff-right {
             --flip: -1;
             --right: var(--before-pos);
         }
+
         .tiger-face-fluff-left {
             --left: var(--before-pos);
         }
+
         .tiger-stripes-top {
             top: 0;
             height: 4rem;
@@ -189,6 +214,7 @@
             border-bottom-right-radius: 50%;
             background-color: var(--black);
         }
+
         .tiger-stripes-top,
         .tiger-stripes-top::before,
         .tiger-stripes-top::after {
@@ -196,31 +222,38 @@
             transform: translateX(-50%);
             background-color: var(--black);
         }
+
         .tiger-stripes-top::before,
         .tiger-stripes-top::after {
             content: "";
             height: 0.75rem;
             border-radius: 50%;
         }
+
         .tiger-stripes-top::before {
             top: 0.75rem;
             width: 3rem;
         }
+
         .tiger-stripes-top::after {
             top: 2rem;
             width: 2.5rem;
         }
+
         .tiger-stripes-side {
             --position: -0.5rem;
             --flip: 1;
             top: 5.5rem;
         }
+
         .tiger-stripes-side-left {
             left: var(--position);
         }
+
         .tiger-stripes-side-right {
             right: var(--position);
         }
+
         .tiger-stripes-side::before,
         .tiger-stripes-side::after {
             content: "";
@@ -230,22 +263,27 @@
             border-bottom-right-radius: 50% 100%;
             background-color: var(--black);
         }
+
         .tiger-stripes-side::before {
             height: 1.25rem;
             transform: rotate(calc(85deg * var(--flip)));
         }
+
         .tiger-stripes-side::after {
             top: 1rem;
             height: 1rem;
             transform: rotate(calc(90deg * var(--flip)));
         }
+
         .tiger-stripes-side-left {
             --flip: -1;
         }
+
         .tiger-stripes-side-right::before,
         .tiger-stripes-side-right::after {
             right: 0;
         }
+
         .tiger-face {
             border-top-left-radius: 50% 65%;
             border-top-right-radius: 50% 65%;
@@ -255,10 +293,12 @@
             inset: 0;
             background-color: var(--primary-color);
         }
+
         .tiger-face-mask {
             background-color: transparent;
             overflow: hidden;
         }
+
         .tiger-ear {
             --position: -0.5rem;
             --flip: 1;
@@ -272,21 +312,26 @@
             background-color: var(--primary-color);
             overflow: hidden;
         }
+
         .tiger-ear-left {
             left: var(--position);
         }
+
         .tiger-ear-right {
             right: var(--position);
         }
+
         .tiger-ear::before,
         .tiger-ear::after {
             content: "";
         }
+
         .tiger-ear::before {
             inset: 1rem;
             border-radius: 50%;
             background-color: var(--accent-color);
         }
+
         .tiger-ear::after {
             top: -1rem;
             left: var(--inner-left);
@@ -297,15 +342,18 @@
             border-radius: 100%;
             background-color: var(--black);
         }
+
         .tiger-ear-left {
             --flip: -1;
             --inner-right: var(--inner-position);
         }
+
         .tiger-ear-right {
             --inner-left: var(--inner-position);
             -webkit-animation: earTwitch 3s infinite;
             animation: earTwitch 3s infinite;
         }
+
         .tiger-head {
             z-index: 2;
             bottom: 1.5rem;
@@ -316,6 +364,7 @@
             transform-origin: center bottom;
             transition: 0.4s ease-out;
         }
+
         .tiger-head::before {
             content: "";
             left: 50%;
@@ -326,6 +375,7 @@
             border-radius: 100%;
             background-color: var(--secondary-color-dark);
         }
+
         .tiger-paw {
             --position: 1.5rem;
             --flip: 1;
@@ -337,18 +387,22 @@
             background-color: var(--secondary-color);
             border-radius: 2rem;
         }
+
         .tiger-paw-left {
             left: var(--position);
         }
+
         .tiger-paw-right {
             right: var(--position);
         }
+
         .tiger-paw::before,
         .tiger-paw::after {
             content: "";
             left: 50%;
             transform: translateX(-50%);
         }
+
         .tiger-paw::before {
             z-index: 1;
             bottom: -0.25rem;
@@ -357,6 +411,7 @@
             border-radius: 1rem;
             background-color: var(--secondary-color);
         }
+
         .tiger-paw::after {
             bottom: 0;
             width: 2.5rem;
@@ -364,9 +419,11 @@
             border-radius: 1.5rem;
             background-color: var(--secondary-color-dark);
         }
+
         .tiger-paw-right {
             --flip: -1;
         }
+
         .tiger-chest {
             border-top-left-radius: 50% 80%;
             border-top-right-radius: 50% 80%;
@@ -375,6 +432,7 @@
             inset: 0;
             background-color: var(--primary-color);
         }
+
         .tiger-chest::before {
             content: "";
             left: 50%;
@@ -384,6 +442,7 @@
             border-radius: inherit;
             background-color: var(--secondary-color);
         }
+
         .tiger-body {
             bottom: -2rem;
             left: 50%;
@@ -391,22 +450,26 @@
             height: 8rem;
             transform: translateX(-50%);
         }
+
         .tiger-front {
             background-color: var(--secondary-color-tint);
             transform: translateZ(0.25rem);
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
         }
+
         .tiger-front,
         .tiger-front-mask {
             inset: 0;
             border-radius: 100%;
         }
+
         .tiger-front-mask {
             overflow: hidden;
             transform: translateZ(0);
             border: 6px solid var;
         }
+
         .tiger-cross {
             --flip: 1;
             top: 4.5rem;
@@ -415,6 +478,7 @@
             width: 1.5rem;
             transform: translateX(-50%);
         }
+
         .tiger-cross::before,
         .tiger-cross::after {
             content: "";
@@ -425,9 +489,11 @@
             background-color: var(--primary-color-dark);
             transform: translateX(-50%) rotate(calc(45deg * var(--flip)));
         }
+
         .tiger-cross::before {
             --flip: -1;
         }
+
         .tiger-tail {
             inset: 0;
             transform-origin: 50% 95%;
@@ -436,6 +502,7 @@
             background-color: var(--primary-color);
             overflow: hidden;
         }
+
         .tiger-tail::before {
             content: "";
             height: 1.5rem;
@@ -444,11 +511,13 @@
             border-radius: 100%;
             background-color: var(--black);
         }
+
         .tiger-tail-stripes {
             top: 2.5rem;
             left: -0.25rem;
             width: 2rem;
         }
+
         .tiger-tail-stripes::before,
         .tiger-tail-stripes::after {
             content: "";
@@ -458,15 +527,18 @@
             border-bottom-right-radius: 100% 50%;
             background-color: var(--black);
         }
+
         .tiger-tail-stripes::after {
             top: 1.5rem;
             left: -0.5rem;
         }
+
         .tiger-tail,
         .tiger-tail-wrap::before {
             -webkit-animation: tailWiggle 2s ease-in infinite;
             animation: tailWiggle 2s ease-in infinite;
         }
+
         .tiger-tail-wrap {
             top: -3.5rem;
             left: 50%;
@@ -475,6 +547,7 @@
             transform: translateX(-50%);
             border-radius: 40% 60% 50% 50%/20% 30% 70% 80%;
         }
+
         .tiger-tail-wrap::before {
             content: "";
             z-index: -1;
@@ -489,18 +562,22 @@
             -webkit-animation-name: tailWiggleShadow;
             animation-name: tailWiggleShadow;
         }
+
         .tiger-rear-stripes {
             --position: -1rem;
             --flip: 1;
             top: 4.5rem;
             height: 2.5rem;
         }
+
         .tiger-rear-stripes-left {
             left: var(--position);
         }
+
         .tiger-rear-stripes-right {
             right: var(--position);
         }
+
         .tiger-rear-stripes::before,
         .tiger-rear-stripes::after {
             content: "";
@@ -511,20 +588,25 @@
             border-bottom-right-radius: 50% 100%;
             background-color: var(--black);
         }
+
         .tiger-rear-stripes::before {
             transform: rotate(calc(80deg * var(--flip)));
         }
+
         .tiger-rear-stripes::after {
             top: 2rem;
             transform: rotate(calc(95deg * var(--flip)));
         }
+
         .tiger-rear-stripes-left {
             --flip: -1;
         }
+
         .tiger-rear-stripes-right::before,
         .tiger-rear-stripes-right::after {
             right: 0;
         }
+
         .tiger-rear {
             border-top-left-radius: 50% 55%;
             border-top-right-radius: 50% 55%;
@@ -534,6 +616,7 @@
             background-color: var(--primary-color);
             overflow: hidden;
         }
+
         .tiger-rear::before {
             content: "";
             bottom: -2rem;
@@ -544,6 +627,7 @@
             border-radius: inherit;
             background-color: var(--secondary-color);
         }
+
         .tiger-body-back {
             bottom: -1rem;
             left: 50%;
@@ -551,11 +635,13 @@
             width: 13.5rem;
             transform: translateX(-50%);
         }
+
         .tiger-toe-beans {
             bottom: 0.25rem;
             left: 50%;
             transform: translateX(-50%);
         }
+
         .tiger-toe-beans,
         .tiger-toe-beans::before,
         .tiger-toe-beans::after {
@@ -564,17 +650,21 @@
             border-radius: 100%;
             background-color: var(--accent-color);
         }
+
         .tiger-toe-beans::before,
         .tiger-toe-beans::after {
             content: "";
             bottom: 0.25rem;
         }
+
         .tiger-toe-beans::before {
             left: -0.75rem;
         }
+
         .tiger-toe-beans::after {
             right: -0.75rem;
         }
+
         .tiger-toe-beans-main {
             bottom: 1.25rem;
             left: 50%;
@@ -584,6 +674,7 @@
             border-radius: 100%;
             background-color: var(--accent-color);
         }
+
         .tiger-paw-back {
             --position: 2.5rem;
             border-top-left-radius: 50% 70%;
@@ -600,12 +691,15 @@
             -webkit-animation: pawRotate 5s ease-in-out infinite;
             animation: pawRotate 5s ease-in-out infinite;
         }
+
         .tiger-paw-back-left {
             left: var(--position);
         }
+
         .tiger-paw-back-right {
             right: var(--position);
         }
+
         .tiger-paw-back::before {
             content: "";
             left: 50%;
@@ -616,9 +710,11 @@
             border-radius: 100%;
             background-color: inherit;
         }
+
         .tiger-paw-back-left {
             --flip: -1;
         }
+
         .tiger-back {
             position: absolute;
             inset: 0;
@@ -628,119 +724,149 @@
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
         }
+
         .tiger-back,
         .tiger-back-mask {
             inset: 0;
             border-radius: 100%;
         }
+
         .tiger-back-mask {
             overflow: hidden;
             transform: translateZ(0);
         }
+
         .tiger-control {
             position: absolute;
             opacity: 0;
         }
+
         .tiger-control:checked+.tiger {
             --circle-rotate: 180deg;
         }
+
         .tiger:hover .tiger-head {
             --head-translate-y: 2rem;
         }
+
         .tiger-wrap {
             display: grid;
             -webkit-animation: squiggleVision 0.3s infinite alternate;
             animation: squiggleVision 0.3s infinite alternate;
         }
+
         .svg-filter-hide {
             position: absolute;
             opacity: 0;
             pointer-events: none;
         }
+
         @-webkit-keyframes tailWiggle {
             50% {
                 transform: rotate(40deg);
             }
         }
+
         @keyframes tailWiggle {
             50% {
                 transform: rotate(40deg);
             }
         }
+
         @-webkit-keyframes tailWiggleShadow {
             50% {
                 transform: rotate(52deg) scaleY(0.95);
             }
         }
+
         @keyframes tailWiggleShadow {
             50% {
                 transform: rotate(52deg) scaleY(0.95);
             }
         }
+
         @-webkit-keyframes pawRotate {
             50% {
                 transform: rotate(calc(10deg * var(--flip)));
             }
         }
+
         @keyframes pawRotate {
             50% {
                 transform: rotate(calc(10deg * var(--flip)));
             }
         }
+
         @-webkit-keyframes earTwitch {
+
             0%,
             70%,
             85% {
                 transform: rotate(calc(50deg * var(--flip)));
             }
+
             80%,
             90% {
                 transform: rotate(calc(60deg * var(--flip))) scaleX(0.9);
             }
         }
+
         @keyframes earTwitch {
+
             0%,
             70%,
             85% {
                 transform: rotate(calc(50deg * var(--flip)));
             }
+
             80%,
             90% {
                 transform: rotate(calc(60deg * var(--flip))) scaleX(0.9);
             }
         }
+
         @-webkit-keyframes squiggleVision {
+
             0%,
             100% {
                 filter: url("#filterSquiggle1");
             }
+
             25% {
                 filter: url("#filterSquiggle2");
             }
+
             50% {
                 filter: url("#filterSquiggle3");
             }
+
             75% {
                 filter: url("#filterSquiggle4");
             }
         }
+
         @keyframes squiggleVision {
+
             0%,
             100% {
                 filter: url("#filterSquiggle1");
             }
+
             25% {
                 filter: url("#filterSquiggle2");
             }
+
             50% {
                 filter: url("#filterSquiggle3");
             }
+
             75% {
                 filter: url("#filterSquiggle4");
             }
         }
     </style>
 </head>
+
 <body>
     <header id="header"></header>
     <!-- //header -->
@@ -928,12 +1054,12 @@
                             <tr>
                                 <td>06</td>
                                 <td>&lt;animation&gt;</td>
-                                <td>&lt;animation&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>애니메이션과 관련된 속성을 일괄적으로 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                 </td>
                                 <td><a href="#">__</a></td>
                                 <td></td>
@@ -941,12 +1067,12 @@
                             <tr>
                                 <td>07</td>
                                 <td>&lt;animation-delay&gt;</td>
-                                <td>&lt;animation-delay&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>애니메이션 지연 시간을 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                 </td>
                                 <td><a href="#">__</a></td>
                                 <td></td>
@@ -954,10 +1080,10 @@
                             <tr>
                                 <td>08</td>
                                 <td>&lt;animation-direction&gt;</td>
-                                <td>&lt;animation-direction&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>애니메이션 움직임 방향을 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
                                 </td>
@@ -967,12 +1093,12 @@
                             <tr>
                                 <td>09</td>
                                 <td>&lt;animation-duration&gt;</td>
-                                <td>&lt;animation-duration&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>애니메이션 움직임 시간을 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                 </td>
                                 <td><a href="#">__</a></td>
                                 <td></td>
@@ -980,9 +1106,9 @@
                             <tr>
                                 <td>10</td>
                                 <td>&lt;animation-fill-mode&gt;</td>
-                                <td>&lt;animation-fill-mode&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>애니메이션이 끝난 후의 상태를 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
@@ -993,11 +1119,11 @@
                             <tr>
                                 <td>11</td>
                                 <td>&lt;animation-iteration-count&gt;</td>
-                                <td>&lt;animation-iteration-count&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>애니메이션의 반복 횟수를 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                     <span class="material-symbols-outlined">grade</span>
                                 </td>
                                 <td><a href="#">__</a></td>
@@ -1006,12 +1132,12 @@
                             <tr>
                                 <td>12</td>
                                 <td>&lt;animation-name&gt;</td>
-                                <td>&lt;animation-name&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>애니메이션 keyframe 이름을 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                 </td>
                                 <td><a href="#">__</a></td>
                                 <td></td>
@@ -1019,9 +1145,9 @@
                             <tr>
                                 <td>13</td>
                                 <td>&lt;animation-play-state&gt;</td>
-                                <td>&lt;animation-play-state&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>애니메이션 진행상태를 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
@@ -1032,7 +1158,7 @@
                             <tr>
                                 <td>14</td>
                                 <td>&lt;animation-timeline&gt;</td>
-                                <td>&lt;animation-timeline&gt;</td>
+                                <td></td>
                                 <td><span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
@@ -1045,12 +1171,12 @@
                             <tr>
                                 <td>15</td>
                                 <td>&lt;animation-timing-function&gt;</td>
-                                <td>&lt;animation-timing-function&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>애니메이션 움직임의 속도를 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                 </td>
                                 <td><a href="#">__</a></td>
                                 <td></td>
@@ -1110,12 +1236,12 @@
                             <tr>
                                 <td>20</td>
                                 <td>&lt;background&gt;</td>
-                                <td>&lt;background&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>백그라운드 속성을 일괄적으로 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                 </td>
                                 <td><a href="#">__</a></td>
                                 <td></td>
@@ -1123,10 +1249,10 @@
                             <tr>
                                 <td>21</td>
                                 <td>&lt;background-attachment&gt;</td>
-                                <td>&lt;background-attachment&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>배경이미지 고정 여부를 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
                                 </td>
@@ -1136,10 +1262,10 @@
                             <tr>
                                 <td>22</td>
                                 <td>&lt;background-blend-mode&gt;</td>
-                                <td>&lt;background-blend-mode&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>배경을 혼합했을 때, 그래픽 효과를 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
                                 </td>
@@ -1149,8 +1275,8 @@
                             <tr>
                                 <td>23</td>
                                 <td>&lt;background-clip&gt;</td>
-                                <td>&lt;background-clip&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
+                                <td>백그라운드 이미지의 위치 기준점을 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
@@ -1162,12 +1288,12 @@
                             <tr>
                                 <td>24</td>
                                 <td>&lt;background-color&gt;</td>
-                                <td>&lt;background-color&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>백그라운드 색을 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                 </td>
                                 <td><a href="#">__</a></td>
                                 <td></td>
@@ -1175,12 +1301,12 @@
                             <tr>
                                 <td>25</td>
                                 <td>&lt;background-image&gt;</td>
-                                <td>&lt;background-image&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>백그라운드이미지 속성을 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                 </td>
                                 <td><a href="#">__</a></td>
                                 <td></td>
@@ -1188,7 +1314,7 @@
                             <tr>
                                 <td>26</td>
                                 <td>&lt;background-origin&gt;</td>
-                                <td>&lt;background-origin&gt;</td>
+                                <td>백그라운드 이미지 위치 기준점을 설정하기 위한 속성입니다.</td>
                                 <td><span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
@@ -1201,12 +1327,12 @@
                             <tr>
                                 <td>27</td>
                                 <td>&lt;background-position&gt;</td>
-                                <td>&lt;background-position&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>백그라운드 이미지의 위치 영역을 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                 </td>
                                 <td><a href="#">__</a></td>
                                 <td></td>
@@ -1214,8 +1340,8 @@
                             <tr>
                                 <td>28</td>
                                 <td>&lt;background-position-x&gt;</td>
-                                <td>&lt;background-position-x&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
+                                <td>백그라운드 이미지의 위치 영역 x축을 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
@@ -1227,8 +1353,8 @@
                             <tr>
                                 <td>29</td>
                                 <td>&lt;background-position-y&gt;</td>
-                                <td>&lt;background-position-y&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
+                                <td>백그라운드 이미지의 위치 영역 y축을 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
@@ -1240,12 +1366,12 @@
                             <tr>
                                 <td>30</td>
                                 <td>&lt;background-repeat&gt;</td>
-                                <td>&lt;background-repeat&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>백그라운드 이미지 반복 여부를 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                 </td>
                                 <td><a href="#">__</a></td>
                                 <td></td>
@@ -1253,12 +1379,12 @@
                             <tr>
                                 <td>31</td>
                                 <td>&lt;background-size&gt;</td>
-                                <td>&lt;background-size&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>백그라운드 이미지 사이즈를 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                 </td>
                                 <td><a href="#">__</a></td>
                                 <td></td>
@@ -1279,12 +1405,12 @@
                             <tr>
                                 <td>33</td>
                                 <td>&lt;border&gt;</td>
-                                <td>&lt;border&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>테두리 속성을 일괄적으로 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                 </td>
                                 <td><a href="#">__</a></td>
                                 <td></td>
@@ -1357,11 +1483,11 @@
                             <tr>
                                 <td>39</td>
                                 <td>&lt;border-bottom&gt;</td>
-                                <td>&lt;border-bottom&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>테두리 아래쪽 속성을 일괄적으로 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                     <span class="material-symbols-outlined">grade</span>
                                 </td>
                                 <td><a href="#">__</a></td>
@@ -1370,10 +1496,10 @@
                             <tr>
                                 <td>40</td>
                                 <td>&lt;border-bottom-color&gt;</td>
-                                <td>&lt;border-bottom-color&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>테두리 아래쪽 색 속성을 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
                                 </td>
@@ -1383,9 +1509,9 @@
                             <tr>
                                 <td>41</td>
                                 <td>&lt;border-bottom-left-radius&gt;</td>
-                                <td>&lt;border-bottom-left-radius&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>테두리 아래 왼쪽 모서리 굴곡을 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
@@ -1396,9 +1522,9 @@
                             <tr>
                                 <td>42</td>
                                 <td>&lt;border-bottom-right-radius&gt;</td>
-                                <td>&lt;border-bottom-right-radius&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>테두리 아래 오른쪽 모서리 굴곡을 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
@@ -1409,9 +1535,9 @@
                             <tr>
                                 <td>43</td>
                                 <td>&lt;border-bottom-style&gt;</td>
-                                <td>&lt;border-bottom-style&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>테두리 아래 스타일 속성을 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
@@ -1422,9 +1548,9 @@
                             <tr>
                                 <td>44</td>
                                 <td>&lt;border-bottom-width&gt;</td>
-                                <td>&lt;border-bottom-width&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>테두리 아래 두께 속성을 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
@@ -1448,7 +1574,7 @@
                             <tr>
                                 <td>46</td>
                                 <td>&lt;border-color&gt;</td>
-                                <td>&lt;border-color&gt;</td>
+                                <td>테두리 색을 설정합니다.</td>
                                 <td><span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
@@ -1772,9 +1898,9 @@
                             <tr>
                                 <td>71</td>
                                 <td>&lt;border-radius&gt;</td>
-                                <td>&lt;border-radius&gt;</td>
-                                <td><span class="material-symbols-outlined">grade</span>
-                                    <span class="material-symbols-outlined">grade</span>
+                                <td>테두리 모서리 각도를 설정합니다.</td>
+                                <td><span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
@@ -1785,7 +1911,7 @@
                             <tr>
                                 <td>72</td>
                                 <td>&lt;border-right&gt;</td>
-                                <td>&lt;border-right&gt;</td>
+                                <td>오른쪽 테두리를 설정합니다.</td>
                                 <td><span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
                                     <span class="material-symbols-outlined">grade</span>
@@ -5914,4 +6040,5 @@
     </footer>
     <!-- //footer -->
 </body>
+
 </html>
