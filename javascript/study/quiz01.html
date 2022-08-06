@@ -39,6 +39,7 @@
                 <li><a href="function.html">함수</a></li>
                 <li><a href="var.html">지역변수/전역변수</a></li>
                 <li><a href="quiz01.html">퀴즈이펙트</a></li>
+                <li><a href="element.html">요소 선택</a></li>
             </ul>
         </nav>
     </header>
@@ -165,6 +166,154 @@ quizConfirm.addEventListener("click", () => { //정답버튼을 클릭했을 때
         alert("오답입니다.");
     }
 }); 
+</code></pre>
+            </div>
+            <hr>
+        </div>
+
+        <div class="document">
+            <h2 class="t_tit">퀴즈 이펙트 03</h2>
+            <p class="t_desc">웹디자인기능사 필기 퀴즈 - JS를 통해 여러 문제의 정답을 주관식으로 입력할 수 있고, 입력 후 
+                정답/오답여부에 대해 알려줍니다. 
+            </p>
+
+            <h3 class="t_tit2">결과</h3>
+            <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
+                <iframe src="https://kimm99604.github.io/cording2/javascript/effect/quizEffect03.html" frameborder="0"></iframe>
+            </div>
+
+            <div class="t_link">
+               <a href="https://github.com/kimm99604/cording2/blob/main/javascript/effect/quizEffect03.html" target="_blank">원본 소스 보기</a> 
+            </div>
+
+            <h3 class="t_tit2">JavaScript</h3>
+            <p class="t_desc">innderText, for문, forEach문 등 다양한 방법으로 코딩할 수 있습니다.
+            </p>
+            <div class="t_code">
+<pre><code>//선택자 - 문제가 여러개임으로 querySelectorAll을 사용함 
+const quizType = document.querySelectorAll(".quiz__type"); //퀴즈 종류
+const quizNumber = document.querySelectorAll(".quiz__question .number"); //퀴즈 번호
+const quizAsk = document.querySelectorAll(".quiz__question .ask"); //퀴즈 질문
+const quizConfirm = document.querySelectorAll(".quiz__answer .confirm"); //정답 확인 버튼 
+const quizResult = document.querySelectorAll(".quiz__answer .result"); //정답 결과
+const quizView = document.querySelectorAll(".quiz__view"); //퀴즈 정답, 오답 표시
+const quizInput = document.querySelectorAll(".quiz__answer .input"); //사용자 정답
+
+//문제정보
+const quizInfo = [
+    {
+        answerType: "웹디자인기능사 2016년 4회",
+        answerNum : "1.",   
+        answerAsk: "매핑 방법 중 오브젝트에 요철이나 엠보싱 효과를 표현하는방법은?",
+        answerResult: "범프 매핑"
+    },
+    {
+        answerType: "웹디자인기능사 2016년 4회",
+        answerNum : "2.",   
+        answerAsk: "다음 중 웹 페이지 제작에 따른 외부 스타일시트 확장자는?",
+        answerResult: "*.css"
+    },
+    {
+        answerType: "웹디자인기능사 2016년 1회",
+        answerNum : "3.",   
+        answerAsk: "연산자 좌우의 검색어를 모두 포함하는 데이터를 찾는 정보검색 연산자는?",
+        answerResult: "AND"
+    },
+    {
+        answerType: "웹디자인기능사 2016년 1회",
+        answerNum : "4.",   
+        answerAsk: "일반적으로 드림위버에서 웹문서에 자바스크립트 소스를 삽입하여 인터렉티브한 페이지를 만들 수 있도록 제공해 주는 것은?",
+        answerResult: "Behaviors"
+    },
+]
+
+//textContent를 통해 문제출력
+//1번
+// quizType[0].textContent = quizInfo[0].answerType;
+// quizNumber[0].textContent = quizInfo[0].answerNum;
+// quizAsk[0].textContent = quizInfo[0].answerAsk;
+// quizResult[0].textContent = quizInfo[0].answerResult;
+
+//2번
+// quizType[1].textContent = quizInfo[1].answerType;
+// quizNumber[1].textContent = quizInfo[1].answerNum;
+// quizAsk[1].textContent = quizInfo[1].answerAsk;
+// quizResult[1].textContent = quizInfo[1].answerResult;
+
+//3번
+// quizType[2].textContent = quizInfo[2].answerType;
+// quizNumber[2].textContent = quizInfo[2].answerNum;
+// quizAsk[2].textContent = quizInfo[2].answerAsk;
+// quizResult[2].textContent = quizInfo[2].answerResult;
+
+//4번 
+// quizType[3].textContent = quizInfo[3].answerType;
+// quizNumber[3].textContent = quizInfo[3].answerNum;
+// quizAsk[3].textContent = quizInfo[3].answerAsk;
+// quizResult[3].textContent = quizInfo[3].answerResult;
+
+
+//for문을 통해 문제 출력 
+// for(i=0; i&lt;quizInfo.lenght; i++){ 
+//     quizType[i].textContent = quizInfo[i].answerType;
+//     quizNumber[i].textContent = quizInfo[i].answerNum;
+//     quizAsk[i].textContent = quizInfo[i].answerAsk;
+//     quizResult[i].textContent = quizInfo[i].answerResult;
+// }
+
+//forEach문을 통해 문제 출력 
+quizInfo.forEach((element,index) =&gt; {
+    quizType[index].textContent = quizInfo[index].answerType;
+    quizNumber[index].textContent = quizInfo[index].answerNum;
+    quizAsk[index].textContent = quizInfo[index].answerAsk;
+    quizResult[index].textContent = quizInfo[index].answerResult;
+});
+
+//style로 정답 숨기기
+// quizResult[0].style.display = "none";
+// quizResult[1].style.display = "none";
+// quizResult[2].style.display = "none";
+// quizResult[3].style.display = "none";
+
+//for문으로 정답 숨기기
+// for(i=0; i&lt;quizInfo.length; i++){
+//     quizResult[i].style.display = "none";
+// }
+
+//forEach문으로 정답 숨기기
+quizInfo.forEach((element,index) =&gt; {
+    quizResult[index].style.display = "none";
+});
+
+//정답버튼 확인 - 정답버튼이 여러개 있기 때문에 forEach문을 통해 작성함.
+// quizConfirm.forEach((btn) =&gt; {
+//     btn.addEventListener("click",()=&gt;{
+//         alert("dd")
+//     })
+// });
+
+//정답버튼을 누를 시, 사용자 정답과 문제 정답 일치 여부 
+quizConfirm.forEach((btn, num) =&gt; { 
+    btn.addEventListener("click",()=&gt;{
+        
+        //사용자 정답을 userWord상수에 저장함 
+        const userWord = quizInput[num].value;
+
+        //사용자 정답 == 문제정답
+        if(userWord == quizInfo[num].answerResult){
+            //정답
+            quizView[num].classList.add("like");
+            quizConfirm[num].style.display = "none";
+            quizInput[num].style.display = "none";
+        } else {
+            //오답
+            quizView[num].classList.add("dislike");
+            quizConfirm[num].style.display = "none";
+            quizResult[num].style.display = "block";
+            quizInput[num].style.display = "none";
+        }
+    })
+});
 </code></pre>
             </div>
             <hr>
