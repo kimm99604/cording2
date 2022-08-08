@@ -322,7 +322,7 @@ quizConfirm.forEach((btn, num) =&gt; {
         <div class="document">
             <h2 class="t_tit">퀴즈 이펙트 04</h2>
             <p class="t_desc">웹디자인기능사 필기 퀴즈 - JS를 통해 문제의 정답을 객관식으로 선택할 수 있고, 입력 후 
-                정답/오답여부에 대해 알려줍니다. 
+                정답/오답/해설로 알려줍니다. 
             </p>
 
             <h3 class="t_tit2">결과</h3>
@@ -370,7 +370,7 @@ function updateQuiz(){ //문제, 보기 출력함수
     quizResult.textContent = quizInfo[0].answerEx;
 
     //보기출력
-    for(i=0;i<4;i++){
+    for(i=0;i&lt;4;i++){
         quizChoice[i].textContent = quizInfo[0].answerChoice[i];
     }
 }
@@ -384,7 +384,7 @@ function answerQuiz(){
     //사용자 선택 정답 == 문제 정답
     //사용자가 클릭한 input box --> checked
     
-    for(i=0; i<quizSelect.length; i++){
+    for(i=0; i&lt;quizSelect.length; i++){
         if(quizSelect[i].checked == true){ //보기에 체크가 된 상태
             //체크된 번호 == 문제번호 일치여부
             if(quizSelect[i].value == quizInfo[0].answerResult){
@@ -393,14 +393,14 @@ function answerQuiz(){
             } else {
                 // alert("오답")
                 quizView.classList.add("dislike");
-                quizResult.style.display = "block";
-                quizConfirm.style.display = "none";
+                quizResult.style.display = "block"; //오답 시, 해설을 보여줍니다.
+                quizConfirm.style.display = "none"; //오답 시, 정답확인 버튼을 없앱니다.
             }
         } 
     }
 }
 //정답클릭
-quizConfirm.addEventListener("click", answerQuiz)
+quizConfirm.addEventListener("click", answerQuiz) //버튼을 누름 -> 정답확인 
 </code></pre>
             </div>
             <hr>
