@@ -1,127 +1,63 @@
-&lt;script&gt;&gt;
- //선택자
- const quizType = document.querySelectorAll(".quiz__type"); //퀴즈 종류
- const quizNumber = document.querySelectorAll(".quiz__question .number"); //퀴즈 번호
- const quizAsk = document.querySelectorAll(".quiz__question .ask"); //퀴즈 질문
- const quizConfirm = document.querySelectorAll(".quiz__answer .confirm"); //정답 확인 버튼 
- const quizResult = document.querySelectorAll(".quiz__answer .result"); //정답 결과
- const quizView = document.querySelectorAll(".quiz__view"); //퀴즈 정답, 오답 표시
- const quizInput = document.querySelectorAll(".quiz__answer .input"); //사용자 정답
-
- //문제정보
- const quizInfo = [
-     {
-         answerType: "웹디자인기능사 2016년 4회",
-         answerNum : "1.",   
-         answerAsk: "매핑 방법 중 오브젝트에 요철이나 엠보싱 효과를 표현하는방법은?",
-         answerResult: "범프 매핑"
-     },
-     {
-         answerType: "웹디자인기능사 2016년 4회",
-         answerNum : "2.",   
-         answerAsk: "다음 중 웹 페이지 제작에 따른 외부 스타일시트 확장자는?",
-         answerResult: "*.css"
-     },
-     {
-         answerType: "웹디자인기능사 2016년 1회",
-         answerNum : "3.",   
-         answerAsk: "연산자 좌우의 검색어를 모두 포함하는 데이터를 찾는 정보검색 연산자는?",
-         answerResult: "AND"
-     },
-     {
-         answerType: "웹디자인기능사 2016년 1회",
-         answerNum : "4.",   
-         answerAsk: "일반적으로 드림위버에서 웹문서에 자바스크립트 소스를 삽입하여 인터렉티브한 페이지를 만들 수 있도록 제공해 주는 것은?",
-         answerResult: "Behaviors"
-     },
- ]
-
- //textContent를 통해 문제출력
- //1번
- // quizType[0].textContent = quizInfo[0].answerType;
- // quizNumber[0].textContent = quizInfo[0].answerNum;
- // quizAsk[0].textContent = quizInfo[0].answerAsk;
- // quizResult[0].textContent = quizInfo[0].answerResult;
-
- // //2번
- // quizType[1].textContent = quizInfo[1].answerType;
- // quizNumber[1].textContent = quizInfo[1].answerNum;
- // quizAsk[1].textContent = quizInfo[1].answerAsk;
- // quizResult[1].textContent = quizInfo[1].answerResult;
-
- // //3번
- // quizType[2].textContent = quizInfo[2].answerType;
- // quizNumber[2].textContent = quizInfo[2].answerNum;
- // quizAsk[2].textContent = quizInfo[2].answerAsk;
- // quizResult[2].textContent = quizInfo[2].answerResult;
-
- // //4번 
- // quizType[3].textContent = quizInfo[3].answerType;
- // quizNumber[3].textContent = quizInfo[3].answerNum;
- // quizAsk[3].textContent = quizInfo[3].answerAsk;
- // quizResult[3].textContent = quizInfo[3].answerResult;
+//선택자
+const quizType = document.querySelector(".quiz__type"); //퀴즈 종류
+const quizNumber = document.querySelector(".quiz__question .number"); //퀴즈 번호
+const quizAsk = document.querySelector(".quiz__question .ask"); //퀴즈 질문
+const quizConfirm = document.querySelector(".quiz__answer .confirm"); //정답 확인 버튼 
+const quizResult = document.querySelector(".quiz__answer .result"); //정답 결과
+const quizView = document.querySelector(".quiz__view"); //강아지 퀴즈 정답, 오답 표시
+const quizSelects = document.querySelector(".quiz_selects"); //객관식 보기
+const quizChoice = quizSelects.querySelectorAll(".choice"); //객관식 보기
+const quizSelect = quizSelects.querySelectorAll(".select"); //객관식 보기
 
 
- //for문을 통해 문제 출력 
- // for(i=0; i&lt;quizInfo.lenght; i++){ 
- //     quizType[i].textContent = quizInfo[i].answerType;
- //     quizNumber[i].textContent = quizInfo[i].answerNum;
- //     quizAsk[i].textContent = quizInfo[i].answerAsk;
- //     quizResult[i].textContent = quizInfo[i].answerResult;
- // }
+//문제정보 
+const quizInfo = [
+    {
+        answerType: "웹디자인기능사 2022년 01회",
+        answerNum : "1.",
+        answerAsk : "분신, 회신이라는 의미로 채팅, 온라인 게임 등 네트워크 환경에서 자신을 대신하여 커뮤니케이션에 참여하는 가상의 그림 또는 아이콘을 뜻하는 인터넷 용어는?",
+        answerChoice : ["아바타", "쿠키", "포털", "허브"],
+        answerResult : "1",
+        answerEx : "분신, 회신이라는 의미로 채팅, 온라인 게임 등 네트워크 환경에서 자신을 대신하여 커뮤니케이션에 참여하는 가상의 그림 또는 아이콘을 뜻하는 것은 '아바타'라고 합니다."
+    }
+]
 
-//forEach문을 통해 문제 출력 
- quizInfo.forEach((element,index) =&gt; {
-     quizType[index].textContent = quizInfo[index].answerType;
-     quizNumber[index].textContent = quizInfo[index].answerNum;
-     quizAsk[index].textContent = quizInfo[index].answerAsk;
-     quizResult[index].textContent = quizInfo[index].answerResult;
- });
+function updateQuiz(){ //문제, 보기 출력함수 
+    //문제출력 
+    quizType.textContent = quizInfo[0].answerType;
+    quizNumber.textContent = quizInfo[0].answerNum;
+    quizAsk.textContent = quizInfo[0].answerAsk;
+    quizResult.textContent = quizInfo[0].answerEx;
 
- //style로 정답 숨기기
- // quizResult[0].style.display = "none";
- // quizResult[1].style.display = "none";
- // quizResult[2].style.display = "none";
- // quizResult[3].style.display = "none";
+    //보기출력
+    for(i=0;i<4;i++){
+        quizChoice[i].textContent = quizInfo[0].answerChoice[i];
+    }
+}
+updateQuiz();
 
-  //for문으로 정답 숨기기
- // for(i=0; i&lt;quizInfo.length; i++){
- //     quizResult[i].style.display = "none";
- // }
+//해설 숨기기 
+quizResult.style.display = "none";
 
-  //forEach문으로 정답 숨기기
- quizInfo.forEach((element,index) =&gt; {
-     quizResult[index].style.display = "none";
- });
-
- //정답버튼 확인 - 정답버튼이 여러개 있기 때문에 forEach문을 통해 작성함.
- // quizConfirm.forEach((btn) =&gt; {
- //     btn.addEventListener("click",()=&gt;{
- //         alert("dd")
- //     })
- // });
-
-
-//정답버튼을 누를 시, 사용자 정답과 문제 정답 일치 여부 
- quizConfirm.forEach((btn, num) =&gt; { 
-     btn.addEventListener("click",()=&gt;{
-        
-         //사용자 정답을 userWord상수에 저장함 
-         const userWord = quizInput[num].value;
-
-         //사용자 정답 == 문제정답
-         if(userWord == quizInfo[num].answerResult){
-             //정답
-             quizView[num].classList.add("like");
-             quizConfirm[num].style.display = "none";
-             quizInput[num].style.display = "none";
-         } else {
-             //오답
-             quizView[num].classList.add("dislike");
-             quizConfirm[num].style.display = "none";
-             quizResult[num].style.display = "block";
-             quizInput[num].style.display = "none";
-         }
-     })
- });
-&lt;/script&gt;
+//정답확인
+function answerQuiz(){
+    //사용자 선택 정답 == 문제 정답
+    //사용자가 클릭한 input box --> checked
+    
+    for(i=0; i<quizSelect.length; i++){
+        if(quizSelect[i].checked == true){ //보기에 체크가 된 상태
+            //체크된 번호 == 문제번호 일치여부
+            if(quizSelect[i].value == quizInfo[0].answerResult){
+                // alert("정답")
+                quizView.classList.add("like");
+            } else {
+                // alert("오답")
+                quizView.classList.add("dislike");
+                quizResult.style.display = "block";
+                quizConfirm.style.display = "none";
+            }
+        } 
+    }
+}
+//정답클릭
+quizConfirm.addEventListener("click", answerQuiz)

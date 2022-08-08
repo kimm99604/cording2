@@ -174,6 +174,7 @@ body {
     font-size: 22px;
     padding: 13px 20px;
     border: 6px ridge #cacaca;
+    line-height: 1.4;
     box-sizing: border-box;
     text-align: center;
     font-family: "Hallym";
@@ -226,6 +227,46 @@ body {
 .quiz__view.dislike .false {
     opacity: 1; /*오답일때 틀렸습니다 표시*/
     animation: wobble 0.6s; /*0.6초동안 좌우 흔들리는 애니메이션 효과*/
+}
+
+.quiz_selects {
+    margin: 5px 0;
+}
+.quiz_selects label {
+    display: flex;
+}
+.quiz_selects label input {
+    position: absolute;
+    left: -9999px;
+}
+.quiz_selects label span {
+    font-size: 20px;
+    font-family: "Hallym";
+    line-height: 1.3;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.quiz_selects label span::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    flex-shrink: 0;
+    box-shadow: inset 0px 0px 0px 4px #F5534F;
+    transition: all 0.25s;
+}
+.quiz_selects label input:checked + span {
+    background-color: #f5524f1e;
+}
+.quiz_selects label input:checked + span::before {
+    box-shadow: inset 0px 0px 0px 10px #F5534F;
 }
 
 @keyframes wobble {

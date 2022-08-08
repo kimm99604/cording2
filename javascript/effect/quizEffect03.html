@@ -207,8 +207,8 @@
             {
                 answerType: "웹디자인기능사 2016년 1회",
                 answerNum : "4.",   
-                answerAsk: "일반적으로 드림위버에서 웹문서에 자바스크립트 소스를 삽입하여 인터렉티브한 페이지를 만들 수 있도록 제공해 주는 것은?",
-                answerResult: "Behaviors"
+                answerAsk: "먼셀의 표색계에서 색상을 표시하는 기호로 맞는 것은?",
+                answerResult: "HV/C"
             },
         ]
 
@@ -283,7 +283,7 @@
             btn.addEventListener("click",()=>{
                
                 //사용자 정답
-                const userWord = quizInput[num].value.toLowerCase().trim(); 
+                const userWord = quizInput[num].value;
 
                 //사용자 정답 == 문제정답
                 if(userWord == quizInfo[num].answerResult){

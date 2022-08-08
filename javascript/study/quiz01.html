@@ -318,6 +318,93 @@ quizConfirm.forEach((btn, num) =&gt; {
             </div>
             <hr>
         </div>
+
+        <div class="document">
+            <h2 class="t_tit">퀴즈 이펙트 04</h2>
+            <p class="t_desc">웹디자인기능사 필기 퀴즈 - JS를 통해 문제의 정답을 객관식으로 선택할 수 있고, 입력 후 
+                정답/오답여부에 대해 알려줍니다. 
+            </p>
+
+            <h3 class="t_tit2">결과</h3>
+            <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
+                <iframe src="https://kimm99604.github.io/cording2/javascript/effect/quizEffect04.html" frameborder="0"></iframe>
+            </div>
+
+            <div class="t_link">
+               <a href="https://github.com/kimm99604/cording2/blob/main/javascript/effect/quizEffect04.html" target="_blank">원본 소스 보기</a> 
+            </div>
+
+            <h3 class="t_tit2">JavaScript</h3>
+            <p class="t_desc">for문과 if문을 통해 객관식 보기 문제를 출력하고 정답/오답을 비교할 수 있다. 
+            </p>
+            <div class="t_code">
+<pre><code>//선택자
+const quizType = document.querySelector(".quiz__type"); //퀴즈 종류
+const quizNumber = document.querySelector(".quiz__question .number"); //퀴즈 번호
+const quizAsk = document.querySelector(".quiz__question .ask"); //퀴즈 질문
+const quizConfirm = document.querySelector(".quiz__answer .confirm"); //정답 확인 버튼 
+const quizResult = document.querySelector(".quiz__answer .result"); //정답 결과
+const quizView = document.querySelector(".quiz__view"); //강아지 퀴즈 정답, 오답 표시
+const quizSelects = document.querySelector(".quiz_selects"); //객관식 보기
+const quizChoice = quizSelects.querySelectorAll(".choice"); //객관식 보기
+const quizSelect = quizSelects.querySelectorAll(".select"); //객관식 보기
+
+
+//문제정보 
+const quizInfo = [
+    {
+        answerType: "웹디자인기능사 2022년 01회",
+        answerNum : "1.",
+        answerAsk : "분신, 회신이라는 의미로 채팅, 온라인 게임 등 네트워크 환경에서 자신을 대신하여 커뮤니케이션에 참여하는 가상의 그림 또는 아이콘을 뜻하는 인터넷 용어는?",
+        answerChoice : ["아바타", "쿠키", "포털", "허브"],
+        answerResult : "1",
+        answerEx : "분신, 회신이라는 의미로 채팅, 온라인 게임 등 네트워크 환경에서 자신을 대신하여 커뮤니케이션에 참여하는 가상의 그림 또는 아이콘을 뜻하는 것은 '아바타'라고 합니다."
+    }
+]
+
+function updateQuiz(){ //문제, 보기 출력함수 
+    //문제출력 
+    quizType.textContent = quizInfo[0].answerType;
+    quizNumber.textContent = quizInfo[0].answerNum;
+    quizAsk.textContent = quizInfo[0].answerAsk;
+    quizResult.textContent = quizInfo[0].answerEx;
+
+    //보기출력
+    for(i=0;i<4;i++){
+        quizChoice[i].textContent = quizInfo[0].answerChoice[i];
+    }
+}
+updateQuiz();
+
+//해설 숨기기 
+quizResult.style.display = "none";
+
+//정답확인
+function answerQuiz(){
+    //사용자 선택 정답 == 문제 정답
+    //사용자가 클릭한 input box --> checked
+    
+    for(i=0; i<quizSelect.length; i++){
+        if(quizSelect[i].checked == true){ //보기에 체크가 된 상태
+            //체크된 번호 == 문제번호 일치여부
+            if(quizSelect[i].value == quizInfo[0].answerResult){
+                // alert("정답")
+                quizView.classList.add("like");
+            } else {
+                // alert("오답")
+                quizView.classList.add("dislike");
+                quizResult.style.display = "block";
+                quizConfirm.style.display = "none";
+            }
+        } 
+    }
+}
+//정답클릭
+quizConfirm.addEventListener("click", answerQuiz)
+</code></pre>
+            </div>
+            <hr>
+        </div>
     
         </div>
     </main>
