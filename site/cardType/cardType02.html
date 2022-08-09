@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드유형02</title>
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+        .nexon {
+            font-family: "NexonLv1Gothic";
+            font-weight: 400;
+        }
+
+        /* reset */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        img {
+            width: 100%;
+        }
+
+        /* common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1160px;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section > h2 {
+            font-size: 50px;
+            line-height: 1; /*line height auto는 1을 의미*/
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section > p {
+            font-size: 22px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        h1, h2, h3, h4, h5 ,h6 {
+            font-weight: normal;
+        }
+
+        /* cardType */
+        .card_inner {
+            display: flex;
+            justify-content: space-between
+        }
+        .card {
+            width: 25%;
+            padding-right: 25px;
+        }
+        .card__body { /*텍스트부분*/
+            padding-top: 21px;
+        }
+        .card__body .tit {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .card__body .desc {
+            font-size: 18px;
+            line-height: 1.4;
+            color: #666;
+            margin-bottom: 50px;
+            font-weight: 300;
+        }
+        .card__body .btn {
+         float: right;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="cardType" class="card__wrap nexon section">
+        <h2>취미 운동 추천</h2>
+        <p>가장 좋아하는 취미가 운동이 될 때 건강 증진 효과는 크다. <br>
+            누구나 즐길 수 있는 재밌는 운동 추천!
+            </p>
+        <div class="card_inner container">
+            <article class="card">
+                <figure>
+                    <img src="img/card2_bg01.jpg" alt="요가사진">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">요가
+                        <a href="/" class="btn">
+                            <span aria-hidden="true">
+                                <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="23" height="25" rx="5" fill="#3056DE"/>
+                                    <path d="M18.7071 13.7071C19.0976 13.3166 19.0976 12.6834 18.7071 12.2929L12.3431 5.92893C11.9526 5.53841 11.3195 5.53841 10.9289 5.92893C10.5384 6.31946 10.5384 6.95262 10.9289 7.34315L16.5858 13L10.9289 18.6569C10.5384 19.0474 10.5384 19.6805 10.9289 20.0711C11.3195 20.4616 11.9526 20.4616 12.3431 20.0711L18.7071 13.7071ZM4 14L18 14V12L4 12L4 14Z" fill="white"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </h3>
+                    <p class="desc">요가(yoga)는 고대 인도에서 제의적으로 연유한 명상의 방법으로 힌두교의 종교적 · 영적 수행 방법의 하나로도 알려져있다. </p>
+                </div>
+            </article>
+            <article class="card">
+                <figure class="card__header">
+                    <img src="img/card2_bg02.jpg" alt="웨이트 트레이닝 사진">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">웨이트 트레이닝
+                        <a href="/" class="btn">
+                            <span aria-hidden="true">
+                                <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="23" height="25" rx="5" fill="#3056DE"/>
+                                    <path d="M18.7071 13.7071C19.0976 13.3166 19.0976 12.6834 18.7071 12.2929L12.3431 5.92893C11.9526 5.53841 11.3195 5.53841 10.9289 5.92893C10.5384 6.31946 10.5384 6.95262 10.9289 7.34315L16.5858 13L10.9289 18.6569C10.5384 19.0474 10.5384 19.6805 10.9289 20.0711C11.3195 20.4616 11.9526 20.4616 12.3431 20.0711L18.7071 13.7071ZM4 14L18 14V12L4 12L4 14Z" fill="white"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </h3>
+                    <p class="desc"> 더 쉽고, 편리하며, 믿을 수 있는<br>
+                        인테리어 시공, 이사, 이사청소, 수리 서비스
+                        어렵게만 느껴졌던 시공도 오늘의집에서는 쉬워집니다.</p>
+                </div>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="img/card2_bg03.jpg" alt="플라잉 요가 사진">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">플라잉 요가
+                        <a href="/" class="btn">
+                            <span aria-hidden="true">
+                                <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="23" height="25" rx="5" fill="#3056DE"/>
+                                    <path d="M18.7071 13.7071C19.0976 13.3166 19.0976 12.6834 18.7071 12.2929L12.3431 5.92893C11.9526 5.53841 11.3195 5.53841 10.9289 5.92893C10.5384 6.31946 10.5384 6.95262 10.9289 7.34315L16.5858 13L10.9289 18.6569C10.5384 19.0474 10.5384 19.6805 10.9289 20.0711C11.3195 20.4616 11.9526 20.4616 12.3431 20.0711L18.7071 13.7071ZM4 14L18 14V12L4 12L4 14Z" fill="white"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </h3>
+                    <p class="desc">온라인 집들이와 인테리어 노하우 등 다양한 인테리어 콘텐츠들을<br>
+                        제공하여 누구나 쉽게 재미있게 공간을 변화시킬 수 있도록 돕습니다.</p>
+                </div>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="img/card2_bg04.jpg" alt="러닝 사진">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">러닝
+                        <a href="/" class="btn">
+                            <span aria-hidden="true">
+                                <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="23" height="25" rx="5" fill="#3056DE"/>
+                                    <path d="M18.7071 13.7071C19.0976 13.3166 19.0976 12.6834 18.7071 12.2929L12.3431 5.92893C11.9526 5.53841 11.3195 5.53841 10.9289 5.92893C10.5384 6.31946 10.5384 6.95262 10.9289 7.34315L16.5858 13L10.9289 18.6569C10.5384 19.0474 10.5384 19.6805 10.9289 20.0711C11.3195 20.4616 11.9526 20.4616 12.3431 20.0711L18.7071 13.7071ZM4 14L18 14V12L4 12L4 14Z" fill="white"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </h3>
+                    <p class="desc">온라인 집들이와 인테리어 노하우 등 다양한 인테리어 콘텐츠들을<br>
+                        제공하여 누구나 쉽게 재미있게 공간을 변화시킬 수 있도록 돕습니다.</p>
+                </div>
+            </article>
+        </div>
+        <div class="card_inner container">
+            <article class="card">
+                <figure>
+                    <img src="img/card2_bg05.jpg" alt="자전거 사진">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">자전거
+                        <a href="/" class="btn">
+                            <span aria-hidden="true">
+                                <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="23" height="25" rx="5" fill="#3056DE"/>
+                                    <path d="M18.7071 13.7071C19.0976 13.3166 19.0976 12.6834 18.7071 12.2929L12.3431 5.92893C11.9526 5.53841 11.3195 5.53841 10.9289 5.92893C10.5384 6.31946 10.5384 6.95262 10.9289 7.34315L16.5858 13L10.9289 18.6569C10.5384 19.0474 10.5384 19.6805 10.9289 20.0711C11.3195 20.4616 11.9526 20.4616 12.3431 20.0711L18.7071 13.7071ZM4 14L18 14V12L4 12L4 14Z" fill="white"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </h3>
+                    <p class="desc">요가(yoga)는 고대 인도에서 제의적으로 연유한 명상의 방법으로 힌두교의 종교적 · 영적 수행 방법의 하나로도 알려져있다. </p>
+                </div>
+            </article>
+            <article class="card">
+                <figure class="card__header">
+                    <img src="img/card2_bg06.jpg" alt="유도 사진">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">유도
+                        <a href="/" class="btn">
+                            <span aria-hidden="true">
+                                <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="23" height="25" rx="5" fill="#3056DE"/>
+                                    <path d="M18.7071 13.7071C19.0976 13.3166 19.0976 12.6834 18.7071 12.2929L12.3431 5.92893C11.9526 5.53841 11.3195 5.53841 10.9289 5.92893C10.5384 6.31946 10.5384 6.95262 10.9289 7.34315L16.5858 13L10.9289 18.6569C10.5384 19.0474 10.5384 19.6805 10.9289 20.0711C11.3195 20.4616 11.9526 20.4616 12.3431 20.0711L18.7071 13.7071ZM4 14L18 14V12L4 12L4 14Z" fill="white"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </h3>
+                    <p class="desc"> 더 쉽고, 편리하며, 믿을 수 있는<br>
+                        인테리어 시공, 이사, 이사청소, 수리 서비스
+                        어렵게만 느껴졌던 시공도 오늘의집에서는 쉬워집니다.</p>
+                </div>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="img/card2_bg07.jpg" alt="권투 사진">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">권투
+                        <a href="/" class="btn">
+                            <span aria-hidden="true">
+                                <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="23" height="25" rx="5" fill="#3056DE"/>
+                                    <path d="M18.7071 13.7071C19.0976 13.3166 19.0976 12.6834 18.7071 12.2929L12.3431 5.92893C11.9526 5.53841 11.3195 5.53841 10.9289 5.92893C10.5384 6.31946 10.5384 6.95262 10.9289 7.34315L16.5858 13L10.9289 18.6569C10.5384 19.0474 10.5384 19.6805 10.9289 20.0711C11.3195 20.4616 11.9526 20.4616 12.3431 20.0711L18.7071 13.7071ZM4 14L18 14V12L4 12L4 14Z" fill="white"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </h3>
+                    <p class="desc">온라인 집들이와 인테리어 노하우 등 다양한 인테리어 콘텐츠들을<br>
+                        제공하여 누구나 쉽게 재미있게 공간을 변화시킬 수 있도록 돕습니다.</p>
+                </div>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="img/card2_bg08.jpg" alt="필라테스 사진">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">필라테스
+                        <a href="/" class="btn">
+                            <span aria-hidden="true">
+                                <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="23" height="25" rx="5" fill="#3056DE"/>
+                                    <path d="M18.7071 13.7071C19.0976 13.3166 19.0976 12.6834 18.7071 12.2929L12.3431 5.92893C11.9526 5.53841 11.3195 5.53841 10.9289 5.92893C10.5384 6.31946 10.5384 6.95262 10.9289 7.34315L16.5858 13L10.9289 18.6569C10.5384 19.0474 10.5384 19.6805 10.9289 20.0711C11.3195 20.4616 11.9526 20.4616 12.3431 20.0711L18.7071 13.7071ZM4 14L18 14V12L4 12L4 14Z" fill="white"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </h3>
+                    <p class="desc">온라인 집들이와 인테리어 노하우 등 다양한 인테리어 콘텐츠들을<br>
+                        제공하여 누구나 쉽게 재미있게 공간을 변화시킬 수 있도록 돕습니다.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+</html>
