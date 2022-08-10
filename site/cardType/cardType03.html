@@ -33,13 +33,14 @@
         .container {
             width: 1160px;
             /* padding: 0 20px; */
+            height: 517px;
             margin: 0 auto;
             min-width: 1160px;
-           
         }
 
         .section {
             padding: 120px 0;
+            background-color: #2254c3;
         }
 
         .section>h2 {
@@ -76,26 +77,21 @@
         }
 
        /* cardType */
-       .card__wrap {
-        background-color: #2254c3;
-        height: 757px;
-        width: 1920px;
-       }
        .card_inner {
             display: flex;
             justify-content: space-between;
             background-color: #fff;
         }
         .card {
-           width: 32%;
+           width: 33.3%;
            position: relative;
-           padding: 26px 26.5px 0px 26px;
+           padding: 26px 26px 0px 26px;
         }
         .card:nth-child(2){
             border: 1px solid #eee;
         }
         .card__body {
-            /* background-color: red; */
+        
         }
         .card__body .tit {
             font-size: 20px;
@@ -131,23 +127,23 @@
             font-size: 16px;
             position: absolute; 
             top: 445px;
-            left: 280px;
+            left: 288px;
         }
         .name2 {
             color: #dd2a2a;
             font-size: 16px;
             position: absolute; 
             top: 445px;
-            left: 270px;
+            left: 273px;
         }
         .name3 {
             color: #dd2a2a;
             font-size: 16px;
             position: absolute; 
             top: 445px;
-            left: 260px;
+            left: 262px;
         }
-        .resour {
+        .sub_name {
             color: #666666;
             font-size: 16px;
             position: absolute; 
@@ -158,9 +154,9 @@
             width: 37.6px;
             height: 40px;
             background-image: url(img/1.svg);
-            display: block; /*a tag는 inline구조라 일단, block으로 모양만듬*/
-            position: absolute; /*relative를 기준으로 위치이동*/
-            left: 322.4px;
+            display: block; 
+            position: absolute;
+            left: 330px;
             top: 445px;
             border-radius: 50%
         }
@@ -168,9 +164,9 @@
             width: 37.6px;
             height: 40px;
             background-image: url(img/2.svg);
-            display: block; /*a tag는 inline구조라 일단, block으로 모양만듬*/
-            position: absolute; /*relative를 기준으로 위치이동*/
-            left: 322.4px;
+            display: block; 
+            position: absolute;
+            left: 330px;
             top: 445px;
             border-radius: 50%
         }
@@ -178,11 +174,23 @@
             width: 37.6px;
             height: 40px;
             background-image: url(img/3.svg);
-            display: block; /*a tag는 inline구조라 일단, block으로 모양만듬*/
-            position: absolute; /*relative를 기준으로 위치이동*/
-            left: 322.4px;
+            display: block; 
+            position: absolute;
+            left: 330px;
             top: 445px;
             border-radius: 50%
+        }
+        .tag {
+            width: 101.1px;
+            height: 28px;
+            border-radius: 50px;
+            background-color: #fff;
+            position: absolute;
+            left: 250px;
+            top: 36px;
+            text-align: center;
+            line-height: 1.5;
+            color: #7b7b7b;
         }
     </style>
 </head>
@@ -190,16 +198,20 @@
     <section section id="cardType" class="card__wrap Nixgon section">
         <div class="card_inner container">
             <article class="card">
+                <figure>
                     <img src="img/card_bg03_01.jpg" alt="카드이미지1">
+                </figure>
                 <div class="card__body">
                     <h3 class="tit">Spectacular designs of 
                         animals in polygonal style</h3>
                     <p class="desc">Digital art is an artistic work or practice
-                        that uses digital ...that uses digital ...that
-                        uses digital ...</p>
+                        that uses digital Digital art is an artistic work or practice
+                        that uses digital Digital art is an artistic work or practice
+                    </p>
                         <div class="name">Alex</div>
-                         <div class="resour">9 Resources</div>
+                         <div class="sub_name">9 Resources</div>
                     <a href="#" class="more1"><span class="ir">더보기</span></a>
+                    <a href="#" class="tag">art</a>
                 </div>
             </article>
             <article class="card">
@@ -209,12 +221,14 @@
                 <div class="card__body">
                     <h3 class="tit">Spectacular designs of 
                         animals in polygonal style</h3>
-                    <p class="desc">Digital art is an artistic work or practice
-                        that uses digital ...that uses digital ...that
-                        uses digital ...</p>
+                        <p class="desc">Digital art is an artistic work or practice
+                            that uses digital Digital art is an artistic work or practice
+                            that uses digital Digital art is an artistic work or practice
+                        </p>
                         <div class="name2">Puppy</div>
-                        <div class="resour">9 Resources</div>
+                        <div class="sub_name">9 Resources</div>
                         <a href="#" class="more2"><span class="ir">더보기</span></a>
+                        <a href="#" class="tag">art</a>
                 </div>
             </article>
             <article class="card">
@@ -224,12 +238,14 @@
                 <div class="card__body">
                     <h3 class="tit">Spectacular designs of 
                         animals in polygonal style</h3>
-                    <p class="desc">Digital art is an artistic work or practice
-                        that uses digital ...that uses digital ...that
-                        uses digital ...</p>
+                        <p class="desc">Digital art is an artistic work or practice
+                            that uses digital Digital art is an artistic work or practice
+                            that uses digital Digital art is an artistic work or practice
+                        </p>
                         <div class="name3">Cosmos</div>
-                         <div class="resour">9 Resources</div>
+                         <div class="sub_name">9 Resources</div>
                         <a href="#" class="more3"><span class="ir">더보기</span></a>
+                        <a href="#" class="tag">art</a>
                 </div>
             </article>
         </div>
