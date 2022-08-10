@@ -69,6 +69,9 @@
         .card__body .tit {
             font-size: 24px;
             margin-bottom: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         .card__body .desc {
             font-size: 18px;
@@ -76,6 +79,11 @@
             color: #666;
             margin-bottom: 20px;
             font-weight: 300;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;  /*설명이 3줄이상 되면 ...으로 처리함*/
+            -webkit-box-orient: vertical;
         }
         .card__body .btn {
           
@@ -84,13 +92,13 @@
     </style>
 </head>
 <body>
-    <section id="cardType" class="card__wrap nexon section">
+    <section id="cardType01" class="card__wrap nexon section">
         <h2>인테리어</h2>
         <p>누구나 예쁜 집을 꾸밀 수 있도록 인테리어 영감을 주는 사진, 동영상이 가득!</p>
         <div class="card_inner container">
             <article class="card">
                 <figure>
-                    <img src="img/card_bg01.jpg" alt="파우더룸 인테리어">
+                    <img src="img/card_bg01_01.jpg" alt="파우더룸 인테리어">
                 </figure>
                 <div class="card__body">
                     <h3 class="tit">파우더룸 인테리어를 해봅시다.</h3>
@@ -108,7 +116,7 @@
             </article>
             <article class="card">
                 <figure class="card__header">
-                    <img src="img/card_bg02.jpg" alt="침실 인테리어">
+                    <img src="img/card_bg01_02.jpg" alt="침실 인테리어">
                 </figure>
                 <div class="card__body">
                     <h3 class="tit">침실 인테리어를 해봅시다.</h3>
@@ -127,7 +135,7 @@
             </article>
             <article class="card">
                 <figure>
-                    <img src="img/card_bg03.jpg" alt="거실 인테리어">
+                    <img src="img/card_bg01_03.jpg" alt="거실 인테리어">
                 </figure>
                 <div class="card__body">
                     <h3 class="tit">거실 인테리어를 해봅시다.</h3>
