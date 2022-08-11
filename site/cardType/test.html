@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 유형02</title>
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+        .gmark {
+            font-family: "GmarketSans";
+            font-weight: 500;
+        }
+
+        /* reset */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        /* common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1160px;
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        .section>h2 {
+            font-size: 50px;
+            line-height: 1;
+            /*line height auto는 1을 의미*/
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section>p {
+            font-size: 22px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+
+        .gray {
+            background-color: #f5f5f5;
+        }
+
+        /* ir 효과 (이미지 대체 효과 == alt) */
+        .ir {  
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px; /*들여쓰기*/
+        }
+        .card {
+            display: flex;
+        }
+        .card__inner {
+            width: 33.333%;
+            padding: 26px;
+        }
+        .imgs { 
+            border-radius: 10px;
+        }
+        figcaption {
+            color: #666;
+            background-color: #fff;
+            width: 70px;
+            border-radius: 20px;
+            position: absolute;
+            height: 30px;
+            line-height: 2;
+            top: 10px;
+            right: 10px;
+            text-align: center;
+        }
+        .header {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="gmark section">
+        <div class="container card">
+            <article class="card__inner">
+                <div class="header">
+                    <img src="img/card_bg03_01.jpg" alt="" class="imgs">
+                    <figcaption>art</figcaption>
+                </div>
+                <div class="body">
+                    <h3>title</h3>
+                    <p>desc</p>
+                </div>
+                <div class="footer">
+                    <span>Alex <em>9 Resources</em></span>
+                    <img src="img/card_bg03_icon01.png" alt="">
+                </div>
+               </article>
+                <article class="card__inner">
+                    <div class="header">
+                        <img src="img/card_bg03_02.jpg" alt="" class="imgs">
+                        <figcaption>art</figcaption>
+                    </div>
+                    <div class="body">
+                        <h3>title</h3>
+                        <p>desc</p>
+                    </div>
+                    <div class="footer">
+                        <span>Alex <em>9 Resources</em></span>
+                        <img src="img/card_bg03_icon02.png" alt="">
+                    </div>
+                   </article>
+                   <article class="card__inner">
+                    <div class="header">
+                        <img src="img/card_bg03_03.jpg" alt="" class="imgs">
+                        <figcaption>art</figcaption>
+                    </div>
+                    <div class="body">
+                        <h3>title</h3>
+                        <p>desc</p>
+                    </div>
+                    <div class="footer">
+                        <span>Alex <em>9 Resources</em></span>
+                        <img src="img/card_bg03_icon03.png" alt="">
+                    </div>
+                   </article>
+        </div>
+</body>
+
+</html>
