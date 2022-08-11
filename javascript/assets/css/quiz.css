@@ -229,17 +229,17 @@ body {
     animation: wobble 0.6s; /*0.6초동안 좌우 흔들리는 애니메이션 효과*/
 }
 
-.quiz_selects {
+.quiz__selects {
     margin: 5px 0;
 }
-.quiz_selects label {
+.quiz__selects label {
     display: flex;
 }
-.quiz_selects label input {
+.quiz__selects label input {
     position: absolute;
     left: -9999px;
 }
-.quiz_selects label span {
+.quiz__selects label span {
     font-size: 20px;
     font-family: "Hallym";
     line-height: 1.3;
@@ -250,7 +250,7 @@ body {
     cursor: pointer;
     border-radius: 5px;
 }
-.quiz_selects label span::before {
+.quiz__selects label span::before {
     content: '';
     width: 30px;
     height: 30px;
@@ -262,11 +262,30 @@ body {
     box-shadow: inset 0px 0px 0px 4px #F5534F;
     transition: all 0.25s;
 }
-.quiz_selects label input:checked + span {
+.quiz__selects label input:checked + span {
     background-color: #f5524f1e;
 }
-.quiz_selects label input:checked + span::before {
+.quiz__selects label input:checked + span::before {
     box-shadow: inset 0px 0px 0px 10px #F5534F;
+}
+.quiz__confirm {
+    width: 100%;
+    text-align: center;
+}
+.quiz__confirm .check {
+    font-size: 22px;
+    padding: 13px 60px;
+    border: 6px ridge #cacaca;
+    line-height: 1.4;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: "Hallym";
+    cursor: pointer;
+    margin: 40px 0;
+    transition: background 0.3s;
+}
+.quiz__confirm .check:hover {
+    background: #f5524f49;
 }
 
 @keyframes wobble {

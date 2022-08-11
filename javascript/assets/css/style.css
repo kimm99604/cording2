@@ -124,12 +124,30 @@ body {
     padding: 3px;
 }
 .sample .table tr td {
-    padding: 3px;
+    padding: 6px;
     border: 1px solid #e6e6e6;
 }
 .sample .table table tr td[class*="_P"] {
-    background: #000;
+    color: #fff;
 }
+.sample .table table tr td[class*="_P"]:hover {
+    color: #000;
+    cursor: help;
+}
+
+/* mobile ver */
+@media (max-width:800px){
+    .sample .table {
+        overflow: scroll;
+    }
+    .sample .table table {
+        width: 780px;
+    }
+    .sample .table table tr td[class*="_P"] {
+        color: #000;
+    }
+}
+
 /* 티스토리용 문서 */
 .document {
     padding-bottom: 100px !important;
