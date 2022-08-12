@@ -32,10 +32,10 @@
     /* common */
     .container {
         width: 1160px;
-        padding: 0 20px;
+        /*padding: 0 20px;*/
         margin: 0 auto;
         min-width: 1160px;
-        border-top: 2px solid black;
+        border-top: 1px solid black;
         position: relative;
     }
     .section {
@@ -57,9 +57,18 @@
     /* card type04 */
     .main {
         display: flex;
+        border-bottom: 1px solid #999999;
     }
     .main_contents {
-        border-bottom: 1px solid #999999;
+    
+    }
+    .desc {
+        display: flex;
+        justify-content: flex-end;
+        margin: 250px 65px 16px 20px;
+        font-size: 8px;
+        text-align: left;
+        color: #747474;
     }
     .main_contents .tit {
         margin: 22px 65px 16px 20px;
@@ -71,6 +80,7 @@
         margin: 16px 7px 14px 19px;
         font-size: 20px;
         line-height: 1.5;
+        font-weight: bold;
     }
     .main_contents .sub {
         margin: 14px 129px 257px 20px;
@@ -86,7 +96,7 @@
     figcaption {
         width: 75px;
         height: 24px;
-        margin: 2px 115px 19px 0;
+        margin: 0px 115px 19px 0;
         padding: 0 11px;
         background-color: #000;
         color: #fff;
@@ -101,27 +111,49 @@
         position: relative;
     }
     .sub__tit {
-        margin: 23px 98px 0 0;
+        padding-left: 23px;
         font-size: 10px;
         color: #666;
         line-height: 1.7;
         text-align: left;
     }
-    h3 {
-        margin: 2px 20px 15px 0;
-        font-size: 12px;
-        font-weight: bold;
-        line-height: 1.42;
+    .sub h4 {
+        padding: 23px 98px 2px 0px;
+        font-size: 10px;
+        line-height: 1.7;
         text-align: left;
+        color: #666666;   
+        font-family: "PyeongChang";
     }
-  
-    .sub {
-        border: 1px solid red;
+    .sub p {
+        font-size: 12px;
+        font-style: normal;
+        text-align: left;
+        line-height: 1.4;
+        font-family: "PyeongChang";
+        font-weight: bold;
+        color: #000;
+        margin: 2px 20px 15px 0;
+    }
+    .sub__img {
+      width: 80px;
+      height: 80px;
+      padding: 27px 20px 0px 20px;
+      position: absolute;
+      right: 0;
+      top: 0px;
+    }
+    .sub_card {
         display: flex;
+    }
+    .sub {
+        height: 150px;
+        width: 30%;
+        position: relative;
     }
 </style>
 <body>
-    <section class="section">
+    <section class="section font">
         <div class="container">
             <figcaption>Lagged</figcaption>
             <article class="main_card"> 
@@ -129,10 +161,10 @@
                     <img src="img/card_bg_04_01.jpg" alt="몬스터이미지" class="main__img">
                     <div class="main_contents">
                         <p class="tit">인기 게임</p>
-                        <h2>Lagged에서 최고의 무료 온라인 게임
+                        <h2>Lagged에서 최고의 무료 온라인 게임<br>
                         모든 기기에서 플레이하세요.</h2>
                          <p class="sub__tit">온라인 게임과 플래시 게임이 준비되어 있습니다!</p>
-                         <p class="tit">그냥 '게임'이라고만 하면 컴퓨터, 휴대폰의 비디오 게임과 온라인 보드 게임, 
+                         <p class="desc">그냥 '게임'이라고만 하면 컴퓨터, 휴대폰의 비디오 게임과 온라인 보드 게임, 
                             즉 얼굴을 직접 보지 않고도 할 수 있는 게임들만을 가리키는 경우가 많다. 
                             이런 게임들은 스포츠와 달리 인터넷만 있으면 장소, 날씨, 시간에 제약을 
                             받지 않는다는 큰 장점이 있다.</p>
@@ -141,37 +173,29 @@
             </article>
             <article class="sub_card"> 
                 <div class="sub">
-                    <img src="img/card_bg_04_icon01.png" alt="몬스터이미지" class="sub__img">
-                        <p>PlayStation 4 </p>
-                        <h3>이번 달 출시되는 최고의 게임과 <br>
+                        <h4>PlayStation 4 </h4>
+                        <p>이번 달 출시되는 최고의 게임과 <br>
                             함께 관련 기능과 가이드 등을 <br>
-                            살펴보세요.</h3>
+                            살펴보세요.</p>
+                        <img src="img/card_bg_04_icon01.png" alt="몬스터이미지" class="sub__img">
                 </div>
-            </article>
-            <article class="sub_card"> 
                 <div class="sub">   
-                        <p>슈퍼 마리오브라더스 35</p>
-                        <h3>플래시게임으로도 나와있었지만 <br>
-                            최근에는 html5로 나와있습니다.</h3>
+                        <h4>슈퍼 마리오브라더스 35</h4>
+                        <p>플래시게임으로도 나와있었지만<br>
+                            최근에는 html5로 나와있습니다.</p>
                         <img src="img/card_bg_04_icon02.png" alt="몬스터이미지" class="sub__img">
-          
                 </div>
-            </article>
-            <article class="sub_card"> 
                 <div class="sub">
-                        <p class="sub__tit">별의커비</p>
-                        <h3>커비와 친구들에 대한 모든 것을<br>
-                            알아보세요. </h3>
+                        <h4>별의커비</h4>
+                        <p>커비와 친구들에 대한 모든 것을<br>
+                            알아보세요. </p>
                             <img src="img/card_bg_04_icon03.png" alt="몬스터이미지" class="sub__img">
                     </div>
-                </div>
-            </article>
-            <article class="sub_card"> 
                 <div class="sub">
-                        <p>VR</p>
-                        <h3>“한없이 실체험에 가까운 체험을<br>
+                        <h4>VR</h4>
+                        <p>“한없이 실체험에 가까운 체험을<br>
                             얻을 수 있다”
-                        </h3>
+                        </p>
                         <img src="img/card_bg_04_icon04.png" alt="몬스터이미지" class="sub__img">
                 </div>
             </article>

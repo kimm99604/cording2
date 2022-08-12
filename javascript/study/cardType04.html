@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 퀴즈 이펙트</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <style>
+        .fig{
+            width: 192px;
+            min-height: 881px; 
+            padding: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+                <li><a href="quiz01.html">퀴즈이펙트</a></li>
+                <li><a href="element.html">요소 선택</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">Card Type Web Site</h2>
+            <p class="t_desc">HTML, CSS를 통해 카드유형 웹사이트 만들기 - 세번째 
+            </p>
+
+            <h3 class="t_tit2">Result</h3>
+            <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
+                <iframe src="https://kimm99604.github.io/cording2/site/cardType/cardType04_22.08.12.html" frameborder="0"></iframe>
+            </div>
+
+            <div class="t_link">
+               <a href="https://github.com/kimm99604/cording2/blob/main/site/cardType/cardType04.html" target="_blank">원본 소스 보기</a> 
+            </div>
+            <div class="t_link">
+                <a href="https://kimm99604.github.io/cording2/site/cardType/cardType04_22.08.12.html" target="_blank">원본 페이지 보기</a> 
+             </div>
+
+            <h3 class="t_tit2">Figma</h3>
+            <p class="t_desc2">먼저, 피그마로 네번째 카드유형 그리드를 만들었습니다.
+            </p>
+            <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FAvCzdFXJ7ypOQ9xKXyXn8H%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D484%253A91" allowfullscreen></iframe>
+            </div>
+
+            <h3 class="t_tit2">HTML</h3>
+            <p class="t_desc2">main_card와 sub_card로 크게 두개의 영역으로 나누어 만들었습니다.
+            </p>
+            <div class="t_code">
+<pre><code>&lt;body&gt;
+    &lt;section class="section font"&gt;
+        &lt;div class="container"&gt;
+            &lt;figcaption&gt;Lagged&lt;/figcaption&gt;
+            &lt;article class="main_card"&gt; 
+                &lt;div class="main"&gt;
+                    &lt;img src="img/card_bg_04_01.jpg" alt="몬스터이미지" class="main__img"&gt;
+                    &lt;div class="main_contents"&gt;
+                        &lt;p class="tit"&gt;인기 게임&lt;/p&gt;
+                        &lt;h2&gt;Lagged에서 최고의 무료 온라인 게임&lt;br&gt;
+                        모든 기기에서 플레이하세요.&lt;/h2&gt;
+                         &lt;p class="sub__tit"&gt;온라인 게임과 플래시 게임이 준비되어 있습니다!&lt;/p&gt;
+                         &lt;p class="desc"&gt;그냥 '게임'이라고만 하면 컴퓨터, 휴대폰의 비디오 게임과 온라인 보드 게임, 
+                            즉 얼굴을 직접 보지 않고도 할 수 있는 게임들만을 가리키는 경우가 많다. 
+                            이런 게임들은 스포츠와 달리 인터넷만 있으면 장소, 날씨, 시간에 제약을 
+                            받지 않는다는 큰 장점이 있다.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/article&gt;
+            &lt;article class="sub_card"&gt; 
+                &lt;div class="sub"&gt;
+                        &lt;h4&gt;PlayStation 4 &lt;/h4&gt;
+                        &lt;p&gt;이번 달 출시되는 최고의 게임과 &lt;br&gt;
+                            함께 관련 기능과 가이드 등을 &lt;br&gt;
+                            살펴보세요.&lt;/p&gt;
+                        &lt;img src="img/card_bg_04_icon01.png" alt="몬스터이미지" class="sub__img"&gt;
+                &lt;/div&gt;
+                &lt;div class="sub"&gt;   
+                        &lt;h4&gt;슈퍼 마리오브라더스 35&lt;/h4&gt;
+                        &lt;p&gt;플래시게임으로도 나와있었지만&lt;br&gt;
+                            최근에는 html5로 나와있습니다.&lt;/p&gt;
+                        &lt;img src="img/card_bg_04_icon02.png" alt="몬스터이미지" class="sub__img"&gt;
+                &lt;/div&gt;
+                &lt;div class="sub"&gt;
+                        &lt;h4&gt;별의커비&lt;/h4&gt;
+                        &lt;p&gt;커비와 친구들에 대한 모든 것을&lt;br&gt;
+                            알아보세요. &lt;/p&gt;
+                            &lt;img src="img/card_bg_04_icon03.png" alt="몬스터이미지" class="sub__img"&gt;
+                    &lt;/div&gt;
+                &lt;div class="sub"&gt;
+                        &lt;h4&gt;VR&lt;/h4&gt;
+                        &lt;p&gt;“한없이 실체험에 가까운 체험을&lt;br&gt;
+                            얻을 수 있다”
+                        &lt;/p&gt;
+                        &lt;img src="img/card_bg_04_icon04.png" alt="몬스터이미지" class="sub__img"&gt;
+                &lt;/div&gt;
+            &lt;/article&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/body&gt;
+</code></pre>
+            </div>
+
+            <h3 class="t_tit2">CSS</h3>
+            <p class="t_desc2">sub__Card에 flex로 가로정렬을 하고, sub img는 position으로 자리를 맞췄습니다.
+            </p>
+            <div class="t_code">
+<pre><code>/* font */
+@import url('https://webfontworld.github.io/PyeongChang/PyeongChang.css');
+
+.font {
+    font-family: "PyeongChang";
+}
+
+/* reset */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+a {
+    text-decoration: none;
+    color: #000;
+}
+img {
+    width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+/* common */
+.container {
+    width: 1160px;
+    /*padding: 0 20px;*/
+    margin: 0 auto;
+    min-width: 1160px;
+    border-top: 1px solid black;
+    position: relative;
+}
+.section {
+    padding: 120px 0;
+}
+.section > h2 {
+    font-size: 50px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section > p {
+    font-size: 22px;
+    font-weight: 300;
+    color: #666;
+    text-align: center;
+    margin-bottom: 70px;
+}
+/* card type04 */
+.main {
+    display: flex;
+    border-bottom: 1px solid #999999;
+}
+.main_contents {}
+.desc {
+    display: flex;
+    justify-content: flex-end;
+    margin: 250px 65px 16px 20px;
+    font-size: 8px;
+    text-align: left;
+    color: #747474;
+}
+.main_contents .tit {
+    margin: 22px 65px 16px 20px;
+    font-size: 8px;
+    text-align: left;
+    color: #747474;
+}
+.main_contents h2 {
+    margin: 16px 7px 14px 19px;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+.main_contents .sub {
+    margin: 14px 129px 257px 20px;
+    font-size: 8px;
+    color: #555;
+}
+.main__img {
+    width: 761px;
+    height: 428px;
+    margin: 19px 17px 19px 0;
+}
+figcaption {
+    width: 75px;
+    height: 24px;
+    margin: 0px 115px 19px 0;
+    padding: 0 11px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+.sub__img { 
+    width: 80px;
+    height: 80px;
+}
+.main_card {
+    position: relative;
+}
+.sub__tit {
+    padding-left: 23px;
+    font-size: 10px;
+    color: #666;
+    line-height: 1.7;
+    text-align: left;
+}
+.sub h4 {
+    padding: 23px 98px 2px 0px;
+    font-size: 10px;
+    line-height: 1.7;
+    text-align: left;
+    color: #666666;   
+    font-family: "PyeongChang";
+}
+.sub p {
+    font-size: 12px;
+    font-style: normal;
+    text-align: left;
+    line-height: 1.4;
+    font-family: "PyeongChang";
+    font-weight: bold;
+    color: #000;
+    margin: 2px 20px 15px 0;
+}
+.sub__img {
+    width: 80px;
+    height: 80px;
+    padding: 27px 20px 0px 20px;
+    position: absolute;
+    right: 0;
+    top: 0px;
+}
+.sub_card {
+    display: flex;
+}
+.sub {
+    height: 150px;
+    width: 30%;
+    position: relative;
+}
+</code></pre>
+            </div>
+        </div>    
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:kimm9964@naver.com">kimm9964@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+</body>
+
+</html>
