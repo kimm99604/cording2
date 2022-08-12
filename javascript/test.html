@@ -1,55 +1,193 @@
-&lt;body&gt;
-  &lt;section id="cardType03" class="card__wrap Score section"&gt;
-      &lt;h2 class="blind"&gt;미술의 세계&lt;/h2&gt;
-      &lt;div class="card__inner container"&gt;
-          &lt;article class="card"&gt;
-              &lt;figure class="card__header"&gt;
-                  &lt;img src="img/card_bg03_01.jpg" alt="Architects"&gt;
-                  &lt;figcaption&gt;Art&lt;/figcaption&gt;
-              &lt;/figure&gt;
-              &lt;div class="card__contents"&gt;
-                  &lt;h3&gt;Spectacular designs of animals in polygonal style&lt;/h3&gt;
-                  &lt;p&gt;Digital art is an artistic work or practice
-                      that uses digital Digital art is an artistic work or practice
-                      that uses digital Digital art is an artistic work or practice&lt;/p&gt;
-              &lt;/div&gt;
-              &lt;div class="card__footer"&gt;
-                  &lt;h4&gt;Alex&lt;em&gt;Hesperioidea&lt;/em&gt;&lt;/h4&gt;
-                  &lt;span&gt;&lt;img src="img/card_bg03_icon01.png" alt=""&gt;&lt;/span&gt;
-              &lt;/div&gt;
-          &lt;/article&gt;
-          &lt;article class="card"&gt;
-              &lt;figure class="card__header"&gt;
-                  &lt;img src="img/card_bg03_02.jpg" alt=""&gt;
-                  &lt;figcaption&gt;Art&lt;/figcaption&gt;
-              &lt;/figure&gt;
-              &lt;div class="card__contents"&gt;
-                  &lt;h3&gt;Spectacular designs of animals in polygonal style&lt;/h3&gt;
-              &lt;p&gt;Digital art is an artistic work or practice
-                  that uses digital Digital art is an artistic work or practice
-                  that uses digital Digital art is an artistic work or practice&lt;/p&gt;
-              &lt;/div&gt;
-              &lt;div class="card__footer"&gt;
-                  &lt;h4&gt;Puppy&lt;em&gt;Hesperioidea&lt;/em&gt;&lt;/h4&gt;
-                  &lt;span&gt;&lt;img src="img/card_bg03_icon02.png" alt=""&gt;&lt;/span&gt;
-              &lt;/div&gt;
-          &lt;/article&gt;
-          &lt;article class="card"&gt;
-              &lt;figure class="card__header"&gt;
-                  &lt;img src="img/card_bg03_03.jpg" alt=""&gt;
-                  &lt;figcaption&gt;Art&lt;/figcaption&gt;
-              &lt;/figure&gt;
-              &lt;div class="card__contents"&gt;
-                  &lt;h3&gt;Spectacular designs of animals in polygonal style&lt;/h3&gt;
-              &lt;p&gt;Digital art is an artistic work or practice
-                  that uses digital Digital art is an artistic work or practice
-                  that uses digital Digital art is an artistic work or practice&lt;/p&gt;
-              &lt;/div&gt;
-              &lt;div class="card__footer"&gt;
-                  &lt;h4&gt;Cosmos&lt;em&gt;Hesperioidea&lt;/em&gt;&lt;/h4&gt;
-                  &lt;span&gt;&lt;img src="img/card_bg03_icon03.png" alt=""&gt;&lt;/span&gt;
-              &lt;/div&gt;
-          &lt;/article&gt;
-      &lt;/div&gt;
-  &lt;/section&gt;
-&lt;/body&gt;
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 이펙트</title>
+
+    <link rel="stylesheet" href="../assets/css/quiz.css">
+    <!-- 폰트 -->
+    <link href="https://webfontworld.github.io/DungGeunMo/DungGeunMo.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/hallym/Hallym.css" rel="stylesheet">
+</head>
+<!-- //header -->
+
+<body>
+    <header id="header">
+        <h1><a href="../javascript04.html">Quiz </a><em>객관식(한문제) 유형</em></h1>
+        <nav>
+            <ul>
+                <li><a href="quizEffect01.html">1</a></li>
+                <li><a href="quizEffect02.html">2</a></li>
+                <li><a href="quizEffect03.html">3</a></li>
+                <li><a href="quizEffect04.html">4</a></li>
+                <li class="active"><a href="quizEffect05.html">5</a></li>
+                <li><a href="quizEffect06.html">6</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="quiz__wrap">
+            <div class="quiz">
+                <span class="quiz__type"></span>
+                <h2 class="quiz__question">
+                    <span class="number"></span>
+                    <div class="ask"></div>
+                </h2>
+                <div class="quiz__view">
+                    <div class="true">정답입니다.</div>
+                    <div class="false">틀렸습니다.</div>
+                    <div class="dog">
+                        <div class="head">
+                            <div class="ears"></div>
+                            <div class="face"></div>
+                            <div class="eyes">
+                                <div class="teardrop"></div>
+                            </div>
+                            <div class="nose"></div>
+                            <div class="mouth">
+                                <div class="tongue"></div>
+                            </div>
+                            <div class="chin"></div>
+                        </div>
+                        <div class="body">
+                            <div class="tail"></div>
+                            <div class="legs"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz__answer">
+                  <div class="quiz_selects">
+                    <label for="select1">
+                        <input type="radio" id="select1" class="select" name="select" value="1"> 
+                        <span class="choice"></span> 
+                    </label>
+                    <label for="select2">
+                        <input type="radio" id="select2" class="select" name="select" value="2"> 
+                        <span class="choice"></span>
+                    </label>
+                    <label for="select3">
+                        <input type="radio" id="select3" class="select" name="select" value="3"> 
+                        <span class="choice"></span>
+                    </label>
+                    <label for="select4">
+                        <input type="radio" id="select4" class="select" name="select" value="4"> 
+                        <span class="choice"></span>
+                    </label>
+                  </div>
+                  <button class="confirm">정답 확인하기</button>
+                  <div class="result"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:kimm9964@naver.com">kimm9964@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script>
+        //문제정보 
+        const quizInfo = [
+            {
+                answerType: "웹디자인기능사 2012년 02회",
+                answerNum: "1.",
+                answerAsk: "입체에 대한 설명으로 옳지 않은 것은?",
+                answerChoice: {
+                    1: "소극적 입체는 현실적 형, 확실히 지각되는 형을 말한다",
+                    2: "입체는 면이 이동한 자취이다",
+                    3: "두 면과 각도를 가진 방향으로 이동하거나 면의 회전에 의해 생긴다",
+                    4: "순수한 입체는 구, 원통, 육면체 등과 같은 형이다."
+                },
+                answerResult: "1",
+                answerEx: "3차원적인 요소로 면이 이동한 자취 또는 면의 집합, 형태와 깊이를 가짐. 구, 육면체, 원뿔, 원기둥"
+            },
+
+            {
+                answerType: "웹디자인기능사 2012년 02회",
+                answerNum: "2.",
+                answerAsk: "다음 중 각 부분 사이에 시각적인 강한 힘과 약한 힘이 규칙적으로 연속될 때에 생기는 디자인의 원리는?",
+                answerChoice: {
+                    1: "조화",
+                    2: "율동",
+                    3: "균형",
+                    4: "강조"
+                },
+                answerResult: "2",
+                answerEx: "규칙적인 반복(연속)은 율동(Rhythm)과 연관성이 있습니다."
+            },
+
+            {
+                answerType: "웹디자인기능사 2012년 02회",
+                answerNum: "3.",
+                answerAsk: " 다음 중 제품 디자인(Product Design) 분야로 거리가 먼 것은?",
+                answerChoice: {
+                    1: "영상 디자인",
+                    2: "완구 디자인",
+                    3: "가전 디자인",
+                    4: "가구 디자인"
+                },
+                answerResult: "1",
+                answerEx: "영상 디자인은 시각 디자인에 포함됩니다."
+            },
+
+            {
+                answerType: "웹디자인기능사 2012년 02회",
+                answerNum: "4.",
+                answerAsk: "다음과 관계있는 디자인의 개념은?", /*"우리는 디자인 속에서 살고 있다",*/
+                answerChoice: {
+                    1: "디자인은 고도로 복잡하고 세련된 숙련이다.",
+                    2: "디자인은 항상 어떤 가능성을 전제로 시작된다",
+                    3: "디자인은 모든 사람의 일상이다.",
+                    4: "디자인은 예술이다."
+                },
+                answerResult: "3",
+                answerEx: "디자인은 모든 사람의 일상이다.와 같은 개념입니다."
+            },
+
+            {
+                answerType: "웹디자인기능사 2012년 02회",
+                answerNum: "5.",
+                answerAsk: "형태에 관한 시각의 기본 법칙을 내포한 게슈탈트(Gustalt) 심리적 원리가 옳은 것은?",
+                answerChoice: {
+                    1: "연속성, 근접성, 유사성, 폐쇄성",
+                    2: "유사성, 연속성, 개방성, 폐쇄성",
+                    3: "근접성, 개방성, 전경과 배경의 법칙",
+                    4: "유사성, 이성적, 개방성, 접근성(근접성)"
+                },
+                answerResult: "1",
+                answerEx: "게슈탈트법칙( 군화의 법칙 )게슈탈트 gestalt란 형태 형상을 의미하는 독일어1923년 막스 베르트하이머가 처음으로 제기연속성, 근접성, 유사성, 폐쇄성이 대표적이다."
+            },
+
+            {
+                answerType: "웹디자인기능사 2012년 02회",
+                answerNum: "6.",
+                answerAsk: "색채를 과학적으로 정리하여 스펙트럼을 7색으로 분리한 사람은?",
+                answerChoice: {
+                    1: "뉴턴",
+                    2: "먼셀",
+                    3: "오스트발트",
+                    4: "돈더스"
+                },
+                answerResult: "1",
+                answerEx: "뉴턴: 프리즘 실험을 통한 스펙트럼 발견 먼셀: 색을 색상, 명도, 채도에 따라 계통적으로 배치오스트발트: 백색량과 흑색량을 순색을 기준으로 한 오스트발트 표색계를 발표(헤링의 4원색설을 기본으로 함)"
+            },
+        ]
+      
+        //선택자
+        
+        //문제출력 함수
+        function updateQuiz(){
+            //문제 저장소 
+            const exam = [];
+        }
+        updateQuiz();
+
+      
+    </script>
+</body>
+
+</html>
