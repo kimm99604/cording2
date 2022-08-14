@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML : 구조 관련 요소</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+                <li><a href="quiz01.html">퀴즈이펙트</a></li>
+                <li><a href="element.html">요소 선택</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">구조 관련 요소</h2>
+            <p class="t_desc2">&lt;header&gt;, &lt;section&gt;, &lt;footer&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;aside&gt;</p>
+            <table class="t_table">
+                <colgroup>
+                    <col style="width:10%">
+                    <col style="width:10%">
+                    <col style="width:80%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>요소 유형</th>
+                    <th>태그명</th>
+                    <th>태그의 의미 및 특징</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="ce" rowspan="12">블록 레벨<br>요소</td>
+                    <td class="ce" rowspan="2">&lt;header&gt;<br>&lt;/header&gt;</td>
+                    <td>1. HTML문서의 헤더 영역을 의미하는 태그로 제목이나 네비게이션, 검색 등의 내용들을 포함할 수 있습니다.</td>
+                  </tr>
+                  <tr>
+                    <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있지만 &lt;header&gt;, &lt;footer&gt;태그는 포함할 수 없습니다.</td>
+                  </tr>
+                  <tr>
+                    <td class="ce" rowspan="2">&lt;section&gt;<br>&lt;/section&gt;</td>
+                    <td>1. HTML문서에서 맥락이 같은 요소들을 주제별로 그룹화해주는 태그이며 섹션 주제에 대한 제목 요소(&lt;h1r&gt;~ &lt;h6&gt;)를 포함하는 것이 좋습니다.</td>
+                  </tr>
+                  <tr>
+                    <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있습니다.</td>
+                  </tr>
+                  <tr>
+                    <td class="ce" rowspan="2">&lt;footer&gt;<br>&lt;/footer&gt;</td>
+                    <td>1. HTML문서의 푸터 영역을 의미하는 태그로 섹션 자성자나 저작권에 대한 정보, 관련된 문서의 링크를 포함할 수 있습니다.</td>
+                  </tr>
+                  <tr>
+                    <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있지만 &lt;header&gt;, &lt;footer&gt;태그는 포함할 수 없습니다.</td>
+                  </tr>
+                  <tr>
+                    <td class="ce" rowspan="2">&lt;nav&gt;<br>&lt;/nav&gt;</td>
+                    <td>1. HTML문서의 메인 메뉴나 목차 등을 정의해 주는 태그입니다.</td>
+                  </tr>
+                  <tr>
+                    <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있습니다.</td>
+                  </tr>
+                  <tr>
+                    <td class="ce" rowspan="2">&lt;article&gt;<br>&lt;/article&gt;</td>
+                    <td>1. HTML문서 내에서 독립적으로 배포 또는 재사용이 가능한 게시물, 뉴스 기사, 블로그 포스팅 등을 의미하는 태그이며
+                        제목 요소(&lt;h1r&gt;~ &lt;h6&gt;)를 포함하는 것이 좋습니다.</td>
+                  </tr>
+                  <tr>
+                    <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있습니다.</td>
+                  </tr>
+                  <tr>
+                    <td class="ce" rowspan="2">&lt;aside&gt;<br>&lt;/aside&gt;</td>
+                    <td>1. 메인 콘텐츠와 직접적으로 관련이 없는 영역을 의미하는 태그이며 HTML 문서의 
+                        오른쪽이나 왼쪽의 사이드 메뉴나 광고 등의 영역으로 사용됩니다.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있습니다.</td>
+                  </tr>
+                  
+                </tbody>
+            </table>
+        
+            <h3 class="t_tit2">예제</h3>
+            <h3 class="t_tit3">Result</h3>
+            <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
+                <iframe src="https://kimm99604.github.io/cording2/javascript/study/structure_example.html" frameborder="0"></iframe>
+            </div>
+            <h3 class="t_tit3">HTML</h3>
+            <div class="t_code">
+<pre><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;구조 요소&lt;/title&gt;
+    &lt;style&gt;&gt;
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;&lt;a&gt; href="#"&gt;반응형웹&lt;/a&gt;&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a&gt; href="#"&gt;MENU01&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt; href="#"&gt;MENU02&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt; href="#"&gt;MENU03&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt; href="#"&gt;MENU04&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt; href="#"&gt;MENU05&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;div id="container"&gt;
+        &lt;section&gt;
+            &lt;h2&gt;콘텐츠 그룹01&lt;/h2&gt;
+        &lt;/section&gt;
+        &lt;section&gt;
+            &lt;h2&gt;콘텐츠 그룹02&lt;/h2&gt;
+        &lt;/section&gt;
+        &lt;div class="aside"&gt;
+            &lt;article&gt;
+                &lt;h2&gt;주요 기사&lt;/h2&gt;
+            &lt;/article&gt;
+            &lt;aside&gt;광고&lt;/aside&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;footer&gt;
+        &lt;address&gt;경기도 부천시 오정구 삼정동    032)674-5685    icoxpub@naver.com&lt;/address&gt;
+        &lt;p&gt;COPYRIGHT @ All right reserved.&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            </div>
+            <h3 class="t_tit3">CSS</h3>
+            <div class="t_code">
+<pre><code class="language-js">@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 200;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+header {
+    background-color: rgb(165, 214, 165);
+    display: flex;
+    align-items: center;
+}
+h1 {
+    background-color: #fff;
+    width: 80px;
+    height: 80px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 80px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+nav {
+    background-color: #fff;
+    height: 50px;
+    width: 1100px;
+    margin-left: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+li {
+    line-height: 3;
+}
+
+#container {
+    width: 100%;
+    height: 500px;
+    background-color: rgb(165, 214, 165);
+    margin-top:20px;
+    padding-bottom: 10px;
+    margin-bottom:20px;
+    display: flex;
+}
+section {
+    background-color: #fff;
+    width: 700px;
+    height: 470px;
+    margin:20px;
+    text-align: center;
+    line-height: 20;
+}
+.aside {
+    display: block;
+    margin:20px;
+}
+article {
+    background-color: #fff;
+    width: 400px;
+    height: 225px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    line-height: 15;
+    text-align: center;
+}
+article h2 {
+    font-size: 16px;
+}
+aside {
+    background-color: #fff;
+    width: 400px;
+    height: 225px;
+    text-align: center;
+    line-height: 15;
+}
+footer {
+    background-color: rgb(165, 214, 165);
+    padding: 5px;
+}
+address {
+    font-style: normal;
+    width: 500px;
+    text-align: center;
+    margin: 5px 0px 5px 200px;
+    background-color: #fff;
+}
+p {
+    width: 480px;
+    background-color: #fff;
+    text-align: left;
+    margin: 5px 0px 5px 200px;
+    padding-left: 20px;
+}
+    </code></pre>
+                </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:kimm9964@naver.com">kimm9964@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+</html>
