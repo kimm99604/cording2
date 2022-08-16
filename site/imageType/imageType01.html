@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드유형 01</title>
+    <style>
+         /* fonts */
+         @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+         .nexon {
+             font-family: "NexonLv1Gothic";
+             font-weight: 400;
+         }
+ 
+         /* reset */
+         * {
+             padding: 0;
+             margin: 0;
+         }
+         a {
+             text-decoration: none;
+             color: #000;
+         }
+         img {
+             width: 100%;
+         }
+ 
+         /* common */
+         .container {
+             width: 1160px;
+             padding: 0 20px;
+             margin: 0 auto;
+             min-width: 1160px;
+         }
+         .section {
+             padding: 120px 0;
+         }
+         .section > h2 {
+             font-size: 50px;
+             line-height: 1; /*line height auto는 1을 의미*/
+             text-align: center;
+             margin-bottom: 20px;
+         }
+         .section > p {
+             font-size: 22px;
+             font-weight: 300;
+             color: #666;
+             text-align: center;
+             margin-bottom: 70px;
+         }
+         h1, h2, h3, h4, h5 ,h6 {
+             font-weight: normal;
+         }
+         .image__inner {
+            display: flex;
+         }
+         .card {
+            width: 570px;
+            height: 370px;
+            background-repeat: no-repeat;
+            padding: 197px 0px 29px 30px;
+            background-image: url(imageType01_bg01.png);
+        }
+        .card2 {
+            width: 570px;
+
+            background-repeat: no-repeat;
+            height: 370px;
+            margin-left: 20px;
+            padding: 197px 10px 29px 30px;
+            background-image: url(imageType01_bg02.png);
+        }
+
+        .title {
+            width: 350px;
+            height: 45px;
+            font-size: 32px;
+            line-height: 1.4;
+            color: #fff;
+            margin: 0 191px 10px 0;
+            
+        }
+        .desc {
+            width: 469px;
+            font-size: 16px;
+            color: #fff;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            
+        }
+        .btn {
+            width: 120px;
+            height: 38px;
+            padding: 9px 23px 7px;
+            background-color: rgba(47, 46, 46, 0.8);
+            color: #fff;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <section id="imageType01" class="ima__wrap nexon section">
+        <h2>야생동물</h2>
+        <p>누구나 예쁜 집을 꾸밀 수 있도록 인테리어 영감을 주는 사진, 동영상이 가득! </p>
+        <div class="container image__inner">
+            <article class="card">
+                <div class="img1"></div>
+                <h3 class="title">포트폴리오가 실력이다.</h3>
+                <p class="desc">포트폴리오가 실력이다.포트폴리오가 실력이다.포트폴리오가 실력이다.
+                    포트폴리오가 실력이다.포트폴리오가 실력이다.</p>
+                <a href="#" class="btn">자세히 보기</a> 
+            </article>
+            <article class="card2">
+                <h3 class="title">포트폴리오가 실력이다.</h3>
+                <p class="desc">포트폴리오가 실력이다.포트폴리오가 실력이다.포트폴리오가 실력이다.
+                    포트폴리오가 실력이다.포트폴리오가 실력이다.</p>
+                <a href="#" class="btn">자세히 보기</a> 
+            </article>
+        </div>
+    </section>
+</body>
+</html>
