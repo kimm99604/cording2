@@ -50,7 +50,6 @@
              font-size: 22px;
              font-weight: 300;
              color: #666;
-             text-align: center;
              margin-bottom: 70px;
          }
          h1, h2, h3, h4, h5 ,h6 {
@@ -60,29 +59,123 @@
          /* imageType */
          .image__inner {
             display: flex;
-            justify-content: center;
-            padding: 100px;
+           justify-content: flex-end;
+           margin-top: -100px;
+           margin-left: 120px;
         }
-        .box {
-            width: 400px;
-            height: 400px;
-            background-color: rgb(33, 107, 218);
-            margin: 50px;
+        .box1 {
+            width: 250px;
+            height: 330px;
+            margin: 0 21px 44px 18px;
+            background: url(../cardType/img/blog1.png) no-repeat;
+            margin: 0 21px 44px 18px;
+            border-radius: 10px;
+            color: #fff;
+            text-align: left;
+            font-size: 35px;
+            padding-top: 10px;
+            padding-left: 10px;
+            font-weight: 400;
         }
-      
+        .box2 {
+            width: 250px;
+            height: 330px;
+            margin: 0 21px 44px 18px;
+            background: url(../cardType/img/blog2.png) no-repeat;
+            margin: 0 21px 44px 18px;
+            border-radius: 10px;
+            color: #fff;
+            text-align: left;
+            font-size: 35px;
+            padding-top: 10px;
+            padding-left: 10px;
+            font-weight: 400;
+        }
+        .box3 {
+            width: 250px;
+            height: 330px;
+            margin: 0 21px 44px 18px;
+            background: url(../cardType/img/blog3.png) no-repeat;
+            margin: 0 21px 44px 18px;
+            border-radius: 10px;
+            color: #fff;
+            text-align: left;
+            font-size: 35px;
+            padding-top: 10px;
+            padding-left: 10px;
+            font-weight: 400;
+        }
+        .title {
+            font-size: 50px;
+            font-weight: 500;
+            color: #fff;
+            display: contents;
+        }
+        .sub {
+            margin-bottom: 10px;
+            font-size: 22px;
+            text-align: left;
+            color: #fff;
+        }
+        .message {
+           margin-left: 20px;
+        }
+        /* 효과 */
+        @-webkit-keyframes sparkle {
+            from {
+              background-position: 0% 100%;
+            }
+            to {
+              background-position: 200% 100%;
+            }
+          }
+          
+          @keyframes sparkle {
+            from {
+              background-position: 0% 100%;
+            }
+            to {
+              background-position: 200% 100%;
+            }
+          }
+          .test {
+            /*background: white;*/
+            display: inline-block;
+            position: relative;
+          }
+          .test:before {
+            -webkit-animation: sparkle 4s infinite linear;
+                    animation: sparkle 4s infinite linear;
+            background: linear-gradient(90deg, #7FEFBD 0%, #FFF689 11%, #EC0B43 22%, #7FEFBD 33%, #FFF689 44%, #EC0B43 55%, #7FEFBD 66%, #FFF689 77%, #EC0B43 88%, #7FEFBD 100%);
+            background-size: 300% 100%;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 96%;
+            height: 98%;
+            filter: blur(3px);
+            z-index: -1;
+            transform: scale(0.99) translateY(3px);
+          }
     </style>
 </head>
 <body>
-    <section id="imageType01" class="ima__wrap nexon section">
+    <section id="imageType01" class="nexon section">
+        <div class="message">
+            <h2 class="title">Reference</h2>
+            <p class="sub">클릭 시, 해당 레퍼런스 북으로<br>
+            이동합니다.</p>
+        </div>
         <div class="image__inner container">
             <article>
-                <div class="box">HTML</div>
+                <div class="box1 test" style="cursor: pointer" onclick="window.location.href='http://kimm99604.github.io/cording2/html/alphabet.html';">HTML</div>
             </article>
             <article>
-                <div class="box">CSS</div>
+                <div class="box2 test" style="cursor: pointer" onclick="window.location.href='http://kimm99604.github.io/cording2/css/index.html';">CSS</div>
             </article>
             <article>
-                <div class="box">JAVASCRIPT</div>
+                <div class="box3 test" style="cursor: pointer" onclick="window.location.href='http://kimm99604.github.io/cording2/javascript/index.html';">JAVA<br>SCRIPT</div>
             </article>
         </div>
     </section>
