@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 이펙트</title>
+    <!-- font -->
+    <link href="https://webfontworld.github.io/tmon/Tmon.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/NexonLv2Gothic/NexonLv2Gothic.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/search.css">
+</head>
+<body>
+    <header id="header">
+        <h1>Search</h1>
+        <nav>
+            <ul>
+                <li><a href="searchEffect01.html">1</a></li>
+                <li class="active"><a href="searchEffect02.html">2</a></li>
+                <li><a href="searchEffect03.html">3</a></li>
+                <li><a href="searchEffect04.html">4</a></li>
+                <li><a href="searchEffect05.html">5</a></li>
+                <li><a href="searchEffect06.html">6</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="search__wrap">
+            <span>includes()를 이용하여 CSS 속성 검색하기</span>
+            <h1>CSS 속성 검색하기</h1>
+            <div class="search__box">
+                <label for="search">검색하기</label>
+                <input type="text" id="search" placeholder="CSS 유형별로 검색해보세요">
+            </div>
+            <div class="search__info">
+                <div class="type">플렉스, 애니메이션, 백그라운드, 기타 등 유형별로 검색해보세요</div>
+                <div>전체 속성 갯수 : <span class="num">0</span></div>
+            </div>
+            <div class="search__list">
+                <div class="html">
+                    <ul>
+                        <li data-name="accent-color" data-type="효과"><strong>accent-color</strong> : accent-color 는 특정 요소에 색상을 지정합니다.
+                        </li>
+                        <li data-name="align-content" data-type="플렉스"><strong>align-content</strong> : align-content 는 콘텐츠 아이템의 상하관계 정렬
+                            상태를 설정합니다.</li>
+                        <li data-name="align-items" data-type="플렉스"><strong>align-items</strong> : align-items 는 콘텐츠 아이템의 내부 상하관계 정렬 상태를
+                            설정합니다.</li>
+                        <li data-name="align-self" data-type="플렉스"><strong>align-self</strong> : align-self 는 아이템의 교차축 정렬 정하는 속성 입니다.
+                        </li>
+                        <li data-name="all" data-type="기타"><strong>all</strong> : all 는 요소의 속성을 초기화 또는 상속을 설정합니다.</li>
+                        <li data-name="animation" data-type="애니메이션"><strong>animation</strong> : animation 는 HTML 요소에 적용되는 CSS 스타일을 다른 CSS
+                            스타일로 부드럽게 변화시킵니다.</li>
+                        <li data-name="animation-delay" data-type="애니메이션"><strong>animation-delay</strong> : animation-delay 는 적용 대기 시간을지정합니다.</li>
+                        <li data-name="animation-direction" data-type="애니메이션"><strong>animation-direction</strong> : animation-direction 는 애니메이션의 진행 방향을 설정합니다.</li>
+                        <li data-name="animation-duration" data-type="애니메이션"><strong>animation-duration</strong> : animation-duration 는실행된 애니메이션 진행 시간을 지정하는 속성입니다.</li>
+                        <li data-name="animation-fill-mode" data-type="애니메이션"><strong>animation-fill-mode</strong> : animation-fill-mode 는애니메이션 실행 이전이나 이후에 애니메이션 효과를 표시할지의 여부를 지정하는 속성입니다.</li>
+                        <li data-name="animation-iteration-count" data-type="애니메이션"><strong>animation-iteration-count</strong> : animation-iteration-count는 애니메이션의 반복 횟수를 설정합니다.</li>
+                        <li data-name="animation-name" data-type="애니메이션"><strong>animation-name</strong> : animation-name 애니메이션 keyframe 이름을 설정합니다.</li>
+                        <li data-name="animation-play-state" data-type="애니메이션"><strong>animation-play-state</strong> : animation-play-state 애니메이션 진행상태를 설정합니다.</li>
+                        <li data-name="animation-timeline" data-type="애니메이션"><strong>animation-timeline</strong> : animation-timeline 타이밍 진행률에 따라 출력 값을 생성하는 개체의 Timeline 형식입니다.</li>
+                        <li data-name="animation-timing-function" data-type="애니메이션"><strong>animation-timing-function</strong> : animation-timing-function 특정 애니메이션을 실행할 때 애니메이션의 가속운동, 즉 특정한 시점에서 가속할지 감속할지를 정하는 속성이다.</li>
+                        <li data-name="appearance" data-type="기타"><strong>appearance</strong> : appearance 요소자체 구성요소를 숨깁니다.</li>
+                        <li data-name="aspect-ratio" data-type="효과"><strong>aspect-ratio</strong> : aspect-ratio 속성은 이미지나 동영상을 비율대로 줄이거나 늘리는 데 사용됩니다.</li>
+                        <li data-name="backdrop-filter" data-type="효과"><strong>backdrop-filter</strong> : backdrop-filter 요소 뒤 영역에 흐림이나 색상 시프트 등 그래픽 효과를 적용할 수 있는 속성입니다. </li>
+                        <li data-name="backface-visibility" data-type="기타"><strong>backface-visibility</strong> : backface-visibility 속성은 요소의 뒷면이 사용자를 향할 때 보여야 하는지 지정합니다.</li>
+                        <li data-name="background" data-type="백그라운드"><strong>background</strong> : background 백그라운드 속성을 일괄적으로 설정합니다.</li>
+                        <li data-name="background-attachment" data-type="백그라운드"><strong>background-attachment</strong> : background-attachment 배경이미지 고정 여부를 설정합니다.</li>
+                        <li data-name="background-blend-mode" data-type="백그라운드"><strong>background-blend-mode</strong> : background-blend-mode 배경을 혼합했을 때, 그래픽 효과를 설정합니다.</li>
+                        <li data-name="background-clip" data-type="백그라운드"><strong>background-clip</strong> : background-clip 백그라운드 이미지의 위치 기준점을 설정합니다.</li>
+                        <li data-name="background-color" data-type="백그라운드"><strong>background-color</strong> : background-color 백그라운드 색을 설정합니다.</li>
+                        <li data-name="background-image" data-type="백그라운드"><strong>background-image</strong> : background-image 백그라운드이미지 속성을 설정합니다.</li>
+                        <li data-name="background-origin" data-type="백그라운드"><strong>background-origin</strong> : background-origin 백그라운드 이미지 위치 기준점을 설정하기 위한 속성입니다.</li>
+                        <li data-name="background-position" data-type="백그라운드"><strong>background-position</strong> : background-position 백그라운드 이미지의 위치 영역을 설정합니다.</li>
+                        <li data-name="background-position-x" data-type="백그라운드"><strong>background-position-x</strong> : background-position-x 백그라운드 이미지의 위치 영역 x축을 설정합니다.</li>
+                        <li data-name="background-position-y" data-type="백그라운드"><strong>background-position-y</strong> : background-position-y 백그라운드 이미지의 위치 영역 y축을 설정합니다.</li>
+                        <li data-name="background-repeat" data-type="백그라운드"><strong>background-repeat</strong> : background-repeat 백그라운드 이미지 반복 여부를 설정합니다.</li>
+                        <li data-name="background-size" data-type="백그라운드"><strong>background-size</strong> : background-size 백그라운드 이미지 반복 여부를 설정합니다.</li>
+                        <li data-name="block-size" data-type="기타"><strong>block-size</strong> : block-size 기록 모드에 따라서, 요소의 블록의 수평과 수직 크기를 정의합니다.</li>
+                        <li data-name="border" data-type="border"><strong>border</strong> : border 테두리 속성을 일괄적으로 설정합니다.</li>
+                        <li data-name="border-block-color" data-type="border"><strong>border-block-color</strong> : border-block-color 속성은 약식 속성 스타일 시트에서 하나의 장소에서 각각의 논리 블록 border 속성 값을 설정합니다.</li>
+                        <li data-name="border-block-end" data-type="border"><strong>border-block-end</strong> : border-block-end 속성은 스타일 시트의 한 곳에서 개별 논리적 블록-엔드 경계선 속성 값을 설정하기 위한 약식 속성입니다. </li>
+                        <li data-name="border-block-end-color" data-type="border"><strong>border-block-end-color</strong> : border-block-end-color 속성은 요소의 논리적 블록-end 경계선의 색상을 정의하며, 요소의 쓰기 모드, 방향성 및 텍스트 방향에 따라 물리적 경계 색상에 매핑됩니다.</li>
+                        <li data-name="border-block-end-style" data-type="border"><strong>border-block-end-style</strong> : border-block-end-style</li>
+                        <li data-name="border-block-end-width" data-type="border-block-end-width"><strong>border-block-end-width</strong> : border-block-end-width</li>
+                        <li data-name="border-bottom" data-type="border"><strong>border-bottom</strong> : border-bottom</li>
+                        <li data-name="border-bottom-color" data-type="border"><strong>border-bottom-color</strong> : border-bottom-color</li>
+                        <li data-name="border-bottom-left-radius" data-type="border"><strong>border-bottom-left-radius</strong> : border-bottom-left-radius</li>
+                        <li data-name="border-bottom-right-radius" data-type="border"><strong>border-bottom-right-radius</strong> : border-bottom-right-radius</li>
+                        <li data-name="border-bottom-style" data-type="border"><strong>border-bottom-style</strong> : border-bottom-style</li>
+                        <li data-name="border-bottom-width" data-type="border"><strong>border-bottom-width</strong> : border-bottom-width</li>
+                        <li data-name="border-collapse" data-type="border"><strong>border-collapse</strong> : border-collapse</li>
+                        <li data-name="border-color" data-type="border"><strong>border-color</strong> : border-color</li>
+                        <li data-name="border-end-end-radius" data-type="border"><strong>border-end-end-radius</strong> : border-end-end-radius</li>
+                        <li data-name="border-end-start-radius" data-type="border"><strong>border</strong> : border</li>
+                        <li data-name="border-image" data-type="border"><strong>border-image</strong> : border-image</li>
+                        <li data-name="border-image-outser" data-type="border"><strong>border-image-outser</strong> : border-image-outser</li>
+                        <li data-name="border-image-repeat" data-type="border"><strong>border-image-repeat</strong> : border-image-repeat</li>
+                        <li data-name="border-image-slice" data-type="border"><strong>border-image-slice</strong> : border-image-slice</li>
+                        <li data-name="border-image-source" data-type="border"><strong>border-image-source</strong> : border-image-source</li>
+                        <li data-name="border-image-width" data-type="border"><strong>border-image-width</strong> : border-image-width</li>
+                        <li data-name="border-inline" data-type="border"><strong>border-inline</strong> : border-inline</li>
+                        <li data-name="border-inline-color" data-type="border"><strong>border-inline-color</strong> : border-inline-color</li>
+                        <li data-name="border-inline-end" data-type="border"><strong>border-inline-end</strong> : border-inline-end</li>
+                        <li data-name="border-inline-end-color" data-type="border"><strong>border-inline-end-color</strong> : border-inline-end-color</li>
+                        <li data-name="border-inline-end-style" data-type="border"><strong>border-inline-end-style</strong> : border-inline-end-style</li>
+                        <li data-name="border-inline-end-width>" data-type="border"><strong>border-inline-end-width></strong> : border-inline-end-width></li>
+                        <li data-name="border-inline-start" data-type="border"><strong>border-inline-start</strong> : border-inline-start</li>
+                        <li data-name="border-inline-start-color" data-type="border"><strong>border-inline-start-color</strong> : border-inline-start-color</li>
+                        <li data-name="border-inline-start-style" data-type="border"><strong>border-inline-start-style</strong> : border-inline-start-style</li>
+                        <li data-name="border-inline-start-width" data-type="border"><strong>border-inline-start-width</strong> : border-inline-start-width</li>
+                        <li data-name="border-inline-style" data-type="border"><strong>border-inline-style</strong> : border-inline-style</li>
+                        <li data-name="border-inline-width" data-type="border"><strong>border-inline-width</strong> : border-inline-width</li>
+                        <li data-name="border-inline-left" data-type="border"><strong>border-inline-left</strong> : border-inline-left</li>
+                        <li data-name="border-inline-left-color" data-type="border"><strong>border-inline-left-color</strong> : border-inline-left-color</li>
+                        <li data-name="" data-type="border"><strong>border</strong> : border</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:kimm9964@naver.com">kimm9964@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+        //선택자 
+        const searchBox = document.querySelector(".search__box input"); //검색 박스
+        const searchList = document.querySelectorAll(".search__list ul li"); //리스트
+        const searchInfo = document.querySelector(".num"); //전체 갯수 
+        const searchType = document.querySelector(".type");//검색 유형 
+
+        //키워드 검색 
+        let str = '플렉스, 애니메이션, 백그라운드, 기타, border';
+        let pos1 = str.indexOf('플렉스')
+
+        //전체 갯수 구하기 
+        searchInfo.textContent = searchList.length;
+        // searchList.forEach(element => {
+        //    const num = searchList.length; //갯수 카운트 
+        //    count.innerHTML = num; //출력 
+        // });
+
+        searchList.forEach(el => {
+            el.classList.add("show");
+        });
+
+        //검색 함수 
+        searchBox.addEventListener("keyup", () => {
+            const searchWord = searchBox.value; //사용자가 입력한 키워드
+            
+            searchList.forEach(el => {
+                const cssName = el.dataset.name; //css속성 모든 값
+                // console.log(cssName)
+
+                if(cssName.includes(searchWord)){
+                    el.classList.remove("hide");
+                } else {
+                    el.classList.add("hide");
+                }
+            });
+        });
+
+    </script>
+</body>
+</body>
+</html>

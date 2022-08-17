@@ -44,10 +44,10 @@
     <!-- //header -->
     <main id="main">
         <div class="document">
-            <h2 class="t_tit">indexOf() - 메서드</h2>
+            <h2 class="t_tit">indexOf() | lastIndexOf()</h2>
             
             <hr>
-            <h3 class="t_tit2">indexOf() </h3>
+            <h3 class="t_tit2">indexOf() | lastIndexOf()</h3>
             <p class="t_desc2">
                 indexOf() 메서드는 배열에서 지정된 요소를 찾을 수 있는 첫 번째 인덱스를 반환하고 존재하지 않으면 -1을 반환합니다.<br>
                 <br>
@@ -55,22 +55,32 @@
                 "문자열".indexOf(검색값, 위치값)
             </p>
             <div class="t_code">
-<pre><code class="language-js">const str1 = "javascript reference";
-const currentStr1 = str1.indexOf("javascript"); //0
-const currentStr2 = str1.indexOf("reference"); //11
-const currentStr3 = str1.indexOf("j"); //0
-const currentStr4 = str1.indexOf("a"); //1
-const currentStr5 = str1.indexOf("v"); //2
-const currentStr6 = str1.indexOf("jquery"); // -1
-const currentStr7 = str1.indexOf("b"); //-1 
-const currentStr8 = str1.indexOf("javascript",0); //0 
-const currentStr9 = str1.indexOf("javascript",1); //-1 
-const currentStr10 = str1.indexOf("reference",0); //11 
-const currentStr11 = str1.indexOf("reference",1); //11 
-const currentStr12 = str1.indexOf("reference",11); //11 
-const currentStr13 = str1.indexOf("reference",12); //-1 
+<pre><code class="language-js">const str1 = "456";
+const currentStr1 = str1.padStart(1, "0"); //456
+const currentStr2 = str1.padStart(2, "0"); //456
+const currentStr3 = str1.padStart(3, "0"); //456
+const currentStr4 = str1.padStart(4, "0"); //0456
+const currentStr5 = str1.padStart(5, "0"); //00456
+const currentStr6 = str1.padStart(6, "0"); //000456
+const currentStr7 = str1.padStart(6, "1"); //111456
+const currentStr8 = str1.padStart(6, "12"); //121456
+const currentStr9 = str1.padStart(6, "123"); //123456
+const currentStr10 = str1.padStart(6, "1234"); //123456 4가 짤림 
+const currentStr11 = str1.padStart(6); //___456  앞 3자리는 공백처리됨
 
-console.log(currentStr13);
+const currentStr12 = str1.padEnd(1,"0"); //456
+const currentStr13 = str1.padEnd(2,"0"); //456
+const currentStr14 = str1.padEnd(3,"0"); //456
+const currentStr15 = str1.padEnd(4,"0"); //4560
+const currentStr16 = str1.padEnd(5,"0"); //45600
+const currentStr17 = str1.padEnd(6,"0"); //456000
+const currentStr18 = str1.padEnd(6,"1"); //456111
+const currentStr19 = str1.padEnd(6,"12"); //456121
+const currentStr20 = str1.padEnd(6,"123"); //456123
+const currentStr21 = str1.padEnd(6,"1234"); //456123
+const currentStr22 = str1.padEnd(6); //456___ 뒤 3자리는 공백처리
+
+console.log(currentStr22);
 </code></pre>
             </div>
 

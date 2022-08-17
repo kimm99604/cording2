@@ -65,17 +65,17 @@
                 <li><a href="#sample05">05. 문자열 메서드 : 변경 : split() : 문자열 변경 : 반환(배열))**</a></li>
 
                 <li><a href="#sample06">06. 문자열 메서드 : 변경 : replace() : 문자열 변경 : 반환(문자열))*</a></li>
-                <li><a href="#sample05">06. 문자열 메서드 : 변경 : replaceAll() : 문자열 변경 : 반환(문자열))</a></li>
-                <li><a href="#sample04">07. 문자열 메서드 : 변경 : concat() : 문자열 결합 : 반환(문자열))</a></li>
-                <li><a href="#sample04">08. 문자열 메서드 : 변경 : repeat() : 문자열 반복 : 반환(문자열))</a></li>
-                <li><a href="#sample04">09. 문자열 메서드 : 변경 : padStart() : 문자열 추가 : 반환(문자열))</a></li>
-                <li><a href="#sample04">09. 문자열 메서드 : 변경 : padEnd() : 문자열 추가 : 반환(문자열))</a></li>
+                <li><a href="#sample06">06. 문자열 메서드 : 변경 : replaceAll() : 문자열 변경 : 반환(문자열))</a></li>
+                <li><a href="#sample07">07. 문자열 메서드 : 변경 : concat() : 문자열 결합 : 반환(문자열))</a></li>
+                <li><a href="#sample08">08. 문자열 메서드 : 변경 : repeat() : 문자열 반복 : 반환(문자열))</a></li>
+                <li><a href="#sample09">09. 문자열 메서드 : 변경 : padStart() : 문자열 추가 : 반환(문자열))</a></li>
+                <li><a href="#sample09">09. 문자열 메서드 : 변경 : padEnd() : 문자열 추가 : 반환(문자열))</a></li>
 
                 <li><a href="#sample10">10. 문자열 메서드 : 검색 : indexOf() : 문자열에서 특정 문자의 위치를 찾음 : 반환(숫자)*</a></li>
-                <li><a href="#sample06">06. 문자열 메서드 : 검색 : lastIndexOf() : 문자열 특정 문자의 위치를 찾음 : 반환(숫자)</a></li>
-                <li><a href="#sample07">07. 문자열 메서드 : 검색 : search() : 문자열을 검색(정규식) : 반환(숫자)*</a></li>
+                <li><a href="#sample10">10. 문자열 메서드 : 검색 : lastIndexOf() : 문자열 특정 문자의 위치를 찾음 : 반환(숫자)</a></li>
+                <li><a href="#sample11">11. 문자열 메서드 : 검색 : includes() : 문자열 포함 여부 검색 : 반환(불린)*</a></li>
+                <li><a href="#sample07">11. 문자열 메서드 : 검색 : search() : 문자열을 검색(정규식) : 반환(숫자)*</a></li>
                 <li><a href="#sample08">08. 문자열 메서드 : 검색 : match() : 문자열을 검색(정규식) : 반환(배열)</a></li>
-                <li><a href="#sample09">09. 문자열 메서드 : 검색 : includes() : 문자열 포함 여부 검색 : 반환(불린)*</a></li>
                 <li><a href="#sample09">09. 문자열 메서드 : 검색 : charAt() : 지정한 인덱스의 문자를 추출 : 반환(불린)</a></li>
                 <li><a href="#sample09">09. 문자열 메서드 : 검색 : charCodeAt() : 지정한 인덱스의 문자를 추출 : 반환(숫자)</a></li>
                 <li><a href="#sample10">10. 문자열 메서드 : 검색 : startsWith() : 문자열 포함 여부 검색 : 반환(불린)</a></li>
@@ -268,36 +268,36 @@ document.querySelector(".sample02_P1").innerHTML = currentStr2;
                     </table>
                 </div>
                 <div class="script">
-    <pre><code class="language-js">const str1 = "       javascript      ";
-    const currentStr1 = str1.trim();
+<pre><code class="language-js">const str1 = "       javascript      ";
+const currentStr1 = str1.trim();
 
-    document.querySelector(".sample03_N1").innerHTML = "1";
-    document.querySelector(".sample03_Q1").innerHTML = "       javascript      ";
-    document.querySelector(".sample03_M1").innerHTML = "trim()";
-    document.querySelector(".sample03_P1").innerHTML = currentStr1;
+document.querySelector(".sample03_N1").innerHTML = "1";
+document.querySelector(".sample03_Q1").innerHTML = "       javascript      ";
+document.querySelector(".sample03_M1").innerHTML = "trim()";
+document.querySelector(".sample03_P1").innerHTML = currentStr1;
 
-    console.log(str1);
+console.log(str1);
 
-    const str2 = "       javascript      ";
-    const currentStr2 = str1.trimStart();
+const str2 = "       javascript      ";
+const currentStr2 = str1.trimStart();
 
-    document.querySelector(".sample03_N2").innerHTML = "2";
-    document.querySelector(".sample03_Q2").innerHTML = "       javascript      ";
-    document.querySelector(".sample03_M2").innerHTML = "trimStart()";
-    document.querySelector(".sample03_P2").innerHTML = currentStr2;
+document.querySelector(".sample03_N2").innerHTML = "2";
+document.querySelector(".sample03_Q2").innerHTML = "       javascript      ";
+document.querySelector(".sample03_M2").innerHTML = "trimStart()";
+document.querySelector(".sample03_P2").innerHTML = currentStr2;
 
-    console.log(str2);
+console.log(str2);
 
-    const str3 = "       javascript      ";
-    const currentStr3 = str1.trimEnd();
+const str3 = "       javascript      ";
+const currentStr3 = str1.trimEnd();
 
-    document.querySelector(".sample03_N3").innerHTML = "3";
-    document.querySelector(".sample03_Q3").innerHTML = "       javascript      ";
-    document.querySelector(".sample03_M3").innerHTML = "trimEnd()";
-    document.querySelector(".sample03_P3").innerHTML = currentStr3;
+document.querySelector(".sample03_N3").innerHTML = "3";
+document.querySelector(".sample03_Q3").innerHTML = "       javascript      ";
+document.querySelector(".sample03_M3").innerHTML = "trimEnd()";
+document.querySelector(".sample03_P3").innerHTML = currentStr3;
 
-    console.log(str3);
-    </code></pre>
+console.log(str3);
+</code></pre>
             </div>
             </div>
             <!-- sample03 -->
@@ -315,46 +315,46 @@ document.querySelector(".sample02_P1").innerHTML = currentStr2;
                 </div>
                 
                 <div class="script">
-        <pre><code class="language-js">const str1 = "javascript reference";
-        const currentStr1 = str1.slice(0); //javascript reference
-        const currentStr2 = str1.slice(1); //avascript reference
-        const currentStr3 = str1.slice(2); //vascript reference
-        const currentStr4 = str1.slice(0,1); //j
-        const currentStr5 = str1.slice(0,2); //ja
-        const currentStr6 = str1.slice(0,3); //jav
-        const currentStr7 = str1.slice(1,2); //a
-        const currentStr8 = str1.slice(1,3); //av
-        const currentStr9 = str1.slice(1,4); //avs
-        const currentStr10 = str1.slice(-1); //e
-        const currentStr11 = str1.slice(-2); //ce
-        const currentStr12 = str1.slice(-3); //nce
-        const currentStr13 = str1.slice(-3,-1); //nc
-        const currentStr14 = str1.slice(-3,-2); //n
-        const currentStr15 = str1.slice(-3,-3); //
+<pre><code class="language-js">const str1 = "javascript reference";
+const currentStr1 = str1.slice(0); //javascript reference
+const currentStr2 = str1.slice(1); //avascript reference
+const currentStr3 = str1.slice(2); //vascript reference
+const currentStr4 = str1.slice(0,1); //j
+const currentStr5 = str1.slice(0,2); //ja
+const currentStr6 = str1.slice(0,3); //jav
+const currentStr7 = str1.slice(1,2); //a
+const currentStr8 = str1.slice(1,3); //av
+const currentStr9 = str1.slice(1,4); //avs
+const currentStr10 = str1.slice(-1); //e
+const currentStr11 = str1.slice(-2); //ce
+const currentStr12 = str1.slice(-3); //nce
+const currentStr13 = str1.slice(-3,-1); //nc
+const currentStr14 = str1.slice(-3,-2); //n
+const currentStr15 = str1.slice(-3,-3); //
 
-        const currentStr16 = str1.slice(1,4); //ava
-        const currentStr17 = str1.slice(4,1); //''
-        const currentStr18 = str1.substring(1,4); //ava
-        const currentStr19 = str1.substring(4,1); //ava
+const currentStr16 = str1.slice(1,4); //ava
+const currentStr17 = str1.slice(4,1); //''
+const currentStr18 = str1.substring(1,4); //ava
+const currentStr19 = str1.substring(4,1); //ava
 
-        const currentStr20 = str1.substr(0); //javascript reference
-        const currentStr21 = str1.substr(1); //avascript reference
-        const currentStr22 = str1.substr(2); //vascript reference
-        const currentStr23 = str1.substr(0,1); //j
-        const currentStr24 = str1.substr(0,2); //ja
-        const currentStr25 = str1.substr(0,3); //jav
-        const currentStr26 = str1.substr(1,2); //av
-        const currentStr27 = str1.substr(1,3); //ava
-        const currentStr28 = str1.substr(1,4); //avas
-        const currentStr29 = str1.substr(-1); //e
-        const currentStr30 = str1.substr(-2); //ce
-        const currentStr31 = str1.substr(-3); //nce
-        const currentStr32 = str1.substr(-1, 1); //e
-        const currentStr33 = str1.substr(-2, 2); //ce
-        const currentStr34 = str1.substr(-3, 3); //nce
+const currentStr20 = str1.substr(0); //javascript reference
+const currentStr21 = str1.substr(1); //avascript reference
+const currentStr22 = str1.substr(2); //vascript reference
+const currentStr23 = str1.substr(0,1); //j
+const currentStr24 = str1.substr(0,2); //ja
+const currentStr25 = str1.substr(0,3); //jav
+const currentStr26 = str1.substr(1,2); //av
+const currentStr27 = str1.substr(1,3); //ava
+const currentStr28 = str1.substr(1,4); //avas
+const currentStr29 = str1.substr(-1); //e
+const currentStr30 = str1.substr(-2); //ce
+const currentStr31 = str1.substr(-3); //nce
+const currentStr32 = str1.substr(-1, 1); //e
+const currentStr33 = str1.substr(-2, 2); //ce
+const currentStr34 = str1.substr(-3, 3); //nce
 
-        console.log(currentStr34);
-        </code></pre>
+console.log(currentStr34);
+</code></pre>
             </div>
             </div>
             <!-- sample04 -->
@@ -369,88 +369,147 @@ document.querySelector(".sample02_P1").innerHTML = currentStr2;
                     //reverse() : 문자열 거꾸로 출력 
                 </div>
                 <div class="script">
-            <pre><code class="language-js">const str1 = "javascript reference"
-            const currentStr1 = str1.split(''); // ['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't', 'r', 'e', 'f', 'e', 'r', 'e', 'n', 'c', 'e']
-            const currentStr2 = str1.split(' '); // ['javascript', 'reference']
-            const currentStr3 = str1.split('',1); // ['j']
-            const currentStr4 = str1.split('',2); // ['j', 'a']
-            const currentStr5 = str1.split(' ',1); // ['javascript']
-            const currentStr6 = str1.split(' ',2); // ['javascript', 'reference']
-            const currentStr7 = str1.split('j'); // ['', 'avascript', 'reference']
-            const currentStr8 = str1.split('a'); // ['j', 'v', 'script reference']
-            const currentStr9 = str1.split('e'); //['javascript r', 'f', 'r', 'nc', '']
+<pre><code class="language-js">const str1 = "javascript reference"
+const currentStr1 = str1.split(''); // ['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't', 'r', 'e', 'f', 'e', 'r', 'e', 'n', 'c', 'e']
+const currentStr2 = str1.split(' '); // ['javascript', 'reference']
+const currentStr3 = str1.split('',1); // ['j']
+const currentStr4 = str1.split('',2); // ['j', 'a']
+const currentStr5 = str1.split(' ',1); // ['javascript']
+const currentStr6 = str1.split(' ',2); // ['javascript', 'reference']
+const currentStr7 = str1.split('j'); // ['', 'avascript', 'reference']
+const currentStr8 = str1.split('a'); // ['j', 'v', 'script reference']
+const currentStr9 = str1.split('e'); //['javascript r', 'f', 'r', 'nc', '']
 
-            const str2 = "java/script/refer/ence";
-            const currentStr10 = str2.split('/'); //['java', 'script', 'refer', 'ence']
+const str2 = "java/script/refer/ence";
+const currentStr10 = str2.split('/'); //['java', 'script', 'refer', 'ence']
 
-            const str3 = "java&script&refer!ence";
-            const currentStr11 = str3.split('!'); // ['java&script&refer', 'ence']
-            const currentStr12 = str3.split('&'); // ['java', 'script', 'refer!ence']
-            const currentStr13 = str3.split(/&|\!/); // ['java', 'script', 'refer', 'ence'] 정규식표현
+const str3 = "java&script&refer!ence";
+const currentStr11 = str3.split('!'); // ['java&script&refer', 'ence']
+const currentStr12 = str3.split('&'); // ['java', 'script', 'refer!ence']
+const currentStr13 = str3.split(/&|\!/); // ['java', 'script', 'refer', 'ence'] 정규식표현
 
-            const str4 = "java&script&refer!ence";
-            const currentStr14 = str4.split('').join(); //j,a,v,a,&,s,c,r,i,p,t,&,r,e,f,e,r,!,e,n,c,e
-            const currentStr15 = str4.split('').join('*'); //j*a*v*a*&*s*c*r*i*p*t*&*r*e*f*e*r*!*e*n*c*e
-            const currentStr16 = str4.split('').reverse().join(); //e,c,n,e,!,r,e,f,e,r,&,t,p,i,r,c,s,&,a,v,a,j
-            const currentStr17 = str4.split('').reverse().join('/'); //e/c/n/e/!/r/e/f/e/r/&/t/p/i/r/c/s/&/a/v/a/j
+const str4 = "java&script&refer!ence";
+const currentStr14 = str4.split('').join(); //j,a,v,a,&,s,c,r,i,p,t,&,r,e,f,e,r,!,e,n,c,e
+const currentStr15 = str4.split('').join('*'); //j*a*v*a*&*s*c*r*i*p*t*&*r*e*f*e*r*!*e*n*c*e
+const currentStr16 = str4.split('').reverse().join(); //e,c,n,e,!,r,e,f,e,r,&,t,p,i,r,c,s,&,a,v,a,j
+const currentStr17 = str4.split('').reverse().join('/'); //e/c/n/e/!/r/e/f/e/r/&/t/p/i/r/c/s/&/a/v/a/j
 
 
-            console.log(currentStr17); 
-            </code></pre>
+console.log(currentStr17); 
+</code></pre>
             </div>
             </div>
             <!-- sample05 -->
 
             <div id="sample06" class="sample">
-                <h3>06. split()</h3>
-                <p></p>
-                <div class="table">
-                    <table>
-                        <colgroup>
-                        <col style="width: 5%">
-                        <col style="width: 32%">
-                        <col style="width: 22%">
-                        <col style="width: 42%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>번호</th>
-                                <th>기본값</th>
-                                <th>메서드</th>
-                                <th>리턴값</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="sample06_N1"></td>
-                                <td class="sample06_Q1"></td>
-                                <td class="sample06_M1"></td>
-                                <td class="sample06_P1"></td>
-                            </tr>
-                            <tr>
-                                <td class="sample06_N2"></td>
-                                <td class="sample06_Q2"></td>
-                                <td class="sample06_M2"></td>
-                                <td class="sample06_P2"></td>
-                            </tr>
-                            <tr>
-                                <td class="sample06_N3"></td>
-                                <td class="sample06_Q3"></td>
-                                <td class="sample06_M3"></td>
-                                <td class="sample06_P3"></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <h3>06. replace() | replaceAll()</h3>
+                <p>replace() 메서드는 어떤 패턴에 일치하는 일부 또는 모든 부분이 교체된 새로운 문자열을 반환합니다.<br>
+                    replaceAll은 첫번째 인자값에 정규식이 들어갑니다. </p>
+                <div class="box">
+                    //"문자열".replace("찾을 문자열", "변경할 문자열")<br>
+                    //"문자열".replace(정규식)<br>
+                    //"문자열".replace(정규식, 변경할 문자열)
                 </div>
                 <div class="script">
-            <pre><code class="language-js">
-            </code></pre>
+<pre><code class="language-js">const str1 = "javascript reference";
+const currentStr1 = str1.replace("javascript", "자바스크립트"); //자바스크립트 reference
+const currentStr2 = str1.replace("j", "J"); //Javascript reference
+const currentStr3 = str1.replace("e", "E"); //Javascript rEference
+const currentStr4 = str1.replaceAll("e", "E"); //javascript rEfErEncE 모든e를 찾아서 E로 변경함 
+const currentStr5 = str1.replaceAll(/e/g, "E"); //javascript rEfErEncE 모든e를 찾아서 E로 변경함 - 정규식 표현 
+const currentStr6 = str1.replaceAll(/e/gi, "E"); //javascript rEfErEncE 모든e/E를 찾아서 E로 변경함 - 정규식 표현 
+
+const str2 = "https://www.naver.com/img01.jpg";
+const currentStr7 = str2.replace("img01.jpg","img02.jpg");
+console.log(currentStr7);
+
+const str3 = "010-2000-1000";
+const currentStr8 = str3.replace("-",""); //0102000-1000
+const currentStr9 = str3.replaceAll("-",""); //01020001000
+const currentStr10 = str3.replace(/-/g,""); //01020001000
+const currentStr11 = str3.replace(/-/g," "); //010 2000 1000
+const currentStr12 = str3.replace(/-/g,"*"); //010*2000*1000
+const currentStr13 = str3.replace(/[1-9]/g,"*"); //0*0-*000-*000
+console.log(currentStr13);
+</code></pre>
             </div>
             </div>
             <!-- sample06 -->
+
+            <div id="sample07" class="sample">
+                <h3>07. concat()</h3>
+                <p> concat 메서드는 두 개의 문자열을 하나의 문자열로 만들어주는 역활을 하는 함수이며,<br>
+                    입력값을 문자열 대신 배열을 사용하면 두 개의 배열을 하나의 배열로 만들어주는 역활도 하는 함수입니다.</p>
+                <div class="script">
+<pre><code class="language-js">const str1 = "javascript";
+const currentStr1  = str1.concat("reference"); //javascriptreference
+const currentStr2  = str1.concat(" ","reference"); //javascript reference
+const currentStr3  = str1.concat(",","reference"); //javascript,reference
+const currentStr4  = str1.concat(", ","reference", ", ", "book"); //javascript, reference, book
+const currentStr5  = str1.concat(" ", ["reference","book"]); //javascript reference,book - 배열로도 쓸 수 있음 
+
+console.log(currentStr5);
+</code></pre>
+            </div>
+            </div>
+            <!-- sample07 -->
+
+            <div id="sample08" class="sample">
+                <h3>08. repeat()</h3>
+                <p>repeat 메서드는 문자열을 복사하여, 복사한 새로운 문자열을 반환합니다.</p>
+                <div class="script">
+<pre><code class="language-js">const str1 = "javascript";
+const currentStr1 = str1.repeat(0); // ''
+const currentStr2 = str1.repeat(1); // javascript
+const currentStr3 = str1.repeat(2); // javascriptjavascript
+
+console.log(currentStr3);
+</code></pre>
+            </div>
+            </div>
+            <!-- sample08 -->
+
+            <div id="sample09" class="sample">
+                <h3>09. padStart() | padEnd()</h3>
+                <p>padStart / padEnd 메서드는 주어진 길이에 맞게 앞/뒤 문자열을 채우고, 새로운 문자열을 반환합니다.</p>
+                <div class="box">
+                    //"문자열".padStart(길이)<br>
+                    //"문자열".padStart(길이, 문자열)
+                </div>
+                <div class="script">
+<pre><code class="language-js">const str1 = "456";
+const currentStr1 = str1.padStart(1, "0"); //456
+const currentStr2 = str1.padStart(2, "0"); //456
+const currentStr3 = str1.padStart(3, "0"); //456
+const currentStr4 = str1.padStart(4, "0"); //0456
+const currentStr5 = str1.padStart(5, "0"); //00456
+const currentStr6 = str1.padStart(6, "0"); //000456
+const currentStr7 = str1.padStart(6, "1"); //111456
+const currentStr8 = str1.padStart(6, "12"); //121456
+const currentStr9 = str1.padStart(6, "123"); //123456
+const currentStr10 = str1.padStart(6, "1234"); //123456 4가 짤림 
+const currentStr11 = str1.padStart(6); //___456  앞 3자리는 공백처리됨
+
+const currentStr12 = str1.padEnd(1,"0"); //456
+const currentStr13 = str1.padEnd(2,"0"); //456
+const currentStr14 = str1.padEnd(3,"0"); //456
+const currentStr15 = str1.padEnd(4,"0"); //4560
+const currentStr16 = str1.padEnd(5,"0"); //45600
+const currentStr17 = str1.padEnd(6,"0"); //456000
+const currentStr18 = str1.padEnd(6,"1"); //456111
+const currentStr19 = str1.padEnd(6,"12"); //456121
+const currentStr20 = str1.padEnd(6,"123"); //456123
+const currentStr21 = str1.padEnd(6,"1234"); //456123
+const currentStr22 = str1.padEnd(6); //456___ 뒤 3자리는 공백처리
+
+console.log(currentStr22);
+</code></pre>
+            </div>
+            </div>
+            <!-- sample09 -->
         
             <div id="sample10" class="sample">
-                <h3>10. indexOf()</h3>
+                <h3>10. indexOf() | lastIndexOf()</h3>
                 <p>문자열에서 특정 문자의 위치를 찾고 숫자를 반환합니다.</p>
                 <div class="box">
                     "문자열".indexOf(검색값)<br>
@@ -472,12 +531,58 @@ const currentStr11 = str1.indexOf("reference",1); //11
 const currentStr12 = str1.indexOf("reference",11); //11 
 const currentStr13 = str1.indexOf("reference",12); //-1 
 
-console.log(currentStr13);
+const currentStr14 = str1.lastIndexOf("javascript"); //0
+const currentStr15 = str1.lastIndexOf("reference"); //11
+const currentStr16 = str1.lastIndexOf("j"); //0
+const currentStr17 = str1.lastIndexOf("a"); //3 jav'a'script
+const currentStr18 = str1.lastIndexOf("v"); //2 
+const currentStr19 = str1.lastIndexOf("jquery"); //-1
+const currentStr20 = str1.lastIndexOf("b"); //-1
+const currentStr21 = str1.lastIndexOf("javascript", 0); //0
+const currentStr22 = str1.lastIndexOf("javascript", 1); //0
+const currentStr23 = str1.lastIndexOf("reference", 0); //-1 뒤부터 셈 
+const currentStr24 = str1.lastIndexOf("reference", 1); //-1
+const currentStr25 = str1.lastIndexOf("reference", 11); //11
+const currentStr26 = str1.lastIndexOf("reference", 12); //11
 </code></pre>
             </div>
             </div>
             <!-- sample010 -->
 
+            <div id="sample11" class="sample">
+                <h3>11. includes()</h3>
+                <p>includes 메서드는 문자열 포함 여부를 검색하며, 불린(true, false)을 반환합니다.</p>
+                <div class="box">
+                    //"문자열".includes(검색값)<br>
+                    //"문자열".includes(검색값, 시작값)
+                </div>
+                <div class="script">
+<pre><code class="language-js">const str1 = "javascript reference";
+const currentStr1 = str1.includes("javascript"); //true
+const currentStr2 = str1.includes("j"); //true
+const currentStr3 = str1.includes("b"); //false
+const currentStr4 = str1.includes("reference"); //true
+const currentStr5 = str1.includes("reference", 1); //true
+const currentStr6 = str1.includes("reference", 11); //true
+const currentStr7 = str1.includes("reference", 12); //false
+</code></pre>
+            </div>
+            </div>
+            <!-- sample11 -->
+
+            <div id="sample12" class="sample">
+                <h3>11. includes()</h3>
+                <p>includes 메서드는 문자열 포함 여부를 검색하며, 불린(true, false)을 반환합니다.</p>
+                <div class="box">
+                    //"문자열".includes(검색값)<br>
+                    //"문자열".includes(검색값, 시작값)
+                </div>
+                <div class="script">
+<pre><code class="language-js">
+</code></pre>
+            </div>
+            </div>
+            <!-- sample12 -->
 
         </div>
         <!-- main sample -->
@@ -650,8 +755,94 @@ console.log(currentStr13);
 
             console.log(currentStr17); 
         }
+        //06
+        {
+            //"문자열".replace("찾을 문자열", "변경할 문자열")
+            //"문자열".replace(정규식)
+            //"문자열".replace(정규식, 변경할 문자열)
+
+            const str1 = "javascript reference";
+            const currentStr1 = str1.replace("javascript", "자바스크립트"); //자바스크립트 reference
+            const currentStr2 = str1.replace("j", "J"); //Javascript reference
+            const currentStr3 = str1.replace("e", "E"); //Javascript rEference
+            const currentStr4 = str1.replaceAll("e", "E"); //javascript rEfErEncE 모든e를 찾아서 E로 변경함 
+            const currentStr5 = str1.replaceAll(/e/g, "E"); //javascript rEfErEncE 모든e를 찾아서 E로 변경함 - 정규식 표현 
+            const currentStr6 = str1.replaceAll(/e/gi, "E"); //javascript rEfErEncE 모든e/E를 찾아서 E로 변경함 - 정규식 표현 
+
+            const str2 = "https://www.naver.com/img01.jpg";
+            const currentStr7 = str2.replace("img01.jpg","img02.jpg");
+            console.log(currentStr7);
+            
+            const str3 = "010-2000-1000";
+            const currentStr8 = str3.replace("-",""); //0102000-1000
+            const currentStr9 = str3.replaceAll("-",""); //01020001000
+            const currentStr10 = str3.replace(/-/g,""); //01020001000
+            const currentStr11 = str3.replace(/-/g," "); //010 2000 1000
+            const currentStr12 = str3.replace(/-/g,"*"); //010*2000*1000
+            const currentStr13 = str3.replace(/[1-9]/g,"*"); //0*0-*000-*000
+            console.log(currentStr13);
+        }
+        //07
+        {
+            //"문자열".concat(문자열)
+            //"문자열".concat(문자열, 문자열...)
+
+            const str1 = "javascript";
+            const currentStr1  = str1.concat("reference"); //javascriptreference
+            const currentStr2  = str1.concat(" ","reference"); //javascript reference
+            const currentStr3  = str1.concat(",","reference"); //javascript,reference
+            const currentStr4  = str1.concat(", ","reference", ", ", "book"); //javascript, reference, book
+            const currentStr5  = str1.concat(" ", ["reference","book"]); //javascript reference,book
+
+            console.log(currentStr5);
+        }
+        //08
+        {
+            const str1 = "javascript";
+            const currentStr1 = str1.repeat(0); // ''
+            const currentStr2 = str1.repeat(1); // javascript
+            const currentStr3 = str1.repeat(2); // javascriptjavascript
+
+            console.log(currentStr3);
+        }
+        //09
+        {
+            //"문자열".padStart(길이)
+            //"문자열".padStart(길이, 문자열)
+
+            const str1 = "456";
+            const currentStr1 = str1.padStart(1, "0"); //456
+            const currentStr2 = str1.padStart(2, "0"); //456
+            const currentStr3 = str1.padStart(3, "0"); //456
+            const currentStr4 = str1.padStart(4, "0"); //0456
+            const currentStr5 = str1.padStart(5, "0"); //00456
+            const currentStr6 = str1.padStart(6, "0"); //000456
+            const currentStr7 = str1.padStart(6, "1"); //111456
+            const currentStr8 = str1.padStart(6, "12"); //121456
+            const currentStr9 = str1.padStart(6, "123"); //123456
+            const currentStr10 = str1.padStart(6, "1234"); //123456 4가 짤림 
+            const currentStr11 = str1.padStart(6); //   456  앞 3자리는 공백처리됨
+
+            const currentStr12 = str1.padEnd(1,"0"); //456
+            const currentStr13 = str1.padEnd(2,"0"); //456
+            const currentStr14 = str1.padEnd(3,"0"); //456
+            const currentStr15 = str1.padEnd(4,"0"); //4560
+            const currentStr16 = str1.padEnd(5,"0"); //45600
+            const currentStr17 = str1.padEnd(6,"0"); //456000
+            const currentStr18 = str1.padEnd(6,"1"); //456111
+            const currentStr19 = str1.padEnd(6,"12"); //456121
+            const currentStr20 = str1.padEnd(6,"123"); //456123
+            const currentStr21 = str1.padEnd(6,"1234"); //456123
+            const currentStr22 = str1.padEnd(6); //456___ 뒤 3자리는 공백처리
+
+            console.log(currentStr22);
+
+        }
         //10 
         {
+            //"문자열".lastIndexOf(검색값)
+            //"문자열".lastIndexOf(검색값, 위치값)
+
             const str1 = "javascript reference";
             const currentStr1 = str1.indexOf("javascript"); //0
             const currentStr2 = str1.indexOf("reference"); //11
@@ -667,7 +858,34 @@ console.log(currentStr13);
             const currentStr12 = str1.indexOf("reference",11); //11 
             const currentStr13 = str1.indexOf("reference",12); //-1 
 
-            console.log(currentStr13);
+            const currentStr14 = str1.lastIndexOf("javascript"); //0
+            const currentStr15 = str1.lastIndexOf("reference"); //11
+            const currentStr16 = str1.lastIndexOf("j"); //0
+            const currentStr17 = str1.lastIndexOf("a"); //3 jav'a'script
+            const currentStr18 = str1.lastIndexOf("v"); //2 
+            const currentStr19 = str1.lastIndexOf("jquery"); //-1
+            const currentStr20 = str1.lastIndexOf("b"); //-1
+            const currentStr21 = str1.lastIndexOf("javascript", 0); //0
+            const currentStr22 = str1.lastIndexOf("javascript", 1); //0
+            const currentStr23 = str1.lastIndexOf("reference", 0); //-1 뒤부터 셈 
+            const currentStr24 = str1.lastIndexOf("reference", 1); //-1
+            const currentStr25 = str1.lastIndexOf("reference", 11); //11
+            const currentStr26 = str1.lastIndexOf("reference", 12); //11
+
+            console.log(currentStr17);
+        }
+        //11
+        {
+            const str1 = "javascript reference";
+            const currentStr1 = str1.includes("javascript"); //true
+            const currentStr2 = str1.includes("j"); //true
+            const currentStr3 = str1.includes("b"); //false
+            const currentStr4 = str1.includes("reference"); //true
+            const currentStr5 = str1.includes("reference", 1); //true
+            const currentStr6 = str1.includes("reference", 11); //true
+            const currentStr7 = str1.includes("reference", 12); //false
+
+            console.log(currentStr1)
         }
     </script>
 

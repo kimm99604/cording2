@@ -15,14 +15,7 @@
         <h1>Search</h1>
         <nav>
             <ul>
-                <li class="active"><a href="searchEffect01.html">1</a>
-                    <ul class="sub">
-                        <li class="active"><a href="searchEffect01.html">HTML</a></li>
-                        <li><a href="searchEffect01_css.html">CSS</a></li>
-                        <li><a href="searchEffect01_javascript.html">JAVASCRIPT</a></li>
-                    </ul>
-                </li>
-
+                <li class="active"><a href="searchEffect01.html">1</a></li>
                 <li><a href="searchEffect02.html">2</a></li>
                 <li><a href="searchEffect03.html">3</a></li>
                 <li><a href="searchEffect04.html">4</a></li>
@@ -36,44 +29,58 @@
     <main id="main">
         <div class="search__wrap">
             <span>indexOf()를 이용하여 CSS 속성 검색하기</span>
-            <h1>HTML 태그 검색하기</h1>
+            <h1>CSS 속성 검색하기</h1>
             <div class="search__box">
                 <label for="search">검색하기</label>
-                <input type="text" id="search" placeholder="HTML 태그를 입력해주세요">
+                <input type="text" id="search" placeholder="CSS 태그를 입력해주세요">
+            </div>
+            <div class="search__info">
+                <div>CSS 속성 갯수 : <span class="num">0</span></div>
             </div>
             <div class="search__list">
                 <div class="html">
                     <ul>
-                        <li data-name="a"><strong>a</strong> : a 태그는 다른 페이지 이동을 설정합니다.</li>
-                        <li data-name="abbr"><strong>abbr</strong> : abbr 태그는 줄임말이나 머리글자를 표현하는 사용합니다.</li>
-                        <li data-name="acronym"><strong>acronym</strong> : acronym 태그는 준말 또는 머리글자를 나타냅니다.</li>
-                        <li data-name="address"><strong>address</strong> : address 태그는 가까운 HTML 요소의 사람, 단체, 조직 등에 대한 연락처
-                            정보를 나타냅니다.</li>
-                        <li data-name="applet"><strong>applet</strong> : applet 태그는 자바 애플릿을 보이게 하는 곳에 쓰입니다.</li>
-                        <li data-name="area"><strong>area</strong> : area 태그는 이미지의 핫스팟 영역을 정의하고 하이퍼링크 (en-US)를 추가할 수
-                            있습니다. map 요소 안에서만 사용할 수 있습니다</li>
-                        <li data-name="article"><strong>article</strong> : article 태그는 문서, 페이지, 애플리케이션, 또는 사이트 안에서 독립적으로
-                            구분해 배포하거나 재사용할 수 있는 구획을 나타냅니다.</li>
-                        <li data-name="aside"><strong>aside</strong> : aside 태그는 문서의 주요 내용과 간접적으로만 연관된 부분을 나타냅니다. 주로
-                            사이드바 혹은 콜아웃 박스로 표현합니다</li>
-                        <li data-name="audio"><strong>audio</strong> : audio 태그는 문서에 소리 콘텐츠를 포함할 때 사용합니다. src 특성 또는
-                            (en-US) 요소를 사용해 한 개 이상의 오디오 소스를 지정할 수 있으며, 다수를 지정한 경우 가장 적절한 소스를 브라우저가 고릅니다.</li>
-                        <li data-name="b"><strong>b</strong> : b 태그는 자의 주의를 요소의 콘텐츠로 끌기 위한 용도로 사용합니다. 그 외의 다른 특별한 중요도는
-                            주어지지 않습니다.</li>
-                        <li data-name="base"><strong>base</strong> : base 태그는 문서 안의 모든 상대 URL이 사용할 기준 URL을 지정합니다. 문서에는
-                            하나의 요소만 존재할 수 있습니다.</li>
-                        <li data-name="bdi"><strong>bdi</strong> : bdi 태그는 BDI는 Bi-Directional Isolation을 의미하며, 주위의
-                            텍스트들과는 다른 방향으로 써지는 텍스트 영역을 정의할 때 사용합니다.</li>
-                        <li data-name="bdo"><strong>bdo</strong> : bdo 태그의 BDO는 Bi-Directional Override를 의미하며, 자식 요소의
-                            텍스트 방향성(text directionality)을 정의할 때 사용합니다.</li>
-                        <li data-name="bgsound"><strong>bgsound</strong> : bgsound </li>
-                        <li data-name="big"><strong>big</strong> : big </li>
-                        <li data-name="blink"><strong>blink</strong> : blink </li>
-                        <li data-name="blockquote"><strong>blockquote</strong> : blockquote </li>
-                        <li data-name="body"><strong>body</strong> : body 태그는 해당 HTML 문서의 텍스트, 하이퍼링크, 이미지, 리스트 등과 같은 모든
-                            콘텐츠를 포함하는 영역을 정의할 때 사용합니다.</li>
-                        <li data-name="br"><strong>br</strong> : br 태그는 텍스트 내의 줄바꿈(line-break)을 정의할 때 사용합니다. _</li>
-                        <li data-name="button"><strong>button</strong> : button 태그는 클릭할 수 있는 버튼을 정의할 때 사용합니다.</li>
+                        <li data-name="accent-color"><strong>accent-color</strong> : accent-color 는 특정 요소에 색상을 지정합니다.
+                        </li>
+                        <li data-name="align-content"><strong>align-content</strong> : align-content 는 콘텐츠 아이템의 상하관계 정렬
+                            상태를 설정합니다.</li>
+                        <li data-name="align-items"><strong>align-items</strong> : align-items 는 콘텐츠 아이템의 내부 상하관계 정렬 상태를
+                            설정합니다.</li>
+                        <li data-name="align-self"><strong>align-self</strong> : align-self 는 아이템의 교차축 정렬 정하는 속성 입니다.
+                        </li>
+                        <li data-name="all"><strong>all</strong> : all 는 요소의 속성을 초기화 또는 상속을 설정합니다.</li>
+                        <li data-name="animation"><strong>animation</strong> : animation 는 HTML 요소에 적용되는 CSS 스타일을 다른 CSS
+                            스타일로 부드럽게 변화시킵니다.</li>
+                        <li data-name="animation-delay"><strong>animation-delay</strong> : animation-delay 는 적용 대기 시간을지정합니다.</li>
+                        <li data-name="animation-direction"><strong>animation-direction</strong> : animation-direction 는 애니메이션의 진행 방향을 설정합니다.</li>
+                        <li data-name="animation-duration"><strong>animation-duration</strong> : animation-duration 는실행된 애니메이션 진행 시간을 지정하는 속성입니다.</li>
+                        <li data-name="animation-fill-mode"><strong>animation-fill-mode</strong> : animation-fill-mode 는애니메이션 실행 이전이나 이후에 애니메이션 효과를 표시할지의 여부를 지정하는 속성입니다.</li>
+                        <li data-name="animation-fill-mode"><strong>animation-iteration-count</strong> : animation-iteration-count는 애니메이션의 반복 횟수를 설정합니다.</li>
+                        <li data-name="animation-fill-mode"><strong>animation-name</strong> : animation-name 애니메이션 keyframe 이름을 설정합니다.</li>
+                        <li data-name="animation-fill-mode"><strong>animation-play-state</strong> : animation-play-state 애니메이션 진행상태를 설정합니다.</li>
+                        <li data-name="animation-fill-mode"><strong>animation-timeline</strong> : animation-timeline 타이밍 진행률에 따라 출력 값을 생성하는 개체의 Timeline 형식입니다.</li>
+                        <li data-name="animation-fill-mode"><strong>animation-timing-function</strong> : animation-timing-function</li>
+                        <li data-name="animation-fill-mode"><strong>appearance</strong> : appearance</li>
+                        <li data-name="animation-fill-mode"><strong>aspect-ratio</strong> : aspect-ratio</li>
+                        <li data-name="animation-fill-mode"><strong>backdrop-filter</strong> : backdrop-filter</li>
+                        <li data-name="animation-fill-mode"><strong>backface-visibility</strong> : backface-visibility</li>
+                        <li data-name="animation-fill-mode"><strong>background</strong> : background 백그라운드 속성을 일괄적으로 설정합니다.</li>
+                        <li data-name="animation-fill-mode"><strong>background-attachment</strong> : background-attachment 배경이미지 고정 여부를 설정합니다.</li>
+                        <li data-name="animation-fill-mode"><strong>background-blend-mode</strong> : background-blend-mode 배경을 혼합했을 때, 그래픽 효과를 설정합니다.</li>
+                        <li data-name="animation-fill-mode"><strong>background-clip</strong> : background-clip 백그라운드 이미지의 위치 기준점을 설정합니다.</li>
+                        <li data-name="animation-fill-mode"><strong>background-color</strong> : background-color 백그라운드 색을 설정합니다.</li>
+                        <li data-name="animation-fill-mode"><strong>background-image</strong> : background-image 백그라운드이미지 속성을 설정합니다.</li>
+                        <li data-name="animation-fill-mode"><strong>background-origin</strong> : background-origin 백그라운드 이미지 위치 기준점을 설정하기 위한 속성입니다.</li>
+                        <li data-name="animation-fill-mode"><strong>background-position</strong> : background-position 백그라운드 이미지의 위치 영역을 설정합니다.</li>
+                        <li data-name="animation-fill-mode"><strong>background-position-x</strong> : background-position-x 백그라운드 이미지의 위치 영역 x축을 설정합니다.</li>
+                        <li data-name="animation-fill-mode"><strong>background-position-y</strong> : background-position-y 백그라운드 이미지의 위치 영역 y축을 설정합니다.</li>
+                        <li data-name="animation-fill-mode"><strong>background-repeat</strong> : background-repeat 백그라운드 이미지 반복 여부를 설정합니다.</li>
+                        <li data-name="animation-fill-mode"><strong>background-size</strong> : background-size 백그라운드 이미지 반복 여부를 설정합니다.</li>
+                        <li data-name="animation-fill-mode"><strong>block-size</strong> : block-size </li>
+                        <li data-name="animation-fill-mode"><strong>border</strong> : border 테두리 속성을 일괄적으로 설정합니다.</li>
+                        <li data-name="animation-fill-mode"><strong>border-block-color</strong> : border-block-color </li>
+                        <li data-name="animation-fill-mode"><strong>border-block-end</strong> : border-block-end </li>
+                        <li data-name="animation-fill-mode"><strong>border-block-end-color</strong> : border-block-end-color </li>
                     </ul>
                 </div>
             </div>
@@ -88,7 +95,12 @@
     <script>
         const searchBox = document.querySelector(".search__box input"); //검색 박스
         const searchList = document.querySelectorAll(".search__list ul li"); //리스트
+        const searchInfo = document.querySelector(".num"); //전체 갯수 
 
+        //전체 갯수 구하기 
+        searchInfo.textContent = searchList.length;
+
+        //키워드 검색 함수 
         searchBox.addEventListener("keyup", () => {
             const searchWord = searchBox.value; //사용자가 입력한키워드
             searchList.forEach((el) => {
