@@ -35,7 +35,7 @@
                 <input type="text" id="search" placeholder="CSS 유형별로 검색해보세요">
             </div>
             <div class="search__info">
-                <div class="type">플렉스, 애니메이션, 백그라운드, 기타 등 유형별로 검색해보세요</div>
+                <div class="type">플렉스, 애니메이션, 백그라운드, border, 기타 등 유형별로 검색해보세요</div>
                 <div>전체 속성 갯수 : <span class="num">0</span></div>
             </div>
             <div class="search__list">
@@ -131,7 +131,10 @@
         const searchBox = document.querySelector(".search__box input"); //검색 박스
         const searchList = document.querySelectorAll(".search__list ul li"); //리스트
         const searchInfo = document.querySelector(".num"); //전체 갯수 
-     
+        const searchType = document.querySelector(".type");//data type 저장  
+
+        
+
         //전체 갯수 구하기 
         searchInfo.textContent = searchList.length;
         // searchList.forEach(element => {
@@ -139,17 +142,23 @@
         //    count.innerHTML = num; //출력 
         // });
 
+
         //검색 함수 
         searchBox.addEventListener("keyup", () => {
-            const searchWord = searchBox.value;
-            //사용자가 입력한 키워드
+            const searchWord = searchBox.value; //사용자가 입력한 키워드
             
             searchList.forEach(el => {
-                const cssName = el.dataset.name; //css속성 모든 값
-                
+                const cssName = el.dataset.name; //css태그 이름
+                const cssType = el.dataset.type; //css태그 키워드 
                 // console.log(cssName)
 
                 if(cssName.includes(searchWord)){
+                    el.classList.remove("hide");
+                } else {
+                    el.classList.add("hide");
+                }
+
+                if(cssType.includes(searchWord)){
                     el.classList.remove("hide");
                 } else {
                     el.classList.add("hide");
