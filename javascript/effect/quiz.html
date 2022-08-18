@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 이펙트</title>
+
+    <link rel="stylesheet" href="../assets/css/quiz.css">
+    <!-- 폰트 -->
+    <link href="https://webfontworld.github.io/DungGeunMo/DungGeunMo.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/hallym/Hallym.css" rel="stylesheet">
+</head>
+<!-- //header -->
+
+<body>
+    <header id="header">
+        <h1><a href="../javascript04.html">Quiz </a><em>객관식(한문제) 유형</em></h1>
+        <nav>
+            <ul>
+                <li><a href="quizEffect01.html">1</a></li>
+                <li><a href="quizEffect02.html">2</a></li>
+                <li><a href="quizEffect03.html">3</a></li>
+                <li><a href="quizEffect04.html">4</a></li>
+                <li class="active"><a href="quizEffect05.html">5</a></li>
+                <li><a href="quizEffect06.html">6</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="quiz__wrap">
+
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:kimm9964@naver.com">kimm9964@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script>
+        //문제정보 
+        const quizInfo = [
+            {
+                answerType: "웹디자인기능사 2013년 01회",
+                answerNum: "1.",
+                answerAsk: "시각적 질감의 예로 성격이 다른 하나는?",
+                answerChoice: {
+                    1: "사진의 망점",
+                    2: "인쇄상의 스크린 톤",
+                    3: "대리석 무늬",
+                    4: "모니터 주사선"
+                },
+                answerResult: "3",
+                answerEx: "대리석 무늬가 아무래도 다르죠"
+            },
+
+            {
+                answerType: "웹디자인기능사 2013년 01회",
+                answerNum: "8.",
+                answerAsk: "어둠이 시작될 때 물체의 상이 흐리게 나타나는 현상과 가장 관계가 깊은 것은?",
+                answerChoice: {
+                    1: "색순응",
+                    2: "푸르킨예 현상",
+                    3: "박명시",
+                    4: "조건등색"
+                },
+                answerResult: "3",
+                answerEx: "명순응은 어두운 -> 밝은곳 갈 때 눈의 적응 암순응은 밝은 -> 어두운 곳 갈 때 눈의 적응입니다. 박명시란 그 중간에 눈의 적응입니다. 그 상태에선 물체가 흐리게 보여요"
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 9,
+                answerAsk: "색채조화의 공통원리에 관한 설명으로 틀린 것은?",
+                answerChoice: {
+                    1 : "질서의 원리는 효과적인 반응을 일으키는 질서 있는 계획에 따라 선택된 색채들에서 생긴다.",
+                    2 : "비모호성의 원리는 두 색 이상의 배색에 있어서 모호함이 없는 명료한 배색에서만 얻어진다.",
+                    3 : "동류의 원리는 가장 가까운 색채끼리의 배색은 보는 사람에게 친근감을 주며 조화를 느끼게 한다.",
+                    4 : "친근성의 원리는 배색된 색채들이 서로 공통되는 상태와 속성을 가질 때 그 색채는 조화된다.",
+                },
+                answerResult: "4",
+                answerEx: "친근성이란 관찰자에게 친숙해있는 배색이 잘 조화를 이룬다.",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 11,
+                answerAsk: "스파트(spot) 광고에 대한 설명이 옳은 것은?",
+                answerChoice: {
+                    1 : "전국 방송망으로 방송국에서 전국에 실시하는 광고",
+                    2 : "일정시간을 정해 30초 CM 10개를 계속 방송하는 형태",
+                    3 : "지역 방송국에 제한되어 방송하는 것",
+                    4 : "프로그램과 프로그램 사이에 광고를 삽입하는 것",
+                },
+                answerResult: "4",
+                answerEx: "기억해주세요 spot 광고란 '라디오나 텔레비전 방송에서, 프로그램 사이 또는 프로그램 진행 중에 아주 짧게 나가는 광고' 입니다.",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 12,
+                answerAsk: "빨간색이 가장 선명하고 뚜렷해 보일 수 있는 배경색으로 적합한 것은?",
+                answerChoice: {
+                    1 : "주황",
+                    2 : "노랑",
+                    3 : "회색",
+                    4 : "보라",
+                },
+                answerResult: "3",
+                answerEx: "이거 제가 주관식문제에도 냈던 문제인데 틀리신분 없으시죠?",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 17,
+                answerAsk: "디자인의 통일성에 영향을 미치는 요소와 거리가 가장 먼 것은?",
+                answerChoice: {
+                    1 : "각 요소들을 근접시킨다.",
+                    2 : "각 요소들을 반복시킨다.",
+                    3 : "각 요소들을 연속시킨다.",
+                    4 : "각 요소들을 분리시킨다.",
+                },
+                answerResult: "4",
+                answerEx: "근접,반복,연속은 비슷한 느낌인데 분리에서 좀 쎄하지 않나요?",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 18,
+                answerAsk: "먼셀의 표색계에서 색상을 표시하는 기호로 맞는 것은?",
+                answerChoice: {
+                    1 : "C/HV",
+                    2 : "HC/V",
+                    3 : "HV/C",
+                    4 : "CV/G",
+                },
+                answerResult: "3",
+                answerEx: "외우세요 HV/C 5R4/14이면 5단계 빨강색, 명도는4 채도는 14에요.",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 19,
+                answerAsk: "신문광고의 구성요소 중 조형적 요소가 아닌 것은?",
+                answerChoice: {
+                    1 : "헤드라인",
+                    2 : "일러스트레이션",
+                    3 : "심볼 마크",
+                    4 : "보더 라인",
+                },
+                answerResult: "가나다",
+                answerEx: "1",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 22,
+                answerAsk: "웹서버의 일반적인 동작 과정으로 옳은 것은?",
+                answerChoice: {
+                    1 : "연결설정→클라이언트가 정보요청→서버의 응답→연결종료",
+                    2 : "연결설정→서버의 응답→클라이언트가 정보요청→연결종료",
+                    3 : "클라이언트가 정보요청→연결설정→서버의 응답→연결종료",
+                    4 : "클라이언트가 정보요청→서버의 응답→연결설정→연결종료",
+                },
+                answerResult: "1",
+                answerEx: "연결을 설정해야 연결이 되겠죠? 정보를 요청해야 응답을 할 수 가 있겠습니다.",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 23,
+                answerAsk: "하나의 회선을 다수의 아주 짧은 시간 간격으로 분할하여 다중화 하는 전송 방식은?",
+                answerChoice: {
+                    1 : "FCM",
+                    2 : "TDM",
+                    3 : "CSM",
+                    4 : "FDD",
+                },
+                answerResult: "2",
+                answerEx: "시분할 다중화 (Time-division multiplexing), 시분할 다중화란 전송로를 점유하는 시간을 분할하여 한 개의 전송로에 여러 개의 가상 경로를 구성하는 통신 방식이다.",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 24,
+                answerAsk: "컴퓨터 그래픽에서 객체의 위치를 정확히 표현하기 위한 좌표계 중 좌표 위에 있는 점과 원점으로 규정하는 기준점과의 거리와 각도의 크기에 따라 좌표를 정의하는 좌표계는?",
+                answerChoice: {
+                    1 : "2차원 그래픽 좌표계",
+                    2 : "3차원 그래픽 좌표계",
+                    3 : "직교 좌표계",
+                    4 : "극 좌표계",
+                },
+                answerResult: "4",
+                answerEx: "?",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 28,
+                answerAsk: "개방형 시스템의 상호접속을 위한 참조모델로 ISO에서 제정한 것은?",
+                answerChoice: {
+                    1 : "OSI 7 Layer",
+                    2 : "Kermit",
+                    3 : "Proxy",
+                    4 : "Archie",
+                },
+                answerResult: "1",
+                answerEx: "ISO osi 7 layer, iso -> osi 외워주세요",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 29,
+                answerAsk: "웹 브라우저의 주소창에 URL을 잘못 입력한 것은?",
+                answerChoice: {
+                    1 : "http://www.abc.or.kr",
+                    2 : "webamil://abc123@abc.co.kr",
+                    3 : "ftp://ftp.abc.com",
+                    4 : "file:///c:\abc.hwp",
+                },
+                answerResult: "2",
+                answerEx: "스펠링이 이상하죠? webamil 이게 뭔지 저도 모르겠습니다.",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 33,
+                answerAsk: "인터넷의 시조이며, 미 국방성이 군사목적으로 UCLA, 스탠포드 대학 등이 보유한 컴퓨터 네트워크로 연결한 것은 무엇일까?",
+                answerChoice: {
+                    1 : "USENET",
+                    2 : "FTP",
+                    3 : "WAIS",
+                    4 : "ARPANET",
+                },
+                answerResult: "4",
+                answerEx: "인터넷의 시조 = 알파넷.",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 34,
+                answerAsk: "다음과 관련 있는 TCP/IP 프로토콜 계층으로 옳은 것은? SMTP, FTP, Telnet, HTTP",
+                answerChoice: {
+                    1 : "물리 계층",
+                    2 : "네트워크 계층",
+                    3 : "전송 계층",
+                    4 : "응용 계층",
+                },
+                answerResult: "4",
+                answerEx: "여러가지 프로토콜들이 나오면 응용계층을 생각해주세요.",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 36,
+                answerAsk: "자바스크립트의 일반적인 장점으로 틀린 것은?",
+                answerChoice: {
+                    1 : "운영체제의 제한을 받지 않는다.",
+                    2 : "문법이 간단해 손쉽게 프로그램을 만들 수 있다.",
+                    3 : "HTML 문서 내에 직접 코드를 삽입하므로 신속하게 작성할 수 있다.",
+                    4 : "게임, 메신저, 채팅방 등을 개발하는데 적합하다.",
+                },
+                answerResult: "2",
+                answerEx: "메신저나 채팅방은 서버 프로그램이 필요하겠죠? 일반적인 장점으로 적합하진 않은 것 같아요.",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 37,
+                answerAsk: "검색엔진과 그에 해당된 서비스가 틀리게 연결된 것은?",
+                answerChoice: {
+                    1 : "야후 - 메신저",
+                    2 : "옥션 - 블로그",
+                    3 : "네이버 - 지식검색",
+                    4 : "네이트 - 메일",
+                },
+                answerResult: "2",
+                answerEx: "옥션사이트를 접속해보시면 알겁니다. 옥션은 쇼핑몰이죠",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 39,
+                answerAsk: "위지웍(WYSIWYG) 기반의 웹 에디터가 아닌 것은?",
+                answerChoice: {
+                    1 : "Namo Web Editor",
+                    2 : "FrontPage",
+                    3 : "Edit Plus",
+                    4 : "Netscape Composer",
+                },
+                answerResult: "3",
+                answerEx: "에딧플러스는 메모장 같은 형식으로 하드코딩에 특화되어있죠, 위지위그란\
+                이미지 같은걸 드래그앤 드롭같은 사용자 편의기능을 제공하는 방식의 에디터를 말합니다.",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 40,
+                answerAsk: "HTML에서 사용되는 글자 모양에 관련된 태그 설명으로 옳지 않은 것은? (문제오류입니다. 모두 정답 처리래요)",
+                answerChoice: {
+                    1 : ".",
+                    2 : ".",
+                    3 : ".",
+                    4 : ".",
+                },
+                answerResult: "0",
+                answerEx: "문제 오류로 인한 모두 정답 처리라고 합니다.",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 44,
+                answerAsk: "웹 페이지 저작에 필요한 S/W 중 웹에디터가 아닌 것은?",
+                answerChoice: {
+                    1 : "Internet Space Builder",
+                    2 : "EditPlus",
+                    3 : "Hotdog Professional",
+                    4 : "Dramweaver",
+                },
+                answerResult: "1",
+                answerEx: "Internet Space Builder은 3D 기술을 제작하는 쪽이라고 하네요.",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 45,
+                answerAsk: `
+                다음 설명과 같은 애니메이션 기법은?
+                <br>- 배경그림은 그래도 두고 캐릭터만 움직이게 하는 기법
+                <br>- 1915년 허드(Earl Hurd)가 고안
+                <br>- 종이에 그린 그림을 셀룰로이드에 옳긴 뒤, 그 뒷면에 채색을 한 다음 배경 위에 놓고 촬영하는 기법
+                `,
+                answerChoice: {
+                    1 : "셀 애니메이션",
+                    2 : "그림 애니메이션",
+                    3 : "모델 애니메이션",
+                    4 : "컴퓨터 애니메이션",
+                },
+                answerResult: "1",
+                answerEx: "배경은 그대로 두고 캐릭터만 움직인다? => 셀 애니메이션",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 46,
+                answerAsk: "애니메이션 기법에 대한 설명이 틀린 것은?",
+                answerChoice: {
+                    1 : "플립북 애니메이션은 프레임의 모든 그림을 그려서 저장하므로 제작 시간이 많이 소요된다.",
+                    2 : "셀 애니메이션은 하나의 배경과 여러 개의 전경을 제작 후 합성하여 하나의 프레임을 만든다.",
+                    3 : "컴퓨터를 이용한 키 프레임 애니메이션은 선형보간법으로 중간 프레임을 자동 생성할 수 있다.",
+                    4 : "모핑 애니메이션은 전통적인 애니메이션 기법으로 용량이 작아 인터넷 환경에 적합하다.",
+                },
+                answerResult: "4",
+                answerEx: "모핑은 영화나 뮤직비디오에서 많이 사용합니다.",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 48,
+                answerAsk: "컴퓨터 그래픽스의 단위 중 1인치당 몇 개의 픽셀이 들어가 있는지를 표현하는 것은?",
+                answerChoice: {
+                    1 : "LPI",
+                    2 : "EPI",
+                    3 : "PPI",
+                    4 : "DPI",
+                },
+                answerResult: "3",
+                answerEx: "PPI = pixel per inch",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 52,
+                answerAsk: "웹디자인 프로세스에 대한 설명으로 틀린 것은?",
+                answerChoice: {
+                    1 : "프로젝트 기획 - 목표설정, 시장조사, 개발전략수립",
+                    2 : "웹 사이트 기획 - 사이트 콘셉트 정의, 자료수집. 분석",
+                    3 : "웹 사이트 디자인 - 콘텐츠 제작 및 배치",
+                    4 : "웹 사이트 구축 - 테스트 및 디버깅",
+                },
+                answerResult: "4",
+                answerEx: "테스트 및 디버깅 단계는 다 개발하고 유지보수 단계에서 실행하는 것 입니다.",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 53,
+                answerAsk: "애니메이션에서 대상의 움직임을 개별적인 단위요소로 세분화한 기본 단위는?",
+                answerChoice: {
+                    1 : "프레임",
+                    2 : "필름",
+                    3 : "콤마",
+                    4 : "컷 아웃",
+                },
+                answerResult: "1",
+                answerEx: "애니메이션의 기본 한단위는 프레임이라고 부릅니다. 프레임을 연결해서 애니메이션을 만들겠죠?",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 55,
+                answerAsk: "웹디자인에 사용하기 위하여 사진이나 그림 등을 스캔 받을 때 나타나는 현상으로 스캔 받은 이미지에 물결무늬가 격자처럼 교차되어 보이는 것을 무엇이라고 하는가?",
+                answerChoice: {
+                    1 : "Dithering",
+                    2 : "Scanning",
+                    3 : "Moire",
+                    4 : "Water Mark",
+                },
+                answerResult: "3",
+                answerEx: "모아레(Moire) 란 두 개 이상의 주기적인 패턴(Periodic Pattern)이 겹쳐질 때 만들어지는 간섭무늬(Interference Fringe)를 지칭하는 것으로 다양한 분야에서 매우 광범위하게 사용되어 지고 있죠.",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 58,
+                answerAsk: "시각 디자인 영역의 한 영역으로서 글자체, 글자크기, 행간, 여백, 간격, 단락, 그리드 등을 통해 전달된다.",
+                answerChoice: {
+                    1 : "내비게이션 디자인(Navigation Design)",
+                    2 : "웹 타이포그래피 디자인(Web Typographic Design)",
+                    3 : "웹 컬러 디자인(Web Color Design)",
+                    4 : "웹 인터페이스 디자인(Web Interface Design)",
+                },
+                answerResult: "2",
+                answerEx: "글씨체 = 타이포 그래피 입니다.",
+            },
+        ]
+       
+
+        //선택자
+        const quiz__wrap = document.querySelector(".quiz__wrap");
+        
+        //문제출력 함수
+        function updateQuiz() {
+            const exam = []; //문제 저장소 
+
+            quizInfo.forEach((question, number) => {
+                exam.push(`  
+
+                <div class="quiz">
+                <span class="quiz__type">${question.answerType}</span>
+                <h2 class="quiz__question">
+                    <span class="number">${question.answerNum}</span>
+                    <div class="ask">${question.answerAsk}</div>
+                </h2>
+                <div class="quiz__view">
+                    <div class="true">정답입니다.</div>
+                    <div class="false">틀렸습니다.</div>
+                    <div class="dog">
+                        <div class="head">
+                            <div class="ears"></div>
+                            <div class="face"></div>
+                            <div class="eyes">
+                                <div class="teardrop"></div>
+                            </div>
+                            <div class="nose"></div>
+                            <div class="mouth">
+                                <div class="tongue"></div>
+                            </div>
+                            <div class="chin"></div>
+                        </div>
+                        <div class="body">
+                            <div class="tail"></div>
+                            <div class="legs"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz__answer">
+                  <div class="quiz__selects">
+                    <label for="select1${number}">
+                        <input type="radio" id="select1${number}" class="select" name="select${number}" value="1"> 
+                        <span class="choice">${question.answerChoice[1]}</span> 
+                    </label>
+                    <label for="select2${number}">
+                        <input type="radio" id="select2${number}" class="select" name="select${number}" value="2"> 
+                        <span class="choice">${question.answerChoice[2]}</span>
+                    </label>
+                    <label for="select3${number}">
+                        <input type="radio" id="select3${number}" class="select" name="select${number}" value="3"> 
+                        <span class="choice">${question.answerChoice[3]}</span>
+                    </label>
+                    <label for="select4${number}">
+                        <input type="radio" id="select4${number}" class="select" name="select${number}" value="4"> 
+                        <span class="choice">${question.answerChoice[4]}</span>
+                    </label>
+                  </div>
+                </div>
+            </div>
+                `);  //exam에 퀴즈 데이터 추가
+
+            });
+
+            exam.push(`
+                <div class="quiz__confirm">
+                    <button class="check">정답 확인하기</button>
+                    <div class="ex"></div>
+                </div>
+            `)
+
+            quiz__wrap.innerHTML = exam.join(''); //문제저장소 exam에 quiz wrap을 추가 + 배열삭제 
+        }
+        updateQuiz();
+
+        //정답 확인 함수 
+        function answerQuiz(){
+            const quizSelects = document.querySelectorAll(".quiz__selects");    //보기 선택자
+            const quizView = document.querySelectorAll(".quiz__view");          //강아지 정답오답
+            //사용자가 체크한 라디오 박스  == 문제 정답
+            quizInfo.forEach((question, number) => {
+                const quizSelectsWrap = quizSelects[number];                    //전체 보기 박스
+                const userSelector = `input[name=select${number}]:checked`;         //사용자가 선택한 답
+                const userAnswer = (quizSelectsWrap.querySelector(userSelector) || {}).value
+                const quizView = document.querySelectorAll(".quiz__view");
+                // console.log(quizSelects)
+                if(userAnswer == question.answerResult){
+                    // console.log("정답")
+                    quizView[number].classList.add("like");
+                    cnt+=1;
+                } else {
+                    // console.log("오답")
+                    quizView[number].classList.add("dislike");
+                    const div = document.createElement("div");
+                    quizSelectsWrap.appendChild(div).innerHTML = `<p class="result">정답은 : 
+                        ${question.answerResult}번<br>
+                        ${question.answerEx}</p>`;
+                }
+            });
+        }
+        document.querySelector(".quiz__confirm .check").addEventListener("click", answerQuiz);
+    </script>
+</body>
+
+</html>
