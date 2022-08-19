@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지유형 03</title>
+
+    <style>
+      /* fonts */
+      @import url('https://webfontworld.github.io/hallym/HallymMjo.css');
+
+      .font {
+        font-family: 'HallymMjo';
+        font-weight: 300;
+      }
+
+      /* reset */
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      img {
+        width: 100%;
+      }
+
+      /* common */
+      .container {
+        width: 1160px;
+        padding: 0 20px;
+        margin: 0 auto;
+        min-width: 1160px;
+      }
+      .container__fluid {
+        width: 100%;
+        padding: 0 100px;
+        box-sizing: border-box;
+      }
+      .section {
+        padding: 120px 0;
+      }
+      .section > h2 {
+        font-size: 32px;
+        line-height: 1; /*line height auto는 1을 의미*/
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .section > p {
+        font-size: 20px;
+        font-weight: 300;
+        color: #666;
+        text-align: center;
+        margin-bottom: 70px;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: normal;
+      }
+      .ir {  
+        display: block;
+        overflow: hidden;
+        font-size: 0;
+        line-height: 0;
+        text-indent: -9999px; /*들여쓰기*/
+    }
+      /* imageType 03 */
+      .image__inner {
+        display: grid;
+        grid-template-areas:
+          "box1 box1 box2 box3"
+          "box1 box1 box4 box5";
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        grid-gap: 20px;
+      }
+
+      .image__inner .image {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .image__inner .image:nth-child(1) {
+        background: url("/site/imageType/img/img3_bg1.png") no-repeat;
+        background-size: cover;
+        grid-area: box1;
+      }
+
+      .image__inner .image:nth-child(2) {
+        grid-area: box2;
+      }
+
+      .image__inner .image:nth-child(3) {
+        grid-area: box3;
+      }
+
+      .image__inner .image:nth-child(4) {
+        grid-area: box4;
+      }
+
+      .image__inner .image:nth-child(5) {
+        grid-area: box5;
+      }
+
+      .image__desc {
+        position: absolute;
+        left: 0;
+        bottom: -100px;
+        width: 100%;
+        color: #fff;
+        background-color: rgba(white, 0.4);
+        backdrop-filter: blur(10px);
+        padding: 16px;
+        box-sizing: border-box;
+        transition: all 0.4s ease-in;
+      }
+
+      .image:hover .image__desc {
+        bottom: 0px;
+      }
+
+      .image__desc h3 {
+        font-size: 24px;
+      }
+
+      .image__desc p {
+        font-size: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .image__sns {
+        position: absolute;
+        right: -110px;
+        top: 10px;
+        transition: all 0.4s ease-in;
+      }
+
+      .image:hover .image__sns {
+        right: 10px;
+      }
+
+      .image__sns a {
+        width: 36px;
+        height: 36px;
+        background: #000;
+        border-radius: 50px;
+        display: block;
+        margin-bottom: 5px;
+        background: url("/site/imageType/img/image_bg03_icon.svg") no-repeat;
+      }
+
+      .image__sns a:nth-child(2) {
+        background-position: -50px 0;
+      }
+
+      .image__sns a:nth-child(3) {
+        background-position: -100px 0;
+      }
+
+      .image__sns a:nth-child(4) {
+        background-position: -150px 0;
+      }
+
+      .image__sns a:nth-child(5) {
+        background-position: -200px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="imageType03" class="image__wrap font section">
+      <h2>야경이 아름다운 해외 도시 BEST 7</h2>
+      <p>
+        야경(夜景, Night view)은 밤의 경치를 뜻하는 한자어다. <br>
+        전구가 등장하기 이전에도 달과 별, 약간의 불빛으로 이루어진 유구한 야경이 존재했다.
+      </p>
+      <div class="image__inner container__fluid">
+        <article class="image">
+          <div class="image__desc">
+            <h3>CITY</h3>
+            <p>SHIBUYA</p>
+          </div>
+          <div class="image__sns">
+            <a href="#" class="link"><span class="ir">clip</span></a>
+            <a href="#" class="link"><span class="ir">twiter</span></a>
+            <a href="#" class="link"><span class="ir">instar</span></a>
+            <a href="#" class="link"><span class="ir">youtube</span></a>
+            <a href="#" class="link"><span class="ir">facebook</span></a>
+          </div>
+        </article>
+
+        <article class="image">
+          <figure class="image__box">
+            <img src="/site/imageType/img/img3_bg2.png" alt="01" />
+          </figure>
+          <div class="image__desc">
+            <h3>CITY</h3>
+            <p>SEOUL</p>
+          </div>
+          <div class="image__sns">
+            <a href="#" class="link"><span class="ir">clip</span></a>
+            <a href="#" class="link"><span class="ir">twiter</span></a>
+          </div>
+        </article>
+
+        <article class="image">
+          <figure class="image__box">
+            <img src="/site/imageType/img/img3_bg3.png" alt="01" />
+          </figure>
+          <div class="image__desc">
+            <h3>CITY</h3>
+            <p>NEWYORK</p>
+          </div>
+          <div class="image__sns">
+            <a href="#" class="link"><span class="ir">clip</span></a>
+            <a href="#" class="link"><span class="ir">twiter</span></a>
+          </div>
+        </article>
+
+        <article class="image">
+          <figure class="image__box">
+            <img src="/site/imageType/img/img3_bg4.png" alt="01" />
+          </figure>
+          <div class="image__desc">
+            <h3>CITY</h3>
+            <p>HONGKONG</p>
+          </div>
+          <div class="image__sns">
+            <a href="#" class="link"><span class="ir">clip</span></a>
+            <a href="#" class="link"><span class="ir">twiter</span></a>
+          </div>
+        </article>
+
+        <article class="image">
+          <figure class="image__box">
+            <img src="/site/imageType/img/img3_bg5.png" alt="01" />
+          </figure>
+          <div class="image__desc">
+            <h3>CITY</h3>
+            <p>NEW JERSEY</p>
+          </div>
+          <div class="image__sns">
+            <a href="#" class="link"><span class="ir">clip</span></a>
+            <a href="#" class="link"><span class="ir">twiter</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </body>
+</html>
