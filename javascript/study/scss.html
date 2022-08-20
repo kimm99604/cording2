@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css : SASS(SCSS)</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+                <li><a href="quiz01.html">퀴즈이펙트</a></li>
+                <li><a href="element.html">요소 선택</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">SASS | SCSS</h2>
+            <p class="t_desc">스타일 시트 언어 (Style Sheets)
+            </p>
+
+            <hr>
+
+            <h3 class="t_tit2">CSS | SCSS | SASS 정의 </h3>
+            <p class="t_desc2">CSS : Cascading Style Sheets - 종속형 시트 <br>
+                SASS : Syntactically Awesome Style Sheets - 문법적으로 어썸한 스타일시트 <br>
+                SCSS : Sassy CSS - SASS의 3버전에서 새롭게 등장한 스타일 시트
+            </p>
+        
+        
+            <h3 class="t_tit2">SASS(SCSS)사용 이유 (장점)</h3>
+            <p class="t_desc2">웹에서는 분명 CSS만 동작하지만 <i>프로젝트의 크기가 커지고 고도화될수록 유지보수에 
+                큰 어려움이 생기게 됩니다.</i> <br><i>SASS(SCSS)는 이러한 이슈를 해소시켜 줄 수 있습니다. </i> <br>
+                ex) 불필요한 선택자(Selector)의 과용과 연산 기능의 한계, 구문(Statement)의 부재 등
+            </p>
+          
+           
+            <h3 class="t_tit2">SCSS | SASS 차이점 </h3>
+            <p class="t_desc2"><i>SASS는 들여 쓰기+줄 바꿈 형식, (style.sass)</i> <br>
+                <i>SCSS는 중괄호+세미콜론 형식 (style.scss)</i><br>
+                <br>
+                SCSS의 경우 CSS문법과 완벽하게 호환이 되는 장점 또한 가지고 있습니다. 또한 코드의 가속성과 재사용성을 높여주며 심플한 표기법으로 CSS 구조를 평준화할 수 있기때문에
+                통상적으로 SCSS의 사용자 수가 더 많습니다. <br>
+            </p>
+           
+
+            <h3 class="t_tit2">SASS(SCSS) 작동 원리 (단점)</h3>
+            <p class="t_desc2">스크립팅 언어이기 때문에 SASS, SCSS로 작성된 파일들은 곧바로 웹에 적용될 수는 없습니다.<br>
+                 웹은 기본적으로 CSS파일로 동작하므로 별도의 컴파일 과정을 거친 
+                다음 CSS파일로 변환하여 사용하게 됩니다. <br>
+                <br>
+                <i>즉, 전처리기를 위한 도구 필요, 컴파일 시간 소요</i>
+            </p>
+          
+            <h3 class="t_tit2">결론</h3>
+            <p class="t_desc2">즉, 간단한 프로젝트는 CSS를 사용해도 좋지만,프로젝트의 크기가 커질수록 코드 재사용성, 가독성, 유지보수성 등 여러 차원에서
+                SASS(SCSS)가 더 실용적이다.  
+            </p>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:kimm9964@naver.com">kimm9964@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+</html>

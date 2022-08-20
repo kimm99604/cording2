@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css : ir / background / image sprite</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+                <li><a href="quiz01.html">퀴즈이펙트</a></li>
+                <li><a href="element.html">요소 선택</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">이미지 스프라이트(Image Sprite) | ir 효과 | 백그라운드 표현</h2>
+            <p class="t_desc">이미지 스프라이트(Image Sprite), ir 효과, 백그라운드 표현에 대해 알아봅시다.
+            </p>
+
+            <hr>
+
+            <h2 class="t_tit2">CSS 이미지 스프라이트(Image Sprite)</h2>
+            <p class="t_desc2">이미지 스프라이트(image sprite)란 <i>여러 개의 이미지를 하나의 이미지로 합쳐서 관리하는 이미지</i>를 의미합니다.<br>
+                이미지 스프라이트를 사용하면 이미지를 다운받기 위한 서버 요청을 단 몇 번으로 줄일 수 있습니다.<br>
+                또한, <i>많은 이미지 파일을 관리하는 대신 몇 개의 스프라이트 이미지(sprite image) 파일만을 관리하면 되므로 매우 간편</i>합니다.
+            </p>
+
+            <h3 class="t_tit2">예제 figma</h3>
+            <div class="t_iframe" style="min-height: 500px; padding-top: 0;">
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="300" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FAvCzdFXJ7ypOQ9xKXyXn8H%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D666%253A701" allowfullscreen></iframe>
+            </div>
+            <br>
+            <p class="t_box">다음 예제는 하나의 이미지를 가지고 6개의 아이콘을 만드는 예제입니다.<br>
+                6개의 아이콘을 만들기 위해 6개의 이미지를 사용하는 것이 아닌 다음 이미지 하나만을 가지고 작업하게 됩니다.<br>
+                간격은 50px씩 주었습니다.
+            </p>
+            
+        
+            <h3 class="t_tit2">ir효과</h3>
+            <p class="t_desc2">ir효과란 <i>이미지에 텍스트 설정하고 안보이게하는 것</i>이다. <br>
+                웹접근성은 몸이 불편한 사람이라도 정보를 이용하는데 불편함이 없도록 하는것이 목적에 있기 때문에 만약 시각 장애인이 사이트를 이용할 경우
+                텍스트는 리더기로 읽어줄 수 있지만 이미지는 읽을 수가 없다 그래서 이미지에 텍스트를 붙여준다.
+            </p>
+          
+            <div class="t_code">
+<pre><code class="language-js">.ir {  
+display: block;
+overflow: hidden;
+font-size: 0;
+line-height: 0;
+text-indent: -9999px; /*들여쓰기*/
+}
+</code></pre>
+            </div>
+
+            <h3 class="t_tit2">백그라운드(background) 표현</h3>
+            <p class="t_desc2">background 속성은 태그의 배경을 지정하는 속성으로, font 속성과 비슷하게 세부적인 속성들을 한번에 쓸 수 있는 속성입니다.<br>
+                아래의 세부적인 속성을 가집니다.
+                <br>
+                <table class="t_table">
+                    <tbody>
+                      <tr>
+                        <td class="ce">background-color</td>
+                        <td class="ce">배경 색</td>
+                      </tr>
+                      <tr>
+                        <td class="ce">background-image</td>
+                        <td class="ce">배경 이미지</td>
+                      </tr>
+                      <tr>
+                        <td class="ce">background-repeat</td>
+                        <td class="ce">배경 이미지 반복 여부</td>
+                      </tr>
+                      <tr>
+                        <td class="ce">background-position</td>
+                        <td class="ce">배경 위치</td>
+                      </tr>
+                    </tbody>
+                </table>
+            </p>
+          
+            <hr>
+
+            <h3 class="t_tit2">이미지 스프라이트(Image Sprite) | ir 효과 | 백그라운드 표현을 활용한 예제 </h3>
+
+            <h3 class="t_tit2">Result</h3>
+            <div class="t_iframe" style="min-height: 700px; padding-top: 0;">
+                <iframe src="https://kimm99604.github.io/cording2/site/imageType/imageType03.html" frameborder="0"></iframe>
+            </div>
+            <div class="t_link">
+                <a href="https://kimm99604.github.io/cording2/site/imageType/imageType03.html" target="_blank">원본 페이지 보기</a> 
+             </div>
+
+
+            <p class="t_tit3">HTML</p>
+            <div class="t_code">
+<pre><code class="language-js">&lt;div class="image__sns"&gt;
+    &lt;a href="#" class="link"&gt;&lt;span class="ir"&gt;facebook&lt;/span&gt;&lt;/a&gt;
+    &lt;a href="#" class="link"&gt;&lt;span class="ir"&gt;twiter&lt;/span&gt;&lt;/a&gt;
+    &lt;a href="#" class="link"&gt;&lt;span class="ir"&gt;instargram&lt;/span&gt;&lt;/a&gt;
+    &lt;a href="#" class="link"&gt;&lt;span class="ir"&gt;youtube&lt;/span&gt;&lt;/a&gt;
+    &lt;a href="#" class="link"&gt;&lt;span class="ir"&gt;facebook&lt;/span&gt;&lt;/a&gt;
+  &lt;/div&gt;
+</code></pre>
+             </div>
+
+             <p class="t_tit3">CSS</p>
+             <div class="t_code">
+ <pre><code class="language-js">.ir {  
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px; /*들여쓰기*/
+    }
+
+.image__sns a {
+    width: 36px;
+    height: 36px;
+    background: #000;
+    border-radius: 50px;
+    display: block;
+    margin-bottom: 5px;
+    background: url("./img/image_bg03_icon.svg") no-repeat; //백그라운드에 이미지 스프라이트를 넣는다. 
+    }
+
+    .image__sns a:nth-child(2) {
+    background-position: -50px 0; //50픽셀씩 간격을 조정해서 새로운 이미지를 넣는다.
+    }
+
+    .image__sns a:nth-child(3) {
+    background-position: -100px 0; //50픽셀씩 간격을 조정해서 새로운 이미지를 넣는다.
+    }
+
+    .image__sns a:nth-child(4) {
+    background-position: -150px 0; //50픽셀씩 간격을 조정해서 새로운 이미지를 넣는다.
+    }
+
+    .image__sns a:nth-child(5) {
+    background-position: -200px 0; //50픽셀씩 간격을 조정해서 새로운 이미지를 넣는다.
+ </code></pre>
+              </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:kimm9964@naver.com">kimm9964@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+</html>
