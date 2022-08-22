@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 함수</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+                <li><a href="quiz01.html">퀴즈이펙트</a></li>
+                <li><a href="element.html">요소 선택</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">함수 유형 (Function Type)</h2>
+            <p class="t_desc">함수는 프로그램에서 반복적으로 사용되는 기능을 만들어 내기 위한 코드들의 집합
+            </p>
+
+            <hr>
+
+            <h3 class="t_tit2">1. 함수 유형 : 함수와 매개변수를 이용한 형태</h3>
+            <p class="t_desc">코드를 재활용하기 위해 함수를 사용한다.
+            </p>
+           
+             <div class="t_code">
+<pre><code class="language-js">function func(num, str1, str2){
+    document.write(num+ ". " + str1 + "가" + str2 + "되었습니다. " + "<br>")
+}
+func("1","함수", "실행") //1. 함수가 실행되었습니다.
+func("2","자바스크립트", "실행") //2. 자바스크립트가 실행되었습니다.
+func("3","제이쿼리", "실행") //3. 제이쿼리가 실행되었습니다.
+</code></pre>
+            </div>
+
+            <h3 class="t_tit2">2. 함수 유형 : 함수와 변수를 이용한 형태</h3>
+            <p class="t_desc">
+               
+            </p>
+            
+             <div class="t_code">
+<pre><code class="language-js">function func(num, str1, str2){
+    document.write(num+ ". " + str1 + "가" + str2 + "되었습니다. " + "<br>")
+}
+
+const youNum1 = 1;
+const youNum2 = 2;
+const youNum3 = 3;
+const youStr1 = "함수";
+const youStr2 = "자바스크립트";
+const youStr3 = "제이쿼리";
+const youCom = "실행";
+
+func(youNum1, youStr1, youCom);  //1. 함수가 실행되었습니다.
+func(youNum2, youStr2, youCom); //2. 자바스크립트가 실행되었습니다.
+func(youNum3, youStr3, youCom); //3. 제이쿼리가 실행되었습니다.
+</code></pre>
+            </div>
+
+
+            <h3 class="t_tit2">3. 함수 유형 : 함수와 배열, 객체를 이용한 형태</h3>
+            <p class="t_desc">
+                
+            </p>
+             <div class="t_code">
+<pre><code class="language-js"> function func(num, str1, str2){
+    document.write(num+ ". " + str1 + "가" + str2 + "되었습니다. " + "<br>")
+}
+
+const info = [
+    {
+    num : "1",
+    name : "함수",
+    com : "실행"
+    },
+
+    {
+    num : "2",
+    name : "자바스크립트",
+    com : "실행"
+    },
+
+    {
+    num : "3",
+    name : "제이쿼리",
+    com : "실행"
+    }
+]
+
+func(info[0].num, info[0].name, info[0].com) //1. 함수가 실행되었습니다.
+func(info[1].num, info[1].name, info[1].com) //2. 자바스크립트가 실행되었습니다.
+func(info[2].num, info[2].name, info[2].com) //3. 제이쿼리가 실행되었습니다.
+</code></pre>
+            </div>
+
+            <h3 class="t_tit2">4. 함수 유형 : 객체 안에 변수와 함수를 이용한 형태</h3>
+            <p class="t_desc">
+            </p>
+             <div class="t_code">
+<pre><code class="language-js"> const info = {
+    num1 : 1,
+    name1 : "함수",
+    word1 : "실행",
+    num2 : 2,
+    name2 : "자바스크립트",
+    word2 : "실행",
+    num3 : 3,
+    name3 : "제이쿼리",
+    word3 : "실행",
+
+    result1 : function(){
+        document.write(info.num1 + ". "+ info.name1 +"가" + info.word1 +"되었습니다. <br>");
+    },
+
+    result2 : function(){
+        document.write(info.num2 + ". "+ info.name2 +"가" + info.word2 +"되었습니다. <br>");
+    },
+
+    result3 : function(){
+        document.write(info.num3 + ". "+ info.name3 +"가" + info.word3 +"되었습니다. <br>");
+    },
+} 
+
+info.result1(); //1. 함수가 실행되었습니다.
+info.result2(); //2. 자바스크립트가 실행되었습니다.
+info.result3(); //3. 제이쿼리가 실행되었습니다.
+</code></pre>
+            </div>
+
+            <h3 class="t_tit2">5. 함수 유형 : 객체 생성자 함수*****</h3>
+            <p class="t_desc">기존 함수에 new 연산자를 붙여서 호출하면, 해당 함수는 생성자 함수로 동작합니다.<br>
+                리터럴과 Obejct()로 객체를 생성하는 것과 달리, 생성자 함수를 통해 객체를 생성하면 같은 속성을 가진 객체를 여러 개 생성할 수 있습니다.<br>
+                생성자 함수로 인스턴스를 생성하기 전에, 먼저 비어있는 객체를 생성합니다.
+            </p>
+           
+            <div class="t_code">
+<pre><code class="language-js">function func(num, name, word){ 
+    this.num = num; //const를 생략하고, this를 사용함으로써 변수 재활용가능 
+    this.name = name;
+    this.word = word;
+
+    this.result = function(){
+        document.write(this.num + ". "+ this.name +"가" + this.word +"되었습니다. <br>");
+    }
+}
+
+//인스턴트 생성
+const info1 = new func("1","함수","실행")
+const info2 = new func("2","자바스크립트","실행")
+const info3 = new func("3","제이쿼리","실행")
+
+//실행
+info1.result(); //1. 함수가 실행되었습니다.
+info2.result(); //2. 자바스크립트가 실행되었습니다.
+info3.result(); //3. 제이쿼리가 실행되었습니다.
+</code></pre>
+            </div>
+
+            <h3 class="t_tit2">6. 함수 유형 : 프로트타입 함수 </h3>
+            <p class="t_desc">함수 프로토타입 은 EGL 시스템 코드가 함수 자체에 액세스하지 못하는 경우 함수 호출에 대해 유형 검사를 수행하는 데 사용되는 정의입니다. <br>
+                 함수 프로토타입은 function 키워드로 시작한 다음 함수 이름, 해당 매개변수(있는 경우), 리턴값(있는 경우)을 나열합니다.
+            </p>
+           
+            <div class="t_code">
+<pre><code class="language-js">function func(num, name, word){ 
+    this.num = num; //const를 생략하고, this를 사용함으로써 변수 재활용가능 
+    this.name = name;
+    this.word = word;
+}
+
+//result를 함수 밖으로 빼줌 
+func.prototype.result = function(){
+document.write(this.num + ". "+ this.name +"가" + this.word +"되었습니다. <br>");
+}
+
+//인스턴트 생성
+const info1 = new func("1","함수","실행")
+const info2 = new func("2","자바스크립트","실행")
+const info3 = new func("3","제이쿼리","실행")
+
+//실행
+info1.result(); //1. 함수가 실행되었습니다.
+info2.result(); //2. 자바스크립트가 실행되었습니다.
+info3.result(); //3. 제이쿼리가 실행되었습니다.
+</code></pre>
+            </div>
+
+            <h3 class="t_tit2">7. 함수 유형 : 객체 리터럴 함수 </h3>
+            <p class="t_desc">자바스크립트 함수는 식별자 없이 함수 그 자체를 객체 타입의 값으로 리터럴로 생성이 가능합니다.<br>
+                객체 타입의 값으로 생성된 함수 리터럴의 레퍼런스를 변수에 대입해줌으로써 , 변수명(인자목록) 의 방법으로도 호출이 가능하고, 한번만 호출하고 다시 호출할 수 없는 즉시 실행 함수 (함수 리터럴)으로도 호출할 수 있습니다.
+            </p>
+           
+            <div class="t_code">
+<pre><code class="language-js"> function func(num, name, word){ 
+    this.num = num; //const를 생략하고, this를 사용함으로써 변수 재활용가능 
+    this.name = name;
+    this.word = word;
+}
+
+//객체 리터럴 함수 
+func.prototype = {
+result1 : function(){
+document.write(this.num + ". "+ this.name +"가" + this.word +"되었습니다. <br>");
+},
+result2 : function(){
+document.write(this.num + ". "+ this.name +"가" + this.word +"되었습니다. <br>");
+},
+result3 : function(){
+document.write(this.num + ". "+ this.name +"가" + this.word +"되었습니다. <br>");
+}
+}
+
+//인스턴트 생성
+const info1 = new func("1","함수","실행")
+const info2 = new func("2","자바스크립트","실행")
+const info3 = new func("3","제이쿼리","실행")
+
+//실행
+info1.result1();  //1. 함수가 실행되었습니다.
+info2.result2(); //2. 자바스크립트가 실행되었습니다.
+info3.result3(); //3. 제이쿼리가 실행되었습니다.
+</code></pre>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:kimm9964@naver.com">kimm9964@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+  
+</body>
+</html>
